@@ -120,4 +120,8 @@
     touchIdAuth = true;
     watchIdAuth = true;
   };
+
+  users.users.kyohei = {
+    home = "/Users/kyohei";
+  };
 }
