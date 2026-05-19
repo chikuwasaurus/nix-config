@@ -8,10 +8,19 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    {
+      nixpkgs,
+      home-manager,
+      nix-darwin,
+      ...
+    }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -26,6 +35,10 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+      };
+
+      darwinConfigurations."Kyoheis-Mac-mini" = nix-darwin.lib.darwinSystem {
+        modules = [ ./nix-darwin/configuration.nix ];
       };
     };
 }
