@@ -4,7 +4,12 @@
   ...
 }:
 {
-  nixpkgs.hostPlatform = "aarch64-darwin";
+  # Allow unfree packages
+  nixpkgs = {
+    config.allowUnfree = true;
+    hostPlatform = "aarch64-darwin";
+  };
+
   nix.enable = false;
 
   system = {
@@ -121,7 +126,13 @@
     watchIdAuth = true;
   };
 
-  users.users.kyohei = {
+  # Define the user's home directory for nix-darwin/home-manager.
+  # https://nix-community.github.io/home-manager/index.xhtml#sec-install-nix-darwin-module
+  users.users."kyohei" = {
     home = "/Users/kyohei";
   };
+
+  imports = [
+    ./home-manager.nix
+  ];
 }
