@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
     nixd # Nix LSP
     nixfmt # Nix formatter
+    git
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -42,6 +43,8 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".gitconfig".source = ./git/.gitconfig;
+
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

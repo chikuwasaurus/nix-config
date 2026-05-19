@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	email = 285532703+chikuwasaurus@users.noreply.github.com
+	name = Chikuwa Saurus
+[ghq]
+	root = ~/Developer
+	user = chikuwasaurus
