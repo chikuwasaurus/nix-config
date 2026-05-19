@@ -1,8 +1,4 @@
 {
-  nix-homebrew,
-  ...
-}:
-{
   nix-homebrew = {
     enable = true;
     user = "kyohei";
@@ -14,7 +10,6 @@
     enable = true;
     user = "kyohei";
     # onActivation.cleanup = "zap";
-    # enableZshIntegration = true;
 
     brews = [
       "mas"

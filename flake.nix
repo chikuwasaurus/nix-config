@@ -26,7 +26,7 @@
     }:
     {
       darwinConfigurations."Kyoheis-Mac-mini" = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit self nix-homebrew; };
+        specialArgs = { inherit self; };
         modules = [
           ./nix-darwin/configuration.nix
           home-manager.darwinModules.home-manager
