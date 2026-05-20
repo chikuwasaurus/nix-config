@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   # The home.packages option allows you to install Nix packages into your
@@ -56,5 +56,8 @@
     uv
     yq
     zoxide
+
+    inputs.claude-code.packages.${pkgs.system}.default # Use latest claude code
+    inputs.codex-cli-nix.packages.${pkgs.system}.default # Use latest codex
   ];
 }

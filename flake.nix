@@ -13,10 +13,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    claude-code.url = "github:sadjow/claude-code-nix";
+    codex-cli-nix.url = "github:sadjow/codex-cli-nix";
   };
 
   outputs =
-    {
+    inputs@{
       self,
       nixpkgs,
       home-manager,
@@ -24,9 +26,18 @@
       nix-homebrew,
       ...
     }:
+    let
+      system = "aarch64-darwin"; # Apple Silicon Mac
+      pkgs = import nixpkgs {
+        inherit system;
+      };
+    in
     {
       darwinConfigurations."Kyoheis-Mac-mini" = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit self; };
+        inherit pkgs;
+        specialArgs = {
+          inherit self inputs;
+        };
         modules = [
           ./nix-darwin/configuration.nix
           home-manager.darwinModules.home-manager

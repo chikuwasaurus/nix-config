@@ -54,3 +54,10 @@ This setup uses:
     nix flake update
     sudo darwin-rebuild switch --flake .
     ```
+
+- Update only AI CLI
+
+    ```sh
+    nix flake update claude-code codex-cli-nix
+    home-manager switch --flake .
+    ```
