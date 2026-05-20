@@ -9,7 +9,7 @@
   homebrew = {
     enable = true;
     user = "kyohei";
-    # onActivation.cleanup = "zap";
+    onActivation.cleanup = "zap";
 
     brews = [
       "mas"
