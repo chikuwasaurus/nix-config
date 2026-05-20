@@ -96,12 +96,12 @@
   xdg.enable = true;
 
   xdg.configFile = {
-    "ghostty".source = "./ghostty";
-    "nushell".source = "./nushell";
-    "nvim".source = "./nvim";
-    "sheldon".source = "./sheldon";
-    "starship.toml".source = "./starship/starship.toml";
-    "zed".source = "./zed";
+    "ghostty".source = ./ghostty;
+    "nushell".source = ./nushell;
+    "nvim".source = ./nvim;
+    "sheldon".source = ./sheldon;
+    "starship.toml".source = ./starship/starship.toml;
+    "zed".source = ./zed;
   };
 
   # Home Manager can also manage your environment variables through
