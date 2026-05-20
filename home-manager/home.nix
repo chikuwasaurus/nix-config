@@ -34,6 +34,7 @@
     ghq
     git
     git-wt
+    go
     jq
     lazydocker
     lazygit
