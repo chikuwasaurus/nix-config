@@ -76,6 +76,8 @@
   # plain files is through 'home.file'.
   home.file = {
     ".gitconfig".source = ./git/.gitconfig;
+    ".zprofile".source = ./zsh/.zprofile;
+    ".zshrc".source = ./zsh/.zshrc;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -87,6 +89,19 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+  };
+
+  # Whether to enable management of XDG base directories.
+  # https://nix-community.github.io/home-manager/options.xhtml#opt-xdg.enable
+  xdg.enable = true;
+
+  xdg.configFile = {
+    "ghostty".source = "./ghostty";
+    "nushell".source = "./nushell";
+    "nvim".source = "./nvim";
+    "sheldon".source = "./sheldon";
+    "starship.toml".source = "./starship/starship.toml";
+    "zed".source = "./zed";
   };
 
   # Home Manager can also manage your environment variables through
@@ -111,8 +126,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # Whether to enable management of XDG base directories.
-  # https://nix-community.github.io/home-manager/options.xhtml#opt-xdg.enable
-  xdg.enable = true;
 }
