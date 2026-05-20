@@ -24,6 +24,7 @@
       "cleanshot"
       "cmux"
       "codex"
+      "codex-app"
       "cursor"
       "figma"
       "ghostty"
