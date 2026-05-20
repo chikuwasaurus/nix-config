@@ -4,6 +4,11 @@
   ...
 }:
 {
+  imports = [
+    ./home-manager.nix
+    ./homebrew.nix
+  ];
+
   # Allow unfree packages
   nixpkgs = {
     config.allowUnfree = true;
@@ -131,9 +136,4 @@
   users.users."kyohei" = {
     home = "/Users/kyohei";
   };
-
-  imports = [
-    ./home-manager.nix
-    ./homebrew.nix
-  ];
 }
