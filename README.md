@@ -36,11 +36,7 @@ This setup uses:
         nix-darwin/master#darwin-rebuild -- switch --flake .
     ```
 
-4. Reload your shell:
-
-    ```sh
-    exec nu
-    ```
+4. Restart your machine
 
 ## Daily Usage
 
