@@ -31,7 +31,9 @@ This setup uses:
 (this will also install Homebrew automatically):
 
     ```sh
-    sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .
+    sudo nix run \
+        --extra-experimental-features "nix-command flakes" \
+        nix-darwin/master#darwin-rebuild -- switch --flake .
     ```
 
 4. Reload your shell:
