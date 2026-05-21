@@ -27,22 +27,26 @@
       ...
     }:
     let
-      system = "aarch64-darwin"; # Apple Silicon Mac
-      pkgs = import nixpkgs {
-        inherit system;
-      };
+      mkDarwin =
+        hostname:
+        nix-darwin.lib.darwinSystem {
+          specialArgs = {
+            inherit self inputs;
+          };
+          modules = [
+            ./nix-darwin/configuration.nix
+            {
+              networking.hostName = hostname;
+              networking.localHostName = hostname;
+              nixpkgs.hostPlatform = "aarch64-darwin";
+            }
+            home-manager.darwinModules.home-manager
+            nix-homebrew.darwinModules.nix-homebrew
+          ];
+        };
     in
     {
-      darwinConfigurations."Kyoheis-Mac-mini" = nix-darwin.lib.darwinSystem {
-        inherit pkgs;
-        specialArgs = {
-          inherit self inputs;
-        };
-        modules = [
-          ./nix-darwin/configuration.nix
-          home-manager.darwinModules.home-manager
-          nix-homebrew.darwinModules.nix-homebrew
-        ];
-      };
+      darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
+      darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
     };
 }
