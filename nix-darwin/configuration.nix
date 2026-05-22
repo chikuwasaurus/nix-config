@@ -120,17 +120,20 @@
       hitoolbox.AppleFnUsageType = "Start Dictation";
     };
 
-    keyboard = {
-      enableKeyMapping = true;
-      remapCapsLockToControl = true; # CapsLock -> Control
-      userKeyMapping = [
-        # Left Control -> Escape
-        {
-          HIDKeyboardModifierMappingSrc = 30064771296; # 0x7000000E0 = Left Control
-          HIDKeyboardModifierMappingDst = 30064771113; # 0x700000029 = Escape
-        }
-      ];
-    };
+    # Disabled because Karabiner-Elements now owns these key remaps.
+    # Avoids conflicting/double remaps for Caps Lock, Control, and Escape.
+    #
+    # keyboard = {
+    #   enableKeyMapping = true;
+    #   remapCapsLockToControl = true; # CapsLock -> Control
+    #   userKeyMapping = [
+    #     # Left Control -> Escape
+    #     {
+    #       HIDKeyboardModifierMappingSrc = 30064771296; # 0x7000000E0 = Left Control
+    #       HIDKeyboardModifierMappingDst = 30064771113; # 0x700000029 = Escape
+    #     }
+    #   ];
+    # };
   };
 
   fonts = {

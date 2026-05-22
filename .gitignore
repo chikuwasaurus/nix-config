@@ -58,6 +58,9 @@ Backups.backupdb
 MobileBackups.trash
 tmbootpicker.efi
 
+# karabiner
+**/karabiner/automatic_backups
+
 # nushell
 **/nushell/history.txt
 

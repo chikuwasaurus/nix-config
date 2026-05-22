@@ -27,6 +27,7 @@
       "figma"
       "ghostty"
       "google-chrome"
+      "karabiner-elements"
       "logi-options+"
       "ogdesign-eagle"
       "orbstack"

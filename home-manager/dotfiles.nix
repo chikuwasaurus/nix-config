@@ -28,6 +28,7 @@ in
   # ~/.config
   xdg.configFile = {
     "ghostty".source = mkLink "ghostty";
+    "karabiner".source = mkLink "karabiner";
     "nushell".source = mkLink "nushell";
     "nvim".source = mkLink "nvim";
     "sheldon".source = mkLink "sheldon";
