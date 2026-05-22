@@ -38,6 +38,7 @@
         tilesize = 48; # Icon size
         show-recents = false; # Don't show recent applications
         orientation = "right"; # Dock position
+        expose-group-apps = true; # Group windows by application
       };
 
       finder = {
