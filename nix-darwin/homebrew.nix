@@ -11,11 +11,16 @@
     user = "kyohei";
     onActivation.cleanup = "zap";
 
+    taps = [
+      "nikitabobko/tap" # aerospace
+    ];
+
     brews = [
       "mas"
     ];
 
     casks = [
+      "aerospace"
       "alt-tab"
       "anki"
       "chatgpt"

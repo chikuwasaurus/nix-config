@@ -84,6 +84,10 @@
         "com.apple.trackpad.forceClick" = false;
         "com.apple.trackpad.scaling" = 3.0;
 
+        # Window
+        # https://github.com/nikitabobko/AeroSpace#tip-of-the-day
+        NSWindowShouldDragOnGesture = true; # Move window by holding anyware
+
         # Disable auto-correct and substitutions
         NSAutomaticCapitalizationEnabled = false;
         NSAutomaticDashSubstitutionEnabled = false;
