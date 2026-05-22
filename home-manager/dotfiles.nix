@@ -11,6 +11,7 @@ in
     ".gitconfig".source = mkLink "git/.gitconfig";
     ".zprofile".source = mkLink "zsh/.zprofile";
     ".zshrc".source = mkLink "zsh/.zshrc";
+    ".local/bin".source = mkLink "scripts";
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -32,5 +33,6 @@ in
     "sheldon".source = mkLink "sheldon";
     "starship.toml".source = mkLink "starship/starship.toml";
     "zed".source = mkLink "zed";
+    "zsh/zed.zsh".source = mkLink "zsh/zed.zsh";
   };
 }
