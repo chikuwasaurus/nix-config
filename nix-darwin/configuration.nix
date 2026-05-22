@@ -15,8 +15,6 @@
     hostPlatform = "aarch64-darwin";
   };
 
-  nix.enable = false;
-
   nix = {
     package = pkgs.nix;
     settings.experimental-features = [
