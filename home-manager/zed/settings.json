@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "auto_install_extensions": {
+    "astro": true,
+    "ghostty": true,
+    "github-theme": true,
+    "html": true,
+    "lua": true,
+    "markdownlint": true,
+    "nix": true,
+    "nu": true,
+    "toml": true,
+  },
   "show_edit_predictions": false,
   "edit_predictions": {
     "copilot": {
