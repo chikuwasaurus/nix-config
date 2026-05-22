@@ -45,7 +45,7 @@
         AppleShowAllFiles = true; # Show hidden files
         ShowPathbar = true; # Show path bar
         ShowStatusBar = true; # Show status bar
-        FXPreferredViewStyle = "Nlsv"; # List view by default
+        FXPreferredViewStyle = "clmv"; # Column view by default
         NewWindowTarget = "Other"; # Open ~/Downloads by default
         NewWindowTargetPath = "file:///Users/kyohei/Downloads"; # Open ~/Downloads by default
       };
