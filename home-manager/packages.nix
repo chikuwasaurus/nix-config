@@ -38,6 +38,7 @@
     git
     git-wt
     go
+    jankyborders
     jq
     lazydocker
     lazygit
