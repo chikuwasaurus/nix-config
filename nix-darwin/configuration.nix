@@ -95,7 +95,7 @@
       CustomUserPreferences = {
         "com.apple.symbolichotkeys" = {
           AppleSymbolicHotKeys = {
-            # Spotlight > Show Spotlight search
+            # Spotlight > "Show Spotlight search"
             # Shortcut: Command + Shift + Space
             "64" = {
               enabled = true;
@@ -109,6 +109,11 @@
               };
             };
           };
+        };
+        # Disable Live Conversion for the Japanese input method.
+        # This is equivalent to turning off “Live Conversion” in macOS Keyboard settings.
+        "com.apple.inputmethod.Kotoeri" = {
+          JIMPrefLiveConversionKey = false;
         };
       };
 
