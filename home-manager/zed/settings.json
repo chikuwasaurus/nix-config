@@ -22,6 +22,7 @@
   "auto_install_extensions": {
     "astro": true,
     "ghostty": true,
+    "git-firefly": true,
     "github-theme": true,
     "html": true,
     "lua": true,
