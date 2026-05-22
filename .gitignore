@@ -58,4 +58,8 @@ Backups.backupdb
 MobileBackups.trash
 tmbootpicker.efi
 
+# nushell
+**/nushell/history.txt
+
+# zed
 **/zed/prompts
