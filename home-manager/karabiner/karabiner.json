@@ -75,6 +75,26 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "Disable Command+H to prevent accidentally hiding the current app while typing",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["command"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "vk_none"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
