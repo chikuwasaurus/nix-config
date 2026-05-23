@@ -42,6 +42,7 @@
       "raycast"
       "slack"
       "tableplus"
+      "wezterm@nightly"
       "zed"
     ];
 

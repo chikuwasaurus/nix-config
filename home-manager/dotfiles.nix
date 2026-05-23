@@ -34,6 +34,7 @@ in
     "nvim".source = mkLink "nvim";
     "sheldon".source = mkLink "sheldon";
     "starship.toml".source = mkLink "starship/starship.toml";
+    "wezterm".source = mkLink "wezterm";
     "zed".source = mkLink "zed";
     "zsh/zed.zsh".source = mkLink "zsh/zed.zsh";
   };
