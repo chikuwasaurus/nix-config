@@ -55,3 +55,4 @@ font-feature = -calt
 # font-size = 15
 cursor-style-blink = false
 theme = dark:Xcode Dark,light:Xcode Light
+font-family = UDEV Gothic 35NF

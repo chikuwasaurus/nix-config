@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_family": "UDEV Gothic 35NF",
+  "terminal": {
+    "font_family": "UDEV Gothic 35NF",
+  },
   "languages": {
     // Config: https://github.com/zed-extensions/nix
     "Nix": {
