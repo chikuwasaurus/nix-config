@@ -49,6 +49,32 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Physical left_control to Hyper",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_control",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_command", "left_control", "left_option"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "event_changed_if",
+                    "value": false
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
