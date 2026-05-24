@@ -51,15 +51,18 @@
             ]
           },
           {
-            "description": "Physical left_control to Hyper",
+            "description": "Physical left_control to Hyper, alone to Escape",
             "manipulators": [
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "event_changed_if",
+                    "value": false
+                  }
+                ],
                 "from": {
                   "key_code": "left_control",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to": [
                   {
@@ -67,12 +70,8 @@
                     "modifiers": ["left_command", "left_control", "left_option"]
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "event_changed_if",
-                    "value": false
-                  }
-                ]
+                "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
               }
             ]
           },
@@ -80,7 +79,6 @@
             "description": "Disable Command+H to prevent accidentally hiding the current app while typing",
             "manipulators": [
               {
-                "type": "basic",
                 "from": {
                   "key_code": "h",
                   "modifiers": {
@@ -88,11 +86,8 @@
                     "optional": ["any"]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "vk_none"
-                  }
-                ]
+                "to": [{ "key_code": "vk_none" }],
+                "type": "basic"
               }
             ]
           }
