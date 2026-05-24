@@ -233,3 +233,10 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+    # Work around Ghostty tabs being rendered as separate windows in AeroSpace.
+    # Start Ghostty in floating layout, then manually unfloat it with Alt+Shift+; followed by F.
+    # See: https://ghostty.org/docs/help/macos-tiling-wms#aerospace
+[[on-window-detected]]
+    if.app-id='com.mitchellh.ghostty'
+    run= ['layout floating']
