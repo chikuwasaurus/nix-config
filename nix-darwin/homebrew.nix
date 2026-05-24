@@ -35,6 +35,7 @@
       "google-chrome"
       "karabiner-elements"
       "logi-options+"
+      "monitorcontrol"
       "ogdesign-eagle"
       "orbstack"
       "pixelsnap"
