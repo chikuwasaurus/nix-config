@@ -57,3 +57,4 @@ cursor-style-blink = false
 theme = TokyoNight
 font-family = UDEV Gothic 35NF
 copy-on-select = clipboard
+window-padding-balance = true
