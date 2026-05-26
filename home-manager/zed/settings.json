@@ -64,6 +64,7 @@
       "language_servers": ["nixd", "!nil"],
     },
   },
+  "relative_line_numbers": "enabled",
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
