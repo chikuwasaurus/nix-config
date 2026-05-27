@@ -18,4 +18,10 @@
       "ctrl-space": "editor::ShowCompletions",
     },
   },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "escape": "editor::Cancel",
+    },
+  },
 ]
