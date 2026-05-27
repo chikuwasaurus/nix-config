@@ -180,6 +180,25 @@
             ]
           },
           {
+            "description": "Physical caps_lock to Control, alone to Escape",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Physical left_control to Hyper, alone to Escape",
             "manipulators": [
               {
@@ -221,12 +240,6 @@
       },
       "name": "Default profile",
       "selected": true,
-      "simple_modifications": [
-        {
-          "from": { "key_code": "caps_lock" },
-          "to": [{ "key_code": "left_control" }]
-        }
-      ],
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     }
   ]
