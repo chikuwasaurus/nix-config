@@ -269,6 +269,10 @@ if.app-id = 'com.cmuxterm.app'
     if.app-id = 'com.apple.Safari'
     run = 'move-node-to-workspace 5'
 
+[[on-window-detected]]
+    if.app-id = 'com.amazon.Lassen'
+    run = 'move-node-to-workspace 6'
+
 # Fallback: everything else
 [[on-window-detected]]
-    run = 'move-node-to-workspace 6'
+    run = 'move-node-to-workspace 7'
