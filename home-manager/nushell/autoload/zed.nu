@@ -8,6 +8,6 @@ def zd [
     }
 
     with-env { DEV_DIR: $dev_dir } {
-        zed-project.sh
+        ^zd
     }
 }

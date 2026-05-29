@@ -78,5 +78,3 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$(atuin init zsh)"
-
-source "$HOME/.config/zsh/zed.zsh"

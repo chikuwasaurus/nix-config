@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-DEV_DIR="${DEV_DIR:-$HOME/Developer}"
+DEV_DIR="${1:-${DEV_DIR:-$HOME/Developer}}"
 
 require() {
   command -v "$1" >/dev/null 2>&1 || {
