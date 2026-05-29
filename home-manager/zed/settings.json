@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": {
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Latte",
+    "mode": "dark",
+  },
   "agent": {
     "commit_message_model": {
       "effort": "low",
@@ -32,6 +37,8 @@
   },
   "auto_install_extensions": {
     "astro": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
     "ghostty": true,
     "git-firefly": true,
     "github-theme": true,
@@ -73,8 +80,8 @@
     "font_family": "UDEV Gothic 35NF",
   },
   "theme": {
-    "dark": "GitHub Dark Dimmed",
-    "light": "GitHub Light",
+    "dark": "Catppuccin Mocha - No Italics",
+    "light": "Catppuccin Latte - No Italics",
     "mode": "dark",
   },
   "ui_font_family": "UDEV Gothic 35NF",
