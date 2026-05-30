@@ -254,6 +254,10 @@ on-mode-changed = []
     run= ['layout floating']
 
 [[on-window-detected]]
+    if.app-id='com.apple.SecurityAgent'
+    run= ['layout floating']
+
+[[on-window-detected]]
     if.app-id = 'com.cmuxterm.app'
     run = 'move-node-to-workspace 1'
 
