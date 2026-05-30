@@ -78,3 +78,6 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$(atuin init zsh)"
+
+# 関数を読み込む
+source "$HOME/.zfunc"
