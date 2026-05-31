@@ -1,6 +1,3 @@
-# Remove duplicate PATH entries in zsh
-typeset -U path PATH
-
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
