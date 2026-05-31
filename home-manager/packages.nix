@@ -28,6 +28,7 @@
     curl
     delta
     deno
+    difftastic
     dust
     eza
     fastfetch
