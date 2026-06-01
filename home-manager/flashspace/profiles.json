@@ -1,0 +1,178 @@
+{
+  "profiles": [
+    {
+      "id": "AC24FDE1-2ADE-468C-BCC9-D504037D9B16",
+      "name": "Default",
+      "workspaces": [
+        {
+          "apps": [
+            {
+              "bundleIdentifier": "com.mitchellh.ghostty",
+              "iconPath": "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name": "Ghostty"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+1",
+          "display": "Studio Display",
+          "id": "6E7C0DFE-4CA4-4C22-858C-14A9F3176E76",
+          "name": "Terminal",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+1",
+          "symbolIconName": "apple.terminal"
+        },
+        {
+          "apps": [
+            {
+              "bundleIdentifier": "dev.zed.Zed",
+              "iconPath": "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name": "Zed"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+2",
+          "display": "Studio Display",
+          "id": "E9FEE38B-8535-4FF9-BAE2-A181F61AA7B1",
+          "name": "Editor",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+2",
+          "symbolIconName": "hammer"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.apple.Safari",
+              "iconPath": "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
+              "name": "Safari"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+3",
+          "display": "Studio Display",
+          "id": "7DD19C0B-3839-462A-B900-3CCD7E9A1C4D",
+          "name": "Browser",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+3",
+          "symbolIconName": "safari"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.openai.chat",
+              "iconPath": "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
+              "name": "ChatGPT"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+4",
+          "display": "Studio Display",
+          "id": "97E0AA4F-CA09-4997-87D6-F653F936A7F3",
+          "name": "Chat",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+4",
+          "symbolIconName": "ellipsis.message"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.openai.codex",
+              "iconPath": "/Applications/Codex.app/Contents/Resources/electron.icns",
+              "name": "Codex"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+5",
+          "display": "Studio Display",
+          "id": "3DA90D9E-2ED5-42E2-97BC-3269832DDFA7",
+          "name": "Agent",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+5",
+          "symbolIconName": "wand.and.sparkles"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.amazon.Lassen",
+              "iconPath": "/Applications/Amazon Kindle.app/Contents/Resources/AppIcon.icns",
+              "name": "Kindle"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+6",
+          "display": "Studio Display",
+          "id": "677ACF3B-F0A6-4CE7-9AD4-74323237B772",
+          "name": "Book",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+6",
+          "symbolIconName": "book"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.apple.Notes",
+              "iconPath": "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name": "Notes"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+7",
+          "display": "Studio Display",
+          "id": "BDFE60BD-9B17-4B78-BA4E-0C9FF427D57F",
+          "name": "Note",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+7",
+          "symbolIconName": "note.text"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.apple.iCal",
+              "iconPath": "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
+              "name": "Calendar"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+8",
+          "display": "Studio Display",
+          "id": "27F41FA9-C2A2-4F3B-B113-B8FB8F405307",
+          "name": "Calendar",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+8",
+          "symbolIconName": "calendar"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.apple.reminders",
+              "iconPath": "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
+              "name": "Reminders"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+9",
+          "display": "Studio Display",
+          "id": "BBBC561D-3012-40CD-8B9C-67BB5D119F7B",
+          "name": "Reminder",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+9",
+          "symbolIconName": "checklist"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.apple.journal",
+              "iconPath": "/System/Applications/Journal.app/Contents/Resources/AppIcon.icns",
+              "name": "Journal"
+            }
+          ],
+          "assignAppShortcut": "opt+shift+0",
+          "display": "Studio Display",
+          "id": "59AC9B13-38D4-4AD0-81CF-0E9C9EDF5443",
+          "name": "Journal",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+0",
+          "symbolIconName": "text.book.closed"
+        }
+      ]
+    }
+  ]
+}
