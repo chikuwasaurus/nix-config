@@ -21,8 +21,6 @@
     ];
 
     casks = [
-      "aerospace"
-      "alt-tab"
       "anki"
       "chatgpt"
       "chatgpt-atlas"
