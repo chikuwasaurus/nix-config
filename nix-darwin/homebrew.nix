@@ -32,6 +32,7 @@
       "codex-app"
       "cursor"
       "figma"
+      "flashspace"
       "ghostty"
       "google-chrome"
       "karabiner-elements"
