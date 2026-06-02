@@ -118,7 +118,7 @@
                   "key_code": "u",
                   "modifiers": { "optional": ["any"] }
                 },
-                "to": [{ "key_code": "page_down" }],
+                "to": [{ "key_code": "page_up" }],
                 "type": "basic"
               },
               {
@@ -133,7 +133,7 @@
                   "key_code": "i",
                   "modifiers": { "optional": ["any"] }
                 },
-                "to": [{ "key_code": "page_up" }],
+                "to": [{ "key_code": "page_down" }],
                 "type": "basic"
               },
               {
