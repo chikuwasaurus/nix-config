@@ -171,6 +171,21 @@
           "openAppsOnActivation": true,
           "shortcut": "opt+0",
           "symbolIconName": "text.book.closed"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "net.ankiweb.launcher",
+              "iconPath": "/Applications/Anki.app/Contents/Resources/AppIcon.icns",
+              "name": "Anki"
+            }
+          ],
+          "display": "Studio Display",
+          "id": "E6A85D62-6503-4434-B81F-56BA122E6CB8",
+          "name": "SRS",
+          "openAppsOnActivation": true,
+          "symbolIconName": "checkmark.rectangle.stack"
         }
       ]
     }
