@@ -24,4 +24,18 @@
       "escape": "editor::Cancel",
     },
   },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-alt-e": "vim::InsertFromBelow",
+      "ctrl-alt-y": "vim::InsertFromAbove",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-e": "vim::InsertFromBelow",
+      "ctrl-y": "vim::InsertFromAbove",
+    },
+  },
 ]
