@@ -48,6 +48,7 @@
     ];
 
     masApps = {
+      "AdGuard Mini" = 1440147259;
       "Control Panel for Twitter" = 1668516167;
       "Control Panel for YouTube" = 6478456678;
       "Developer" = 640199958;
