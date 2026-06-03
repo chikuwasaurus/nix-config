@@ -22,6 +22,7 @@
 
     casks = [
       "anki"
+      "arc"
       "chatgpt"
       "chatgpt-atlas"
       "claude"
@@ -45,6 +46,7 @@
       "tableplus"
       "wezterm@nightly"
       "zed"
+      "zen"
     ];
 
     masApps = {
