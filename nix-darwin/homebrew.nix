@@ -11,10 +11,6 @@
     user = "kyohei";
     onActivation.cleanup = "zap";
 
-    taps = [
-      "nikitabobko/tap" # aerospace
-    ];
-
     brews = [
       "mas"
       "herdr"
