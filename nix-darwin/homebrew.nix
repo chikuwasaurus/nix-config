@@ -33,6 +33,7 @@
       "karabiner-elements"
       "logi-options+"
       "monitorcontrol"
+      "obsidian"
       "ogdesign-eagle"
       "orbstack"
       "pixelsnap"
