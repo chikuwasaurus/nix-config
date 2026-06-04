@@ -119,6 +119,9 @@
           JIMPrefLiveConversionKey = false; # Disable Live Conversion for the Japanese input method.
           JIMPrefPredictiveCandidateKey = false; # Disable predictive candidates in the Japanese input method's candidate window.
         };
+        "com.apple.finder" = {
+          QuitMenuItem = true; # Allow quitting Finder; when quit, it disappears from ⌘Tab.
+        };
       };
 
       hitoolbox.AppleFnUsageType = "Start Dictation";
