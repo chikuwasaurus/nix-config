@@ -111,6 +111,12 @@
               "bundleIdentifier": "com.apple.Notes",
               "iconPath": "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
               "name": "Notes"
+            },
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "md.obsidian",
+              "iconPath": "/Applications/Obsidian.app/Contents/Resources/icon.icns",
+              "name": "Obsidian"
             }
           ],
           "assignAppShortcut": "opt+shift+7",
