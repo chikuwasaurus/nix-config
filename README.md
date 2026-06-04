@@ -53,6 +53,14 @@ This setup uses:
     sudo darwin-rebuild switch --flake .
     ```
 
+- Update packages and Homebrew only:
+
+    ```sh
+    nix flake update nixpkgs
+    sudo darwin-rebuild switch --flake .
+    brew upgrade -g
+    ```
+
 - Update only AI CLI
 
     ```sh
