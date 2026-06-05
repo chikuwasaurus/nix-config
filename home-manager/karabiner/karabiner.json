@@ -299,7 +299,7 @@
             ]
           },
           {
-            "description": "Physical caps_lock to Control, alone to Escape then Eisu",
+            "description": "Physical caps_lock to Control, alone to Eisu",
             "manipulators": [
               {
                 "from": {
@@ -312,10 +312,7 @@
                     "lazy": true
                   }
                 ],
-                "to_if_alone": [
-                  { "key_code": "escape" },
-                  { "key_code": "japanese_eisuu" }
-                ],
+                "to_if_alone": [{ "key_code": "japanese_eisuu" }],
                 "type": "basic"
               }
             ]
