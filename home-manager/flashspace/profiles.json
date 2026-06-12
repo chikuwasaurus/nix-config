@@ -107,13 +107,11 @@
         {
           "apps": [
             {
-              "autoOpen": true,
               "bundleIdentifier": "com.apple.Notes",
               "iconPath": "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
               "name": "Notes"
             },
             {
-              "autoOpen": true,
               "bundleIdentifier": "md.obsidian",
               "iconPath": "/Applications/Obsidian.app/Contents/Resources/icon.icns",
               "name": "Obsidian"
@@ -123,7 +121,7 @@
           "display": "Studio Display",
           "id": "BDFE60BD-9B17-4B78-BA4E-0C9FF427D57F",
           "name": "Note",
-          "openAppsOnActivation": true,
+          "openAppsOnActivation": false,
           "shortcut": "opt+7",
           "symbolIconName": "note.text"
         },
