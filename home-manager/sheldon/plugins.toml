@@ -55,9 +55,9 @@ github = "zsh-users/zsh-completions"
 github = "Aloxaf/fzf-tab"
 
 # abbrev
-[plugins.zeno]
-github = "yuki-yano/zeno.zsh"
-use = ["zeno-plugin.zsh"]
+# [plugins.zeno]
+# github = "yuki-yano/zeno.zsh"
+# use = ["zeno-plugin.zsh"]
 
 # コマンドの completion を有効にする
 [plugins.compinit]
