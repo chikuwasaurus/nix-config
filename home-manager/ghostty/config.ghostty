@@ -54,6 +54,7 @@ background-blur-radius = 20
 font-feature = -calt
 font-size = 13
 cursor-style-blink = false
+macos-option-as-alt = true
 mouse-hide-while-typing = true
 theme = Catppuccin Mocha
 font-family = UDEV Gothic 35NF
