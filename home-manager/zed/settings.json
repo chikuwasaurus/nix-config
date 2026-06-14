@@ -90,5 +90,5 @@
   },
   "ui_font_family": "UDEV Gothic 35NF",
   "ui_font_size": 16.0,
-  "vim_mode": true,
+  "helix_mode": true,
 }
