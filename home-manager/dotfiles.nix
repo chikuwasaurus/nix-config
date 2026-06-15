@@ -31,6 +31,7 @@ in
     "aerospace".source = mkLink "aerospace";
     "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
+    "helix".source = mkLink "helix";
     "karabiner".source = mkLink "karabiner";
     "nushell".source = mkLink "nushell";
     "nvim".source = mkLink "nvim";
