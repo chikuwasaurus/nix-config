@@ -1,1 +1,9 @@
 theme = "catppuccin_mocha"
+
+[keys.normal]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
+[keys.select]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
