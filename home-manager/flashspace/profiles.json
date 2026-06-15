@@ -7,12 +7,12 @@
         {
           "apps": [
             {
+              "autoOpen": true,
               "bundleIdentifier": "com.mitchellh.ghostty",
               "iconPath": "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
               "name": "Ghostty"
             }
           ],
-          "assignAppShortcut": "opt+shift+1",
           "display": "Studio Display",
           "id": "6E7C0DFE-4CA4-4C22-858C-14A9F3176E76",
           "name": "Terminal",
@@ -28,7 +28,6 @@
               "name": "Zed"
             }
           ],
-          "assignAppShortcut": "opt+shift+2",
           "display": "Studio Display",
           "id": "E9FEE38B-8535-4FF9-BAE2-A181F61AA7B1",
           "name": "Editor",
@@ -45,7 +44,6 @@
               "name": "Safari"
             }
           ],
-          "assignAppShortcut": "opt+shift+3",
           "display": "Studio Display",
           "id": "7DD19C0B-3839-462A-B900-3CCD7E9A1C4D",
           "name": "Browser",
@@ -62,7 +60,6 @@
               "name": "ChatGPT"
             }
           ],
-          "assignAppShortcut": "opt+shift+4",
           "display": "Studio Display",
           "id": "97E0AA4F-CA09-4997-87D6-F653F936A7F3",
           "name": "Chat",
@@ -79,7 +76,6 @@
               "name": "Codex"
             }
           ],
-          "assignAppShortcut": "opt+shift+5",
           "display": "Studio Display",
           "id": "3DA90D9E-2ED5-42E2-97BC-3269832DDFA7",
           "name": "Agent",
@@ -96,7 +92,6 @@
               "name": "Kindle"
             }
           ],
-          "assignAppShortcut": "opt+shift+6",
           "display": "Studio Display",
           "id": "677ACF3B-F0A6-4CE7-9AD4-74323237B772",
           "name": "Book",
@@ -117,7 +112,6 @@
               "name": "Obsidian"
             }
           ],
-          "assignAppShortcut": "opt+shift+7",
           "display": "Studio Display",
           "id": "BDFE60BD-9B17-4B78-BA4E-0C9FF427D57F",
           "name": "Note",
@@ -134,7 +128,6 @@
               "name": "Calendar"
             }
           ],
-          "assignAppShortcut": "opt+shift+8",
           "display": "Studio Display",
           "id": "27F41FA9-C2A2-4F3B-B113-B8FB8F405307",
           "name": "Calendar",
@@ -151,7 +144,6 @@
               "name": "Reminders"
             }
           ],
-          "assignAppShortcut": "opt+shift+9",
           "display": "Studio Display",
           "id": "BBBC561D-3012-40CD-8B9C-67BB5D119F7B",
           "name": "Reminder",
@@ -168,7 +160,6 @@
               "name": "Journal"
             }
           ],
-          "assignAppShortcut": "opt+shift+0",
           "display": "Studio Display",
           "id": "59AC9B13-38D4-4AD0-81CF-0E9C9EDF5443",
           "name": "Journal",
