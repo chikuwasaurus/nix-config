@@ -39,6 +39,7 @@ in
     "sheldon".source = mkLink "sheldon";
     "starship.toml".source = mkLink "starship/starship.toml";
     "wezterm".source = mkLink "wezterm";
+    "yazi".source = mkLink "yazi";
     "zed".source = mkLink "zed";
   };
 }
