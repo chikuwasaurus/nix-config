@@ -57,6 +57,7 @@
     tlrc
     tree
     uv
+    yazi
     yq
     zoxide
 
