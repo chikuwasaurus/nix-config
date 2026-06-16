@@ -29,6 +29,7 @@ in
   # ~/.config
   xdg.configFile = {
     "aerospace".source = mkLink "aerospace";
+    "bat".source = mkLink "bat";
     "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
     "helix".source = mkLink "helix";
