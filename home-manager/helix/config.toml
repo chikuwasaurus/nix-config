@@ -1,5 +1,8 @@
 theme = "catppuccin_mocha"
 
+[editor.file-picker]
+hidden = false
+
 [keys.normal]
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
