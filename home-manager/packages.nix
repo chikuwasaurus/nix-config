@@ -54,6 +54,7 @@
     ripgrep
     sheldon
     starship
+    taplo
     tlrc
     tree
     uv
