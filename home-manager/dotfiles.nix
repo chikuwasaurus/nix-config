@@ -41,5 +41,6 @@ in
     "wezterm".source = mkLink "wezterm";
     "yazi".source = mkLink "yazi";
     "zed".source = mkLink "zed";
+    "zsh".source = mkLink "zsh";
   };
 }
