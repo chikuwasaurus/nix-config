@@ -79,6 +79,4 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$(atuin init zsh)"
 
-# 関数を読み込む
-source "$HOME/.zfunc"
 source "$HOME/.config/zsh/keybindings.zsh"

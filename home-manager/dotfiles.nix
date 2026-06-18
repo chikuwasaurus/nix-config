@@ -11,8 +11,6 @@ in
     ".gitconfig".source = mkLink "git/.gitconfig";
     ".zprofile".source = mkLink "zsh/.zprofile";
     ".zshrc".source = mkLink "zsh/.zshrc";
-    ".zfunc".source = mkLink "zsh/.zfunc";
-    ".local/bin".source = mkLink "scripts";
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
