@@ -42,6 +42,8 @@
     helix
     jankyborders
     jq
+    just
+    just-lsp
     lazydocker
     lazygit
     nixd # Nix LSP
