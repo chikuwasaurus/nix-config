@@ -51,6 +51,7 @@
     pnpm
     qpdf
     ripgrep
+    sd
     sheldon
     starship
     taplo
