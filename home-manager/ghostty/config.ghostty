@@ -62,6 +62,10 @@ copy-on-select = clipboard
 window-padding-balance = true
 
 
+# https://ghostty.org/docs/config/keybind/reference#toggle_quick_terminal
+keybind = global:cmd+backquote=toggle_quick_terminal
+
+
 # Vim-mode keybindings for Ghostty.
 #
 # Note: We're missing a number of actions to produce a better vim experience.
