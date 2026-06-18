@@ -29,6 +29,7 @@
     delta
     deno
     difftastic
+    direnv
     dust
     eza
     fastfetch
