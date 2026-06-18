@@ -33,7 +33,6 @@ in
     "helix".source = mkLink "helix";
     "karabiner".source = mkLink "karabiner";
     "nushell".source = mkLink "nushell";
-    "nvim".source = mkLink "nvim";
     "sheldon".source = mkLink "sheldon";
     "starship.toml".source = mkLink "starship/starship.toml";
     "wezterm".source = mkLink "wezterm";

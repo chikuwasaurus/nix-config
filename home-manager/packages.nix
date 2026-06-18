@@ -44,7 +44,6 @@
     jq
     lazydocker
     lazygit
-    neovim
     nixd # Nix LSP
     nixfmt # Nix formatter
     nodejs_24
