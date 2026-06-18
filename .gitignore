@@ -58,6 +58,10 @@ Backups.backupdb
 MobileBackups.trash
 tmbootpicker.efi
 
+# herdr
+**/herdr/*
+!**/herdr/config.toml
+
 # karabiner
 **/karabiner/automatic_backups
 

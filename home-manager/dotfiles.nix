@@ -31,6 +31,7 @@ in
     "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
     "helix".source = mkLink "helix";
+    "herdr".source = mkLink "herdr";
     "karabiner".source = mkLink "karabiner";
     "nushell".source = mkLink "nushell";
     "sheldon".source = mkLink "sheldon";
