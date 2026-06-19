@@ -29,7 +29,7 @@ A-s = ":write-all"
 A-r = [":write-all", ":reload-all"]
 # Launch lazygit and yazi from Helix
 # https://github.com/helix-editor/helix/discussions/12934
-C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-l = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 C-y = [
   ':sh rm -f /tmp/unique-file',
   ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file',
