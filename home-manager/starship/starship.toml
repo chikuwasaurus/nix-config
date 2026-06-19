@@ -32,13 +32,13 @@ style = "bright-black"
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
 style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
+modified = "[M](yellow)"
+staged = "[A](green)"
+untracked = "[?](red)"
+deleted = "[D](red)"
+renamed = "[R](blue)"
+conflicted = "[!](red bold)"
+stashed = "[≡](cyan)"
 
 [cmd_duration]
 min_time = 0
