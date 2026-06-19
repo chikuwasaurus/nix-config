@@ -31,11 +31,13 @@ A-r = [":write-all", ":reload-all"]
 # https://github.com/helix-editor/helix/discussions/12934
 C-l = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 C-y = [
-  ':sh rm -f /tmp/unique-file',
-  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file',
+  ':write-all',
+  ':sh rm -f /tmp/helix-yazi-file',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/helix-yazi-file',
   ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-  ':open %sh{cat /tmp/unique-file}',
+  ':open %sh{cat /tmp/helix-yazi-file}',
   ':redraw',
+  ':reload-all'
 ]
 
 [keys.select]
