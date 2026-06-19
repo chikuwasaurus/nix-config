@@ -33,6 +33,7 @@ in
     "helix".source = mkLink "helix";
     "herdr".source = mkLink "herdr";
     "karabiner".source = mkLink "karabiner";
+    "lazygit".source = mkLink "lazygit";
     "nushell".source = mkLink "nushell";
     "sheldon".source = mkLink "sheldon";
     "starship.toml".source = mkLink "starship/starship.toml";
