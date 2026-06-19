@@ -6,3 +6,6 @@ require("git"):setup {
 
 -- https://github.com/Rolv-Apneseth/starship.yazi
 require("starship"):setup()
+
+-- https://github.com/yazi-rs/plugins/tree/main/full-border.yazi
+require("full-border"):setup()

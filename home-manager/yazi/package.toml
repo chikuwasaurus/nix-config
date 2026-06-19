@@ -13,6 +13,11 @@ use = "yazi-rs/plugins:vcs-files"
 rev = "ae1335e"
 hash = "bc5da419b4337d0122ac531e705fa7b6"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "ae1335e"
+hash = "7b625412411be411153886894d9acaf"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "0f9204b"
