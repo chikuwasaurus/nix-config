@@ -29,7 +29,21 @@ A-s = ":write-all"
 A-r = [":write-all", ":reload-all"]
 # Launch lazygit and yazi from Helix
 # https://github.com/helix-editor/helix/discussions/12934
-C-l = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+#
+# Run lazygit from Helix and let it hand selected files back through a temp file.
+# This avoids spawning a nested editor from lazygit inside :insert-output.
+# see: ~/Developer/nix-config/home-manager/lazygit/config.yml
+C-l = [
+  ':write-all',
+  ':sh rm -f /tmp/helix-lazygit-file',
+  ':new',
+  ':insert-output HELIX_LAZYGIT_FILE=/tmp/helix-lazygit-file lazygit',
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':buffer-close!',
+  ':open %sh{cat /tmp/helix-lazygit-file 2>/dev/null || echo %{buffer_name}}',
+  ':redraw',
+  ':reload-all'
+]
 C-y = [
   ':write-all',
   ':sh rm -f /tmp/helix-yazi-file',
