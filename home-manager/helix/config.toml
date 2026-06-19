@@ -26,7 +26,7 @@ hidden = false
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
 A-s = ":write-all"
-A-r = [":write-all", ":reload-all"]
+A-r = ":reload-all"
 # Launch lazygit and yazi from Helix
 #
 # Run lazygit from Helix and let it hand selected files back through a temp file.
