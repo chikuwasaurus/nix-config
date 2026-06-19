@@ -3,3 +3,6 @@ require("git"):setup {
 	-- Order of status signs showing in the linemode
 	order = 1500,
 }
+
+-- https://github.com/Rolv-Apneseth/starship.yazi
+require("starship"):setup()
