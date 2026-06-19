@@ -25,6 +25,7 @@
     bat
     btop
     bun
+    codebook
     curl
     delta
     deno
