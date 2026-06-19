@@ -8,6 +8,11 @@ use = "Rolv-Apneseth/starship"
 rev = "159eaba"
 hash = "7de446280b1ba8c49ffd86dbc24bbbe6"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:vcs-files"
+rev = "ae1335e"
+hash = "bc5da419b4337d0122ac531e705fa7b6"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "0f9204b"
