@@ -23,17 +23,18 @@
         {
           "apps": [
             {
-              "bundleIdentifier": "dev.zed.Zed",
-              "iconPath": "/Applications/Zed.app/Contents/Resources/Zed.icns",
-              "name": "Zed"
+              "autoOpen": true,
+              "bundleIdentifier": "com.openai.chat",
+              "iconPath": "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
+              "name": "ChatGPT"
             }
           ],
           "display": "Studio Display",
-          "id": "E9FEE38B-8535-4FF9-BAE2-A181F61AA7B1",
-          "name": "Editor",
+          "id": "97E0AA4F-CA09-4997-87D6-F653F936A7F3",
+          "name": "Chat",
           "openAppsOnActivation": true,
           "shortcut": "opt+2",
-          "symbolIconName": "hammer"
+          "symbolIconName": "ellipsis.message"
         },
         {
           "apps": [
@@ -55,17 +56,31 @@
           "apps": [
             {
               "autoOpen": true,
-              "bundleIdentifier": "com.openai.chat",
-              "iconPath": "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
-              "name": "ChatGPT"
+              "bundleIdentifier": "md.obsidian",
+              "iconPath": "/Applications/Obsidian.app/Contents/Resources/icon.icns",
+              "name": "Obsidian"
             }
           ],
           "display": "Studio Display",
-          "id": "97E0AA4F-CA09-4997-87D6-F653F936A7F3",
-          "name": "Chat",
+          "id": "269AA1A2-9002-4155-BFF4-619531FB2CAF",
+          "name": "Memo",
           "openAppsOnActivation": true,
           "shortcut": "opt+4",
-          "symbolIconName": "ellipsis.message"
+          "symbolIconName": "square.stack.3d.up"
+        },
+        {
+          "apps": [
+            {
+              "bundleIdentifier": "dev.zed.Zed",
+              "iconPath": "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name": "Zed"
+            }
+          ],
+          "display": "Studio Display",
+          "id": "E9FEE38B-8535-4FF9-BAE2-A181F61AA7B1",
+          "name": "Editor",
+          "openAppsOnActivation": true,
+          "symbolIconName": "hammer"
         },
         {
           "apps": [
@@ -105,11 +120,6 @@
               "bundleIdentifier": "com.apple.Notes",
               "iconPath": "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
               "name": "Notes"
-            },
-            {
-              "bundleIdentifier": "md.obsidian",
-              "iconPath": "/Applications/Obsidian.app/Contents/Resources/icon.icns",
-              "name": "Obsidian"
             }
           ],
           "display": "Studio Display",
