@@ -45,6 +45,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# rm のエイリアス
+alias rm=gomi
+
 # 使用中のポートを表示
 # https://qiita.com/yokozawa/items/dbcb3b31f9308e4dcefc
 alias port="lsof -i -P | grep \"LISTEN\""

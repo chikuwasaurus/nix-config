@@ -41,6 +41,7 @@
     git
     git-wt
     go
+    gomi
     helix
     jankyborders
     jq
