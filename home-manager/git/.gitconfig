@@ -10,12 +10,15 @@
 [interactive]
 	diffFilter = delta --color-only
 
+[include]
+	path = ~/.config/delta/catppuccin.gitconfig
+
 [delta]
 	navigate = true  # use n and N to move between diff sections
 	dark = true      # or light = true, or omit for auto-detection
 	line-numbers = true
 	side-by-side = false
-	syntax-theme = Catppuccin Mocha
+	features = catppuccin-mocha
 
 [merge]
 	conflictStyle = zdiff3

@@ -28,6 +28,7 @@ in
   xdg.configFile = {
     "aerospace".source = mkLink "aerospace";
     "bat".source = mkLink "bat";
+    "delta".source = mkLink "delta";
     "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
     "helix".source = mkLink "helix";
