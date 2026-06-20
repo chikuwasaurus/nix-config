@@ -79,4 +79,12 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$(atuin init zsh)"
 
+# fzf を Catppuccin Mocha theme にする
+# https://github.com/catppuccin/fzf/blob/main/themes/catppuccin-fzf-mocha.sh
+export FZF_DEFAULT_OPTS=" \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
+
 source "$HOME/.config/zsh/keybindings.zsh"
