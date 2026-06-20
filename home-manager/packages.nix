@@ -62,6 +62,7 @@
     tlrc
     tree
     uv
+    vscode-json-languageserver
     yazi
     yq
     zoxide
