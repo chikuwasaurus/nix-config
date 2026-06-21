@@ -34,7 +34,7 @@ A-r = ":reload-all"
 # see: ~/Developer/nix-config/home-manager/lazygit/config.yml
 # 
 # https://github.com/jesseduffield/lazygit/discussions/4399#discussioncomment-13071651
-C-l = [
+C-g = [
   ':write-all',
   ':sh rm -f /tmp/helix-lazygit-file',
   ':new',
