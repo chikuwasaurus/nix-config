@@ -48,6 +48,21 @@ alias l='ls -CF'
 # rm のエイリアス
 alias rm=gomi
 
+# Treat Nerd Font Private Use Area glyphs as printable in less.
+# Without this, icons from tools like eza may disappear or break when viewed
+# through less or pagers that use less, such as bat.
+#
+# Ranges:
+#   E000-F8FF       BMP Private Use Area
+#   F0000-FFFFD     Supplementary Private Use Area-A
+#   100000-10FFFD   Supplementary Private Use Area-B
+export LESSUTFCHARDEF='E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p'
+
+# Show a Git-aware directory tree with Nerd Font icons and colors.
+# eza disables icons/colors when piped, so force them with `always`.
+alias tree='eza --tree'
+alias treep='eza --tree --git --icons=always --color=always | bat'
+
 # 使用中のポートを表示
 # https://qiita.com/yokozawa/items/dbcb3b31f9308e4dcefc
 alias port="lsof -i -P | grep \"LISTEN\""

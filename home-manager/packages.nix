@@ -67,7 +67,6 @@
     starship
     taplo
     tlrc
-    tree
     uv
     vscode-json-languageserver
     xh
