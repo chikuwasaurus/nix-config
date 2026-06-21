@@ -31,6 +31,8 @@
     deno
     difftastic
     direnv
+    doggo
+    duf
     dust
     eza
     fastfetch
@@ -42,8 +44,9 @@
     git-wt
     go
     gomi
+    gping
     helix
-    jankyborders
+    hyperfine
     jq
     just
     just-lsp
@@ -53,7 +56,9 @@
     nixfmt # Nix formatter
     nodejs_24
     nushell
+    oha
     pnpm
+    procs
     qpdf
     ripgrep
     scooter
@@ -65,6 +70,7 @@
     tree
     uv
     vscode-json-languageserver
+    xh
     yazi
     yq
     zoxide
