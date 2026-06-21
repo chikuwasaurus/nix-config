@@ -37,6 +37,7 @@ in
     "karabiner".source = mkLink "karabiner";
     "lazygit".source = mkLink "lazygit";
     "nushell".source = mkLink "nushell";
+    "scooter".source = mkLink "scooter";
     "sheldon".source = mkLink "sheldon";
     "starship.toml".source = mkLink "starship/starship.toml";
     "wezterm".source = mkLink "wezterm";

@@ -27,7 +27,8 @@ hidden = false
 "{" = "goto_prev_paragraph"
 A-s = ":write-all"
 A-r = ":reload-all"
-# Launch lazygit and yazi from Helix
+# Launch lazygit, yazi, and scooter from Helix
+# https://github.com/helix-editor/helix/wiki/Recipes
 #
 # Run lazygit from Helix and let it hand selected files back through a temp file.
 # This avoids spawning a nested editor from lazygit inside :insert-output.
@@ -55,6 +56,18 @@ C-y = [
   ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/helix-yazi-file',
   ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
   ':open %sh{cat /tmp/helix-yazi-file 2>/dev/null || echo %{buffer_name}}',
+  ':redraw',
+  ':reload-all'
+]
+# Launch scooter from Helix for project-wide search and replace.
+# Use --no-stdin and redirect scooter's TUI to the real terminal so
+# :insert-output does not try to capture the interactive UI into a buffer.
+# Reload all buffers afterward to pick up file changes made by scooter.
+#
+# https://github.com/helix-editor/helix/discussions/3793#discussioncomment-13817834
+C-r = [
+  ':write-all',
+  ':insert-output scooter --no-stdin >/dev/tty',
   ':redraw',
   ':reload-all'
 ]

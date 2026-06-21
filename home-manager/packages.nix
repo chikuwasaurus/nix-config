@@ -56,6 +56,7 @@
     pnpm
     qpdf
     ripgrep
+    scooter
     sd
     sheldon
     starship
