@@ -9,7 +9,7 @@ function hx_dev_project() {
   dir="$(select_dev_project)"
   [[ -z "$dir" ]] && return
 
-  BUFFER="hx \"$HOME/Developer/$dir\""
+  BUFFER="cd \"$HOME/Developer/$dir\" && hx ."
   zle accept-line
 }
 
@@ -18,7 +18,7 @@ function zed_dev_project() {
   dir="$(select_dev_project)"
   [[ -z "$dir" ]] && return
 
-  BUFFER="zed \"$HOME/Developer/$dir\""
+  BUFFER="cd \"$HOME/Developer/$dir\" && zed ."
   zle accept-line
 }
 
