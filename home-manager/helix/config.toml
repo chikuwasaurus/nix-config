@@ -6,6 +6,10 @@ bufferline = "always"
 trim-final-newlines=true
 trim-trailing-whitespace=true
 line-number = "relative"
+cursorline = true
+
+[editor.indent-guides]
+render = true
 
 [editor.auto-save]
 focus-lost = true
