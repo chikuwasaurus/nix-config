@@ -66,6 +66,16 @@ window-padding-balance = true
 keybind = global:cmd+backquote=toggle_quick_terminal
 
 
+# Shift + Emacs-style cursor movement.
+# Send custom escape sequences to zsh so ZLE can select while moving.
+#
+# see: ~/Developer/nix-config/home-manager/zsh/keybindings.zsh
+keybind = shift+ctrl+a=text:\x1b[1;S-a
+keybind = shift+ctrl+e=text:\x1b[1;S-e
+keybind = shift+ctrl+b=text:\x1b[1;S-b
+keybind = shift+ctrl+f=text:\x1b[1;S-f
+
+
 # Vim-mode keybindings for Ghostty.
 #
 # Note: We're missing a number of actions to produce a better vim experience.
