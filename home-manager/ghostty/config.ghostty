@@ -63,7 +63,7 @@ window-padding-balance = true
 
 
 # https://ghostty.org/docs/config/keybind/reference#toggle_quick_terminal
-keybind = global:cmd+backquote=toggle_quick_terminal
+keybind = global:cmd+shift+backquote=toggle_quick_terminal
 
 
 # Shift + Emacs-style cursor movement.

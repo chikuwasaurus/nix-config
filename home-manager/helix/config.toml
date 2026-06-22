@@ -5,6 +5,7 @@ color-modes = true
 bufferline = "always"
 trim-final-newlines=true
 trim-trailing-whitespace=true
+line-number = "relative"
 
 [editor.auto-save]
 focus-lost = true
