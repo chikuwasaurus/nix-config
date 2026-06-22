@@ -1,4 +1,4 @@
-{ pkgs, llm-agents, ... }:
+{ pkgs, ... }:
 
 {
   # The home.packages option allows you to install Nix packages into your
@@ -73,13 +73,9 @@
     yazi
     yq
     zoxide
-  ]
-    ++ (
-      with llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
-      [
-        claude-code
-        codex
-        herdr
-      ]
-    );
+
+    llm-agents.claude-code
+    llm-agents.codex
+    llm-agents.herdr
+  ];
 }

@@ -44,7 +44,7 @@
         hostname:
         nix-darwin.lib.darwinSystem {
           specialArgs = {
-            inherit self llm-agents;
+            inherit self;
           };
           modules = [
             ./nix-darwin/configuration.nix
@@ -52,6 +52,10 @@
               networking.hostName = hostname;
               networking.localHostName = hostname;
               nixpkgs.hostPlatform = "aarch64-darwin";
+
+              nixpkgs.overlays = [
+                llm-agents.overlays.default
+              ];
             }
             home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
