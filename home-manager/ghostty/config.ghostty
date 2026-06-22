@@ -53,6 +53,7 @@ background-opacity = 0.8
 background-blur-radius = 20
 font-feature = -calt
 font-size = 13
+adjust-cell-height = 30%
 cursor-style-blink = false
 macos-option-as-alt = true
 mouse-hide-while-typing = true
