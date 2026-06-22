@@ -65,5 +65,5 @@ This setup uses:
 
     ```sh
     nix flake update claude-code codex-cli-nix
-    home-manager switch --flake .
+    sudo darwin-rebuild switch --flake .
     ```
