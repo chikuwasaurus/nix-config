@@ -1,6 +1,19 @@
 {
   description = "Home Manager configuration of kyohei";
 
+  nixConfig = {
+    # Use numtide's binary cache for llm-agents.nix.
+    #
+    # Keep llm-agents.nix on its own pinned nixpkgs input instead of
+    # `inputs.nixpkgs.follows = "nixpkgs"`.
+    # This matches the nixpkgs revision used by llm-agents.nix CI and makes
+    # pre-built binaries more likely to be fetched instead of rebuilt locally.
+    #
+    # https://github.com/numtide/llm-agents.nix#binary-cache
+    extra-substituters = [ "https://cache.numtide.com" ];
+    extra-trusted-public-keys = [ "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g=" ];
+  };
+
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -13,17 +26,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    claude-code.url = "github:sadjow/claude-code-nix";
-    codex-cli-nix.url = "github:sadjow/codex-cli-nix";
+    llm-agents.url = "github:numtide/llm-agents.nix";
   };
 
   outputs =
-    inputs@{
+    {
       self,
       nixpkgs,
       home-manager,
       nix-darwin,
       nix-homebrew,
+      llm-agents,
       ...
     }:
     let
@@ -31,7 +44,7 @@
         hostname:
         nix-darwin.lib.darwinSystem {
           specialArgs = {
-            inherit self inputs;
+            inherit self llm-agents;
           };
           modules = [
             ./nix-darwin/configuration.nix

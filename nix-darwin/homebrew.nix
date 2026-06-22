@@ -13,7 +13,6 @@
 
     brews = [
       "mas"
-      "herdr"
     ];
 
     casks = [
