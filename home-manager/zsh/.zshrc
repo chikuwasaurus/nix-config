@@ -7,11 +7,11 @@ export EDITOR=hx
 stty -ixon
 
 # 履歴ファイルの保存先
-export HISTFILE=${HOME}/.zsh_history
+HISTFILE=${HOME}/.zsh_history
 # メモリに保存される履歴の件数
-export HISTSIZE=100000
+HISTSIZE=100000
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=100000
+SAVEHIST=100000
 
 # コマンド入力時に同じコマンドがあれば古いものを消す
 setopt HIST_IGNORE_ALL_DUPS
@@ -29,16 +29,13 @@ setopt EXTENDED_HISTORY
 # setopt SHARE_HISTORY
 
 # zsh で help コマンドを使えるようにする
-# 参考: https://qiita.com/Kit-i/items/06a47d8e4e655497e342
-zsh_version=$(zsh --version | awk '{print $2}')
-export HELPDIR="/usr/share/zsh/$zsh_version/help"
-alias help="/usr/share/zsh/$zsh_version/functions/run-help"
+unalias run-help 2>/dev/null
+autoload -Uz run-help
+alias help=run-help
 
 # コマンドの色付けを有効にする
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 
 # ls のエイリアス
 alias ll='ls -alF'
@@ -46,7 +43,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # rm のエイリアス
-alias rm=gomi
+alias rm='gomi'
 
 # Treat Nerd Font Private Use Area glyphs as printable in less.
 # Without this, icons from tools like eza may disappear or break when viewed
