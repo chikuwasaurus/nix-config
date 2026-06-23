@@ -64,6 +64,6 @@ This setup uses:
 - Update only AI CLI
 
     ```sh
-    nix flake update claude-code codex-cli-nix
+    nix flake update llm-agents
     sudo darwin-rebuild switch --flake .
     ```
