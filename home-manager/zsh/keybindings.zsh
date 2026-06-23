@@ -29,6 +29,21 @@ bindkey '^O^H' hx_dev_project
 bindkey '^O^Z' zed_dev_project
 
 
+open_lazygit() {
+  lazygit
+}
+
+open_yazi() {
+  yazi
+}
+
+zle -N open_lazygit
+zle -N open_yazi
+
+bindkey '^O^G' open_lazygit
+bindkey '^O^Y' open_yazi
+
+
 # Start selecting a region in the current ZLE buffer.
 # Move the cursor after this, then copy the selected region with Ctrl-x Ctrl-y.
 bindkey '^X ' set-mark-command
