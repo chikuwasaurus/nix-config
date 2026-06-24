@@ -29,6 +29,7 @@ in
     "aerospace".source = mkLink "aerospace";
     "atuin".source = mkLink "atuin";
     "bat".source = mkLink "bat";
+    "btop".source = mkLink "btop";
     "delta".source = mkLink "delta";
     "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
