@@ -49,6 +49,8 @@
     helix
     hyperfine
     jq
+    jujutsu
+    jjui
     just
     just-lsp
     lazydocker
