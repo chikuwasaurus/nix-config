@@ -25,6 +25,12 @@
     },
   },
   {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "space": "vim::WrappingRight",
+    },
+  },
+  {
     "context": "vim_mode == insert",
     "bindings": {
       "ctrl-alt-e": "vim::InsertFromBelow",

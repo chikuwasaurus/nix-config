@@ -9,7 +9,6 @@
 {
   "which_key": {
     "enabled": true,
-    "delay_ms": 500,
   },
   "icon_theme": {
     "dark": "Catppuccin Mocha",
@@ -91,4 +90,5 @@
   "ui_font_family": "UDEV Gothic 35NF",
   "ui_font_size": 16.0,
   "helix_mode": true,
+  // "vim_mode": false
 }
