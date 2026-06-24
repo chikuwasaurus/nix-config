@@ -44,4 +44,10 @@
       "ctrl-y": "vim::InsertFromAbove",
     },
   },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-v": "terminal::ToggleViMode"
+    }
+  }
 ]
