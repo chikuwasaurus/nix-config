@@ -23,6 +23,7 @@
 
     atuin
     bat
+    bottom
     btop
     bun
     codebook
