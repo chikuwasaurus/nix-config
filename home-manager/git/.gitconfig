@@ -26,3 +26,63 @@
 [ghq]
 	root = ~/Developer
 	user = chikuwasaurus
+
+[alias]
+	# status
+	s = status -sb
+	st = status
+
+	# log
+	l = log --oneline --decorate -n 20
+	ll = log --stat --decorate -n 10
+	lg = log --graph --oneline --decorate --all
+	graph = log --graph --pretty=format:'%C(auto)%h %d %s %C(dim white)(%cr) <%an>' --all
+
+	# diff
+	d = diff
+	ds = diff --staged
+	dw = diff --word-diff
+	de = "!git diff HEAD --name-only | fzf -m | xargs ${EDITOR:-hx}"
+
+	# add / commit
+	a = add
+	aa = add -A
+	ci = commit
+	cm = commit -m
+	amend = commit --amend
+	amendn = commit --amend --no-edit
+
+	# branch
+	br = branch
+	ba = branch -a
+	sw = switch
+	swc = switch -c
+
+	# fetch / pull / push
+	f = fetch --prune
+	pl = pull --ff-only
+	ps = push
+	psu = push -u origin HEAD
+
+	# rebase / merge
+	rb = rebase
+	rbi = rebase -i
+	rbc = rebase --continue
+	rba = rebase --abort
+	mg = merge
+
+	# stash
+	sl = stash list
+	sp = stash push -u
+	sa = stash apply
+	spo = stash pop
+
+	# restore / reset
+	unstage = restore --staged
+	discard = restore
+	undo = reset --soft HEAD~1
+
+	# utils
+	aliases = config --get-regexp ^alias\\.
+	root = rev-parse --show-toplevel
+	who = shortlog -sn
