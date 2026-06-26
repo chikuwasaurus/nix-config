@@ -25,6 +25,7 @@
       "cmux"
       "codex-app"
       "cursor"
+      "dockdoor"
       "figma"
       "flashspace"
       "ghostty"
