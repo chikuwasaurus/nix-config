@@ -41,11 +41,13 @@ bindkey '^O^Z' zed_dev_project
 
 
 open_lazygit() {
-  lazygit
+  BUFFER="lazygit"
+  zle accept-line
 }
 
 open_yazi() {
-  yazi
+  BUFFER="yazi"
+  zle accept-line
 }
 
 zle -N open_lazygit
