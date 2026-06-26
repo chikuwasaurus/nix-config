@@ -1,5 +1,19 @@
 { pkgs, ... }:
 
+let
+  # Nix-managed wrapper for czg.
+  # This avoids global npm/bun installs and pins the czg version used by Bun.
+  #
+  # Note: Bun still resolves/downloads the package at runtime, so this is not
+  # fully Nix-reproducible.
+  czg = pkgs.writeShellApplication {
+    name = "czg";
+    runtimeInputs = [ pkgs.bun ];
+    text = ''
+      exec ${pkgs.bun}/bin/bunx czg@1.13.1 "$@"
+    '';
+  };
+in
 {
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -80,5 +94,8 @@
     llm-agents.claude-code
     llm-agents.codex
     llm-agents.herdr
+  ]
+  ++ [
+    czg
   ];
 }
