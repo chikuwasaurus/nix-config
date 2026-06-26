@@ -49,6 +49,7 @@
 	aa = add -A
 	ci = commit
 	cm = commit -m
+	cz = "!czg"
 	amend = commit --amend
 	amendn = commit --amend --no-edit
 
