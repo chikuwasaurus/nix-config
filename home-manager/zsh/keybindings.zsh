@@ -4,6 +4,15 @@ select_dev_project() {
     | fzf --preview 'bat --color=always --line-range :80 "$HOME/Developer"/{}/README.* 2>/dev/null'
 }
 
+cd_dev_project() {
+  local dir
+  dir="$(select_dev_project)"
+  [[ -z "$dir" ]] && return
+
+  BUFFER="cd \"$HOME/Developer/$dir\""
+  zle accept-line
+}
+
 hx_dev_project() {
   local dir
   dir="$(select_dev_project)"
@@ -22,9 +31,11 @@ zed_dev_project() {
   zle accept-line
 }
 
+zle -N cd_dev_project
 zle -N hx_dev_project
 zle -N zed_dev_project
 
+bindkey '^Z' cd_dev_project
 bindkey '^O^H' hx_dev_project
 bindkey '^O^Z' zed_dev_project
 
