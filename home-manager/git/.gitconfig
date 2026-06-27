@@ -19,6 +19,7 @@
 	line-numbers = true
 	side-by-side = true
 	features = catppuccin-mocha
+	hyperlinks = true # commit hashes link to GitHub/GitLab/Bitbucket
 
 [merge]
 	conflictStyle = zdiff3
