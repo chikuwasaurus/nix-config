@@ -86,11 +86,12 @@ This setup uses:
     cd ~/Developer/nix-config
     ```
 
-2. Apply dotfiles inside the container:
+3. Apply dotfiles inside the container:
 
     ```sh
     env USER=kyohei nix run github:nix-community/home-manager -- switch --flake .#kyohei@apple-container
     ```
+4. Restart your container machine
 
 ### Daily Usage
 
