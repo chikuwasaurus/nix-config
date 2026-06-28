@@ -13,6 +13,7 @@ in
   home.file = {
     ".gitconfig".source = mkLink "git/.gitconfig";
     ".zprofile".source = mkLink "zsh/.zprofile";
+    ".zshenv".source = mkLink "zsh/.zshenv";
     ".zshrc".source = mkLink "zsh/.zshrc";
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
