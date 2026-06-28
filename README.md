@@ -99,7 +99,7 @@ This setup uses:
 - Build and apply changes
 
     ```sh
-    env USER=kyohei home-manager switch --flake .#kyohei@apple-container
+    home-manager switch --flake .#kyohei@apple-container
     ```
 
 ### Note
