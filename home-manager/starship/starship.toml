@@ -3,6 +3,7 @@
 palette = "catppuccin_mocha"
 
 format = """
+$os\
 $username\
 $hostname\
 $directory\
@@ -14,6 +15,33 @@ $line_break\
 $character"""
 
 # right_format = """$time"""
+
+[os]
+disabled = false
+style = "bold lavender"
+format = "[$symbol]($style) "
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [directory]
 style = "bold blue"
