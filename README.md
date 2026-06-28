@@ -12,7 +12,9 @@ This setup uses:
 - **home-manager** for user-level dotfiles and programs
 - **Homebrew integration** for macOS GUI applications and casks
 
-## Initial Setup
+## macOS
+
+### Initial Setup
 
 1. Install [Nix](https://nixos.org/download/):
 
@@ -38,7 +40,7 @@ This setup uses:
 
 4. Restart your machine
 
-## Daily Usage
+### Daily Usage
 
 - Build and apply changes:
 
@@ -67,3 +69,37 @@ This setup uses:
     nix flake update llm-agents
     sudo darwin-rebuild switch --flake .
     ```
+
+## Linux (Apple container machine)
+
+### Initial Setup
+
+1. Create and Run machine:
+
+    see: [./containers/nix-alpine/README.md]
+
+2. Clone this repository inside the container:
+
+    ```sh
+    mkdir -p ~/Developer
+    git clone https://github.com/chikuwasaurus/nix-config.git ~/Developer/nix-config
+    cd ~/Developer/nix-config
+    ```
+
+2. Apply dotfiles inside the container:
+
+    ```sh
+    env USER=kyohei nix run github:nix-community/home-manager -- switch --flake .#kyohei@apple-container
+    ```
+
+### Daily Usage
+
+- Build and apply changes
+
+    ```sh
+    env USER=kyohei home-manager switch --flake .#kyohei@apple-container
+    ```
+
+### Note
+
+Running Home Manager inside the container updates files under the mounted host home directory.

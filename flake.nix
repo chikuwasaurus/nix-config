@@ -61,9 +61,38 @@
             nix-homebrew.darwinModules.nix-homebrew
           ];
         };
+
+      mkHome =
+        system:
+        {
+          username,
+          homeDirectory,
+          nixConfigPath,
+        }:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [
+              llm-agents.overlays.default
+            ];
+          };
+          extraSpecialArgs = {
+            inherit username homeDirectory nixConfigPath;
+          };
+          modules = [
+            ./home-manager/home.nix
+          ];
+        };
     in
     {
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
       darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
+
+      homeConfigurations."kyohei@apple-container" =
+        mkHome "aarch64-linux" {
+          username = "kyohei";
+          homeDirectory = "/home/kyohei";
+          nixConfigPath = "/home/kyohei/Developer/nix-config";
+        };
     };
 }
