@@ -11,8 +11,7 @@ RUN apk update && apk add --no-cache \
     sudo \
     git \
     ca-certificates \
-    nix \
-    nix-openrc
+    nix
 
 # Create or reuse the user's primary group
 # If the requested GID already exists, reuse the existing group
@@ -31,9 +30,5 @@ RUN mkdir -p /etc/nix /nix/store /nix/var/nix \
     && chown -R ${UID}:${GID} /nix \
     && printf '%s\n' \
       'experimental-features = nix-command flakes' \
+      'store = local' \
       > /etc/nix/nix.conf
-
-USER ${USERNAME}
-WORKDIR /home/${USERNAME}
-
-CMD ["/bin/zsh", "-l"]

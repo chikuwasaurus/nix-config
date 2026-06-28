@@ -16,7 +16,7 @@ container build --tag nix-alpine-machine --platform linux/arm64 ./containers/nix
 
 ```sh
 container machine create --name nix-alpine nix-alpine-machine
-container machine run --name nix-alpine
+container machine run --name nix-alpine -it /bin/zsh -l
 ```
 
 ## Use nix-config
