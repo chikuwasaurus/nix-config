@@ -1,10 +1,10 @@
 {
   config,
-  nixConfigPath ? "${config.home.homeDirectory}/Developer/nix-config",
   ...
 }:
 
 let
+  nixConfigPath = "${config.home.homeDirectory}/Developer/nix-config";
   mkLink = path: config.lib.file.mkOutOfStoreSymlink "${nixConfigPath}/home-manager/${path}";
 in
 {
