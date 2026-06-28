@@ -1,0 +1,4 @@
+# https://github.com/apple/container/blob/main/docs/tutorials/container-system-config-tutorial.md
+
+[build]
+rosetta = false

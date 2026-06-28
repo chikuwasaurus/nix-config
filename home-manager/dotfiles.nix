@@ -31,6 +31,7 @@ in
     "bat".source = mkLink "bat";
     "bottom".source = mkLink "bottom";
     "btop".source = mkLink "btop";
+    "container".source = mkLink "container";
     "delta".source = mkLink "delta";
     "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
