@@ -78,14 +78,15 @@ This setup uses:
 
     see: [./containers/nix-alpine/README.md]
 
-2. Clone this repository inside the container:
+2. Link the host Developer directory inside the container:
+
+    Apple Container automatically mounts the host `/Users` directory, so expose
+    the host repository under the container home directory:
 
     ```sh
-    mkdir -p ~/Developer
-    git clone https://github.com/chikuwasaurus/nix-config.git ~/Developer/nix-config
+    ln -s /Users/kyohei/Developer ~/Developer
     cd ~/Developer/nix-config
     ```
-
 3. Apply dotfiles inside the container:
 
     ```sh
