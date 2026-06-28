@@ -36,4 +36,4 @@ RUN mkdir -p /etc/nix /nix/store /nix/var/nix \
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}
 
-CMD ["/bin/zsh"]
+CMD ["/bin/zsh", "-l"]
