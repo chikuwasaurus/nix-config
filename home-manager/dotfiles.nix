@@ -51,5 +51,6 @@ in
     "yazi".source = mkLink "yazi";
     "zed".source = mkLink "zed";
     "zsh".source = mkLink "zsh";
+    "zsh-abbr".source = mkLink "zsh-abbr";
   };
 }

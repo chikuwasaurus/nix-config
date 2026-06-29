@@ -54,10 +54,12 @@ github = "zsh-users/zsh-completions"
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 
-# abbrev
-# [plugins.zeno]
-# github = "yuki-yano/zeno.zsh"
-# use = ["zeno-plugin.zsh"]
+# abbreviations
+[plugins.zsh-abbr]
+github = "olets/zsh-abbr"
+
+[plugins.zsh-autosuggestions-abbreviations-strategy]
+github = "olets/zsh-autosuggestions-abbreviations-strategy"
 
 # コマンドの completion を有効にする
 [plugins.compinit]

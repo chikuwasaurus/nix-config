@@ -109,3 +109,16 @@ export FZF_DEFAULT_OPTS=" \
 # NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
 # https://github.com/aloxaf/fzf-tab#configure
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
+
+# zsh-abbr: Cursor placement
+# https://zsh-abbr.olets.dev/cursor-placement.html#cursor-placement
+ABBR_SET_EXPANSION_CURSOR=1
+
+# zsh-abbr: Reminders
+# https://zsh-abbr.olets.dev/reminders.html
+ABBR_GET_AVAILABLE_ABBREVIATION=1
+ABBR_LOG_AVAILABLE_ABBREVIATION=1
+
+# zsh-abbr: Suggestions
+# https://zsh-abbr.olets.dev/integrations.html#suggestions
+ZSH_AUTOSUGGEST_STRATEGY=( abbreviations $ZSH_AUTOSUGGEST_STRATEGY )
