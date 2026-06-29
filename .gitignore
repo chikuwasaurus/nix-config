@@ -64,9 +64,11 @@ tmbootpicker.efi
 
 # karabiner
 **/karabiner/automatic_backups
+**/karabiner/assets
 
 # nushell
 **/nushell/history.txt
 
 # zed
 **/zed/prompts
+**/zed/themes
