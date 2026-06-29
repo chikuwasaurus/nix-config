@@ -39,7 +39,7 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 
 # コマンドのシンタックスハイライト
 [plugins.syntax-highlighting]
-github = "zdharma/fast-syntax-highlighting"
+github = "zdharma-continuum/fast-syntax-highlighting"
 
 # コマンドの自動サジェスチョン
 [plugins.zsh-autosuggestions]
