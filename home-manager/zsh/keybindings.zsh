@@ -1,3 +1,5 @@
+source $HOME/.config/zsh/fzf-git.sh
+
 select_dev_project() {
   fd . "$HOME/Developer" -d 1 -t d \
     | sed "s|^$HOME/Developer/||" \
