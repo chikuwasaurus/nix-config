@@ -9,14 +9,14 @@ This image is a small bootstrap environment for using this `nix-config` reposito
 From the repository root:
 
 ```sh
-container build --tag nix-alpine-machine --platform linux/arm64 ./containers/nix-alpine
+container build --tag nix-alpine-machine ./containers/nix-alpine
 ```
 
 ## Create and start machine
 
 ```sh
 container machine create --name nix-alpine nix-alpine-machine
-container machine run --name nix-alpine -it /bin/zsh -l
+container machine run --name nix-alpine --env USER=$USER -it -- zsh -l
 ```
 
 ## Use nix-config

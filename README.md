@@ -78,21 +78,13 @@ This setup uses:
 
     see: [./containers/nix-alpine/README.md]
 
-2. Link the host Developer directory inside the container:
-
-    Apple Container automatically mounts the host `/Users` directory, so expose
-    the host repository under the container home directory:
+2. Apply dotfiles inside the container:
 
     ```sh
-    ln -s /Users/kyohei/Developer ~/Developer
-    cd ~/Developer/nix-config
+    nix run github:nix-community/home-manager -- switch --flake .#kyohei@apple-container
     ```
-3. Apply dotfiles inside the container:
 
-    ```sh
-    env USER=kyohei nix run github:nix-community/home-manager -- switch --flake .#kyohei@apple-container
-    ```
-4. Restart your container machine
+3. Restart your container machine
 
 ### Daily Usage
 
