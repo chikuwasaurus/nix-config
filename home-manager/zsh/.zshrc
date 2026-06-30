@@ -31,6 +31,14 @@ setopt EXTENDED_HISTORY
 # zsh で help コマンドを使えるようにする
 unalias run-help 2>/dev/null
 autoload -Uz run-help
+alias help=run-help
+
+# aliases
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+alias la="ls -A"
+alias ll="ls -alF"
+alias rm="gomi"
 
 # Treat Nerd Font Private Use Area glyphs as printable in less.
 # Without this, icons from tools like eza may disappear or break when viewed

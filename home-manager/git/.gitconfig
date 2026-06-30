@@ -30,8 +30,8 @@
 
 [alias]
 	# status
-	s = status -sb
-	st = status
+	s = status
+	ss = status -sb
 
 	# log
 	l = log --oneline --decorate -n 20
