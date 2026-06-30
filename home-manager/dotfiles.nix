@@ -37,6 +37,7 @@ in
     "btop".source = mkLink "btop";
     "container".source = mkLink "container";
     "delta".source = mkLink "delta";
+    "eza".source = mkLink "eza";
     "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
     "helix".source = mkLink "helix";

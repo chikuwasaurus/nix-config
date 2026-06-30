@@ -79,3 +79,6 @@ ABBR_LOG_AVAILABLE_ABBREVIATION=1
 # zsh-abbr: Suggestions
 # https://zsh-abbr.olets.dev/integrations.html#suggestions
 # ZSH_AUTOSUGGEST_STRATEGY=( abbreviations $ZSH_AUTOSUGGEST_STRATEGY )
+
+# eza
+# EZA_CONFIG_DIR=~/.config/eza
