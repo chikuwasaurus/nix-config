@@ -88,14 +88,14 @@ alias cpul="sysctl -n hw.logicalcpu"
 # キーバインディング
 source "$HOME/.config/zsh/keybindings.zsh"
 
-# sheldon: zsh のプラグインマネージャ
-# shell のプラグイン周りは sheldon で管理している(~/.config/sheldon/plugins.toml)。
-eval "$(sheldon source)"
 eval "$(starship init zsh)"
 # eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$(atuin init zsh)"
+# sheldon: zsh のプラグインマネージャ
+# shell のプラグイン周りは sheldon で管理している(~/.config/sheldon/plugins.toml)。
+eval "$(sheldon source)"
 
 # fzf を Catppuccin Mocha theme にする
 # https://github.com/catppuccin/fzf/blob/main/themes/catppuccin-fzf-mocha.sh
