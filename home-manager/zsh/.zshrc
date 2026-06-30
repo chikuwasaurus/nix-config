@@ -36,8 +36,10 @@ alias help=run-help
 # aliases
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
-alias la="ls -A"
-alias ll="ls -alF"
+alias l='eza --icons=auto'
+alias ll='eza -lah --git --git-repos-no-status --icons=auto'
+alias la='eza -a --icons=auto'
+alias lt='eza --tree --all --git-ignore --icons=always --color=always'
 alias rm="gomi"
 
 # Treat Nerd Font Private Use Area glyphs as printable in less.
