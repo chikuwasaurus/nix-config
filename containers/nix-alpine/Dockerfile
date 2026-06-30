@@ -14,16 +14,16 @@ RUN apk add --no-cache \
 
 # Create or reuse the user's primary group.
 # If the requested GID already exists, reuse the existing group.
-# This is useful for macOS, where GID 20 is commonly used by the staff group.
+# This is useful for macOS, where GID 20 is commonly used by the staff group,
+# but on Alpine it may already be an existing group such as dialout.
 RUN GROUPNAME="$(getent group "$GID" | cut -d: -f1)" \
     && if [ -z "$GROUPNAME" ]; then \
          GROUPNAME="$USERNAME"; \
          addgroup -g "$GID" "$GROUPNAME"; \
        fi \
     && adduser -D -u "$UID" -G "$GROUPNAME" -s /bin/zsh "$USERNAME" \
-    && addgroup "$USERNAME" wheel \
-    && echo '%wheel ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel \
-    && chmod 0440 /etc/sudoers.d/wheel
+    && echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/"$USERNAME" \
+    && chmod 0440 /etc/sudoers.d/"$USERNAME"
 
 # Link the host Developer directory and Downloads directory inside the container.
 # Apple Container automatically mounts the host home directory, so expose
