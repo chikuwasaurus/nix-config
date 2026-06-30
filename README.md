@@ -91,7 +91,7 @@ This setup uses:
 - Build and apply changes
 
     ```sh
-    home-manager switch --flake .#kyohei@apple-container
+    home-manager switch --flake .#kyohei@apple-container -b backup
     ```
 
 ### Note
