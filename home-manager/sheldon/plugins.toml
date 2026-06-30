@@ -58,8 +58,13 @@ github = "Aloxaf/fzf-tab"
 [plugins.zsh-abbr]
 github = "olets/zsh-abbr"
 
+# https://zsh-abbr.olets.dev/integrations.html#suggestions
 [plugins.zsh-autosuggestions-abbreviations-strategy]
 github = "olets/zsh-autosuggestions-abbreviations-strategy"
+
+# https://zsh-abbr.olets.dev/integrations.html#fast-syntax-highlighting
+[plugins.fast-abbr-highlighting]
+github = "5A6F65/fast-abbr-highlighting"
 
 # Git Objects を fzf で選択
 # https://github.com/junegunn/fzf-git.sh
