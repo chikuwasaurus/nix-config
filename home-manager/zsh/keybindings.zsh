@@ -185,3 +185,11 @@ bindkey '\e[1;S-a' select-beginning-of-line
 bindkey '\e[1;S-e' select-end-of-line
 bindkey '\e[1;S-b' select-backward-char
 bindkey '\e[1;S-f' select-forward-char
+
+
+# Use ^G only as the fzf-git.sh prefix.
+# see: ~/.config/sheldon/plugins.toml
+bindkey -r '^G'
+
+# Move abort/break to ^G^G.
+bindkey '^G^G' send-break
