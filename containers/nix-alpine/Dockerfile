@@ -8,6 +8,7 @@ ARG GID=20
 
 RUN apk add --no-cache \
     zsh \
+    git-zsh-completion \
     sudo \
     ca-certificates \
     nix
