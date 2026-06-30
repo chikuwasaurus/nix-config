@@ -24,7 +24,7 @@ insert = "bar"
 select = "underline"
 
 [editor.soft-wrap]
-enable = true
+enable = false
 
 [editor.file-picker]
 hidden = false
