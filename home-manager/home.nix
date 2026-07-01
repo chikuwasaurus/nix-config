@@ -52,7 +52,7 @@ in
   };
 
   home.sessionPath = [
-    "$HOME/.local/bin"
+    # "$HOME/.local/bin"
   ];
 
   # Let Home Manager install and manage itself.
