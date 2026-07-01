@@ -4,6 +4,7 @@ palette = "catppuccin_mocha"
 
 format = """
 $os\
+$shell\
 $username\
 $hostname\
 $directory\
@@ -11,15 +12,24 @@ $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
+$fill\
+$time\
 $line_break\
 $character"""
 
-# right_format = """$time"""
+# right_format = """
+# $time
+# """
 
 [os]
 disabled = false
-style = "bold lavender"
 format = "[$symbol]($style) "
+style = "bold lavender"
+
+[shell]
+disabled = false
+format = "[$indicator]($style) "
+style = "bold mauve"
 
 [os.symbols]
 Windows = ""
@@ -62,7 +72,7 @@ format = '\([$state( $progress_current/$progress_total)]($style)\) '
 style = "pink"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](pink) ($ahead_behind$stashed)]($style)"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](pink) ($ahead_behind$stashed)]($style) "
 style = "teal"
 modified = "[M](yellow)"
 staged = "[A](green)"
@@ -76,13 +86,16 @@ stashed = "[≡](teal)"
 min_time = 0
 show_milliseconds = true
 format = "[$duration]($style) "
-style = "mauve"
+style = "yellow"
+
+[fill]
+symbol = ' '
 
 [time]
 disabled = false
 format = '[$time]($style) '
 time_format = '%c'
-style = "overlay0"
+style = "pink"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

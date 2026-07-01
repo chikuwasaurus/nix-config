@@ -40,10 +40,10 @@ do {
     mkdir $user_autoload_dir
 
     # Starship setup.
-    # const starship_config_file: string = ($user_autoload_dir | path join starship.nu)
-    # if not ($starship_config_file | path exists) {
-    #     starship init nu | save $starship_config_file
-    # }
+    const starship_config_file: string = ($user_autoload_dir | path join starship.nu)
+    if not ($starship_config_file | path exists) {
+        starship init nu | save $starship_config_file
+    }
 
     # Zoxide setup.
     const zoxide_config_file: string = ($user_autoload_dir | path join zoxide.nu)
