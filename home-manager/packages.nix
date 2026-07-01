@@ -40,6 +40,7 @@ in
     bottom
     btop
     bun
+    carapace
     codebook
     curl
     delta
@@ -52,6 +53,7 @@ in
     eza
     fastfetch
     fd
+    fish
     fzf
     gh
     ghq
