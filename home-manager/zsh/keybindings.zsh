@@ -35,7 +35,7 @@ zle -N cd_dev_project
 zle -N hx_dev_project
 zle -N zed_dev_project
 
-bindkey '^Z' cd_dev_project
+# bindkey '^Z' cd_dev_project
 bindkey '^O^H' hx_dev_project
 bindkey '^O^Z' zed_dev_project
 
