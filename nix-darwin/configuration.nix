@@ -100,6 +100,24 @@
       CustomUserPreferences = {
         "com.apple.symbolichotkeys" = {
           AppleSymbolicHotKeys = {
+            # 60 = Select previous input source (Ctrl + Space)
+            "60" = {
+              enabled = false;
+              value = {
+                type = "standard";
+                parameters = [ 32 49 262144 ];
+              };
+            };
+
+            # 61 = Select next source in Input menu (Ctrl + Option + Space)
+            "61" = {
+              enabled = false;
+              value = {
+                type = "standard";
+                parameters = [ 32 49 786432 ];
+              };
+            };
+
             # Spotlight > "Show Spotlight search"
             # Shortcut: Command + Shift + Space
             "64" = {
