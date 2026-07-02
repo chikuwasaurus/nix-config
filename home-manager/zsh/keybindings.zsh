@@ -196,10 +196,10 @@ bindkey '^G^G' send-break
 
 
 # Make Ctrl-D safer.
-# Confirm before letting Ctrl-D pass through as EOF.
+# Confirm before exiting the shell when the buffer is empty.
 #
 # Note: Without `setopt ignore_eof` in .zshrc, Ctrl-D would still be treated as EOF and exit the shell.
-safe-ctrl-d() {
+delete-char-or-confirm-exit() {
   if [[ -z "$BUFFER" ]]; then
     echo
     read -q "REPLY?Exit shell? [y/N] "
@@ -215,5 +215,5 @@ safe-ctrl-d() {
   fi
 }
 
-zle -N safe-ctrl-d
-bindkey '^D' safe-ctrl-d
+zle -N delete-char-or-confirm-exit
+bindkey '^D' delete-char-or-confirm-exit
