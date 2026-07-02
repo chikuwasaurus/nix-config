@@ -27,6 +27,8 @@ setopt HIST_REDUCE_BLANKS
 setopt EXTENDED_HISTORY
 # 複数のシェルで履歴を共有
 # setopt SHARE_HISTORY
+# Prevent accidental Ctrl-D (EOF: End Of File) from exiting the shell.
+setopt IGNORE_EOF
 
 # zsh で help コマンドを使えるようにする
 unalias run-help 2>/dev/null

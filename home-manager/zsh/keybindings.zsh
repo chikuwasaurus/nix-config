@@ -193,3 +193,27 @@ bindkey -r '^G'
 
 # Move abort/break to ^G^G.
 bindkey '^G^G' send-break
+
+
+# Make Ctrl-D safer.
+# Confirm before letting Ctrl-D pass through as EOF.
+#
+# Note: Without `setopt ignore_eof` in .zshrc, Ctrl-D would still be treated as EOF and exit the shell.
+safe-ctrl-d() {
+  if [[ -z "$BUFFER" ]]; then
+    echo
+    read -q "REPLY?Exit shell? [y/N] "
+    echo
+
+    if [[ "$REPLY" == [yY] ]]; then
+      exit
+    fi
+
+    zle reset-prompt
+  else
+    zle delete-char
+  fi
+}
+
+zle -N safe-ctrl-d
+bindkey '^D' safe-ctrl-d
