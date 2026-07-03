@@ -54,8 +54,10 @@ alias rm="gomi"
 #   100000-10FFFD   Supplementary Private Use Area-B
 export LESSUTFCHARDEF='E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p'
 
-# キーバインディング
+# keybindings
 source "$HOME/.config/zsh/keybindings.zsh"
+# functions
+source "$HOME/.config/zsh/functions.zsh"
 
 eval "$(starship init zsh)"
 # eval "$(mise activate zsh)"
