@@ -38,9 +38,9 @@ alias help=run-help
 # aliases
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
-alias l='eza --icons=auto'
-alias ll='eza -lah --git --git-repos-no-status --icons=auto'
-alias la='eza -a --icons=auto'
+alias l="eza -F"
+alias la='eza -aF'
+alias ll='eza -lahHF --git --git-repos-no-status --icons=always --color=always'
 alias lt='eza --tree --all --git-ignore --icons=always --color=always'
 alias rm="gomi"
 
