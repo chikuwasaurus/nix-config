@@ -24,10 +24,8 @@
       "chatgpt-atlas"
       "claude"
       "cleanshot"
-      "cmux"
       "codex-app"
       "cursor"
-      "dockdoor"
       "figma"
       "flashspace"
       "ghostty"
@@ -43,16 +41,13 @@
       "raycast"
       "slack"
       "tableplus"
-      "wezterm@nightly"
       "zed"
-      "zen"
     ];
 
     masApps = {
       "AdGuard Mini" = 1440147259;
       "Control Panel for Twitter" = 1668516167;
       "Control Panel for YouTube" = 6478456678;
-      "Developer" = 640199958;
       "Dropover" = 1355679052;
       "Eagle for Safari" = 1526651672;
       "Final Cut Pro" = 1631624924;
@@ -67,7 +62,6 @@
       "Pages" = 361309726;
       "Photomator" = 1444636541;
       "Pixelmator Pro" = 6746662575;
-      "TestFlight" = 899247664;
       "TextSniper" = 1528890965;
       "Wappalyzer - Technology profiler" = 1520333300;
       "Xcode" = 497799835;
