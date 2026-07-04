@@ -32,7 +32,6 @@ hidden = false
 [keys.normal]
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
-A-s = ":write-all"
 A-r = ":reload-all"
 # Launch lazygit, yazi, and scooter from Helix
 # https://github.com/helix-editor/helix/wiki/Recipes
