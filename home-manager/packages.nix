@@ -93,12 +93,13 @@ in
     yazi
     yq
     zoxide
-
-    llm-agents.claude-code
-    llm-agents.codex
-    llm-agents.herdr
   ]
   ++ [
     czg
-  ];
+  ]
+  ++ (with pkgs.llm-agents; [
+    claude-code
+    codex
+    herdr
+  ]);
 }
