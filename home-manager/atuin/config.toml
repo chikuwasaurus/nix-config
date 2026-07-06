@@ -3,3 +3,6 @@ name = "catppuccin-mocha-mauve"
 
 [ai]
 enabled = false
+
+[logs]
+enabled = false

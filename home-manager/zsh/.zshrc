@@ -7,7 +7,8 @@ export EDITOR=hx
 stty -ixon
 
 # 履歴ファイルの保存先
-HISTFILE=${HOME}/.zsh_history
+mkdir -p "$HOME/.local/state/zsh"
+HISTFILE="$HOME/.local/state/zsh/history"
 # メモリに保存される履歴の件数
 HISTSIZE=100000
 # 履歴ファイルに保存される履歴の件数
@@ -95,4 +96,7 @@ ABBR_LOG_AVAILABLE_ABBREVIATION=1
 # ZSH_AUTOSUGGEST_STRATEGY=( abbreviations $ZSH_AUTOSUGGEST_STRATEGY )
 
 # eza
-export EZA_CONFIG_DIR=~/.config/eza
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+
+# macOS Terminal.app に ~/.zsh_sessions を作成させない
+export SHELL_SESSIONS_DISABLE=1
