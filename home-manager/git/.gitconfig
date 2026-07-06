@@ -88,3 +88,7 @@
 	aliases = config --get-regexp ^alias\\.
 	root = rev-parse --show-toplevel
 	who = shortlog -sn
+
+	# hunk
+	hdiff = "-c core.pager=\"hunk pager\" diff"
+	hshow = "-c core.pager=\"hunk pager\" show"

@@ -62,6 +62,9 @@ tmbootpicker.efi
 **/herdr/*
 !**/herdr/config.toml
 
+# hunk
+**/hunk/state.json
+
 # karabiner
 **/karabiner/automatic_backups
 **/karabiner/assets

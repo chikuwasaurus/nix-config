@@ -40,6 +40,7 @@ in
     "ghostty".source = mkLink "ghostty";
     "helix".source = mkLink "helix";
     "herdr".source = mkLink "herdr";
+    "hunk".source = mkLink "hunk";
     "karabiner".source = mkLink "karabiner";
     "lazygit".source = mkLink "lazygit";
     "nushell".source = mkLink "nushell";

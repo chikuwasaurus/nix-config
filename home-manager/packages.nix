@@ -101,5 +101,6 @@ in
     claude-code
     codex
     herdr
+    hunk
   ]);
 }
