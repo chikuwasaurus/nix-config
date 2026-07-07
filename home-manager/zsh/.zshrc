@@ -45,6 +45,10 @@ alias ll='eza -lahHF --git --git-repos-no-status --icons=always --color=always'
 alias lt='eza --tree --all --git-ignore --icons=always --color=always'
 alias rm="gomi"
 
+# Show other users' processes
+# https://github.com/dalance/procs#permissions-issues
+alias procs="sudo procs"
+
 # Treat Nerd Font Private Use Area glyphs as printable in less.
 # Without this, icons from tools like eza may disappear or break when viewed
 # through less or pagers that use less, such as bat.
