@@ -42,6 +42,7 @@ in
     bun
     carapace
     codebook
+    coreutils
     curl
     delta
     deno
@@ -53,12 +54,17 @@ in
     eza
     fastfetch
     fd
+    findutils
     fish
     fzf
+    gawk
     gh
     ghq
     git
     git-wt
+    gnugrep
+    gnused
+    gnutar
     go
     gomi
     gping
