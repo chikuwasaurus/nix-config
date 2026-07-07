@@ -58,7 +58,7 @@ This setup uses:
 - Update packages and Homebrew only:
 
     ```sh
-    nix flake update nixpkgs
+    nix flake update nixpkgs llm-agents
     sudo darwin-rebuild switch --flake .
     brew upgrade -g
     ```
