@@ -6,3 +6,8 @@ args = ["serve"]
 [[language]]
 name = "markdown"
 language-servers = ["codebook"]
+
+[[language]]
+name = "bash"
+formatter = { command = "shfmt" }
+auto-format = true

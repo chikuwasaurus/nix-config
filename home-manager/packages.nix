@@ -90,6 +90,7 @@ in
     scooter
     sd
     sheldon
+    shfmt
     starship
     taplo
     tlrc
