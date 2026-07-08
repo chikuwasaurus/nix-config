@@ -3,7 +3,7 @@ export EDITOR=hx
 # zsh でターミナルの出力が改行されずに最後の行に到達したとき、末尾に記号(%や#)が表示されないようにする
 # export PROMPT_EOL_MARK=''
 
-# Disable flow control to use ctrl-s for forward search
+# Disable Ctrl-S / Ctrl-Q terminal flow control to use ctrl-s for forward search
 stty -ixon
 
 # 履歴ファイルの保存先
@@ -31,7 +31,7 @@ setopt EXTENDED_HISTORY
 # Prevent accidental Ctrl-D (EOF: End Of File) from exiting the shell.
 setopt IGNORE_EOF
 
-# zsh で help コマンドを使えるようにする
+# zsh のビルトインコマンドに対して help コマンドを使えるようにする
 unalias run-help 2>/dev/null
 autoload -Uz run-help
 alias help=run-help
