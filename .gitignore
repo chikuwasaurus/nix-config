@@ -77,4 +77,4 @@ tmbootpicker.efi
 **/zed/themes
 
 # zsh
-**/zsh/.zcompdump
+**/zsh/.zcompdump*
