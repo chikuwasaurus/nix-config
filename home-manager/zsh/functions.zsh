@@ -6,11 +6,9 @@ rgh() {
       --ansi \
       --delimiter ':' \
       --preview 'bat --style=numbers --color=always --highlight-line {2} {1}' \
-      --preview-window 'right,60%,border-left,+{2}+3/3' \
-      --bind 'enter:become(
-        awk -F: '\''{print $1 ":" $2 ":" $3}'\'' |
-        xargs hx
-      )'
+      --preview-window 'right,60%,border-left,+{2}+3/3' |
+        awk -F : '{print $1 ":" $2 ":" $3}' |
+        xargs -r hx
 }
 
 # Search files with fd, preview them in fzf, and open selected files in Helix.
@@ -25,6 +23,6 @@ fdh() {
           bat --style=numbers --color=always {}
         fi
       ' \
-      --preview-window 'right,60%,border-left' \
-      --bind 'enter:become(xargs hx)'
+      --preview-window 'right,60%,border-left' |
+      xargs -r hx
 }
