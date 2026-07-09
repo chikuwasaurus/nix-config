@@ -49,6 +49,9 @@ alias rm="gomi"
 # https://github.com/dalance/procs#permissions-issues
 alias procs="sudo procs"
 
+# Use tailscale as CLI
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 # Treat Nerd Font Private Use Area glyphs as printable in less.
 # Without this, icons from tools like eza may disappear or break when viewed
 # through less or pagers that use less, such as bat.
