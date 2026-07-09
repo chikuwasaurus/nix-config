@@ -172,6 +172,8 @@
     watchIdAuth = true;
   };
 
+  services.openssh.enable = true;
+
   # Define the user's home directory for nix-darwin/home-manager.
   # https://nix-community.github.io/home-manager/index.xhtml#sec-install-nix-darwin-module
   users.users."kyohei" = {
