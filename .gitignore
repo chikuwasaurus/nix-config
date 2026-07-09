@@ -72,6 +72,10 @@ tmbootpicker.efi
 # nushell
 **/nushell/history.txt
 
+# ssh
+**/ssh/agents/*
+**/ssh/known_hosts*
+
 # zed
 **/zed/prompts
 **/zed/themes

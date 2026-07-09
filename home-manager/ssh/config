@@ -1,0 +1,13 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
+# Tailscale
+Host mac-mini
+  HostName kyoheis-mac-mini
+  User kyohei
+
+Host macbook-air
+  HostName kyoheis-macbook-air
+  User kyohei

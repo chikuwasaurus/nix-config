@@ -12,6 +12,7 @@ in
   # plain files is through 'home.file'.
   home.file = {
     ".gitconfig".source = mkLink "git/.gitconfig";
+    ".ssh".source = mkLink "ssh";
     ".zshenv".source = mkLink "zsh/.zshenv";
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
