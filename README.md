@@ -42,32 +42,28 @@ This setup uses:
 
 ### Daily Usage
 
-- Build and apply changes:
+- Build and apply macOS system and Home Manager changes:
 
     ```sh
-    sudo darwin-rebuild switch --flake .
+    just switch
     ```
 
 - Update flake inputs (dependencies):
 
     ```sh
-    nix flake update
-    sudo darwin-rebuild switch --flake .
+    just update
     ```
 
 - Update packages and Homebrew only:
 
     ```sh
-    nix flake update nixpkgs llm-agents
-    sudo darwin-rebuild switch --flake .
-    brew upgrade -g
+    just packages
     ```
 
-- Update only AI CLI
+- Update only AI CLI:
 
     ```sh
-    nix flake update llm-agents
-    sudo darwin-rebuild switch --flake .
+    just ai
     ```
 
 ## Linux (Apple container machine)
@@ -88,10 +84,10 @@ This setup uses:
 
 ### Daily Usage
 
-- Build and apply changes
+- Apply Home Manager changes inside Apple container:
 
     ```sh
-    home-manager switch --flake .#kyohei@apple-container -b backup
+    just container
     ```
 
 ### Note
