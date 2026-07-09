@@ -41,6 +41,7 @@
       "raycast"
       "slack"
       "tableplus"
+      "tailscale-app"
       "zed"
     ];
 
