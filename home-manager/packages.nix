@@ -78,6 +78,7 @@ in
     lazydocker
     lazygit
     less
+    mise
     nixd # Nix LSP
     nixfmt # Nix formatter
     nodejs_24
