@@ -63,6 +63,7 @@ copy-on-select = clipboard
 window-padding-balance = true
 macos-titlebar-style = tabs
 auto-update-channel = tip
+shell-integration-features = ssh-env,ssh-terminfo
 
 
 # https://ghostty.org/docs/config/keybind/reference#toggle_quick_terminal
