@@ -62,6 +62,7 @@ font-family = UDEV Gothic 35NF
 copy-on-select = clipboard
 window-padding-balance = true
 macos-titlebar-style = tabs
+auto-update-channel = tip
 
 
 # https://ghostty.org/docs/config/keybind/reference#toggle_quick_terminal
