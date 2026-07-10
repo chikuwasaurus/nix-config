@@ -26,17 +26,6 @@ apply = ["defer"]
 github = "romkatv/zsh-defer"
 apply = ["source"]
 
-[templates]
-# 遅延読み込みのテンプレート
-# source テンプレートを zsh-defer しているだけ。
-# https://github.com/rossmacarthur/sheldon?tab=readme-ov-file#templates
-defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
-
-# コマンドの自動補完
-# fzf-tab と 相性が悪いので使用していない。
-# [plugins.zsh-autocomplete]
-# github = "marlonrichert/zsh-autocomplete"
-
 # コマンドのシンタックスハイライト
 [plugins.syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
@@ -74,4 +63,15 @@ use = ["fzf-git.sh"]
 
 # コマンドの completion を有効にする
 [plugins.compinit]
-inline = 'autoload -Uz compinit && zsh-defer compinit'
+inline = "autoload -Uz compinit && zsh-defer compinit"
+
+[templates]
+# 遅延読み込みのテンプレート
+# source テンプレートを zsh-defer しているだけ。
+# https://github.com/rossmacarthur/sheldon?tab=readme-ov-file#templates
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
+# コマンドの自動補完
+# fzf-tab と 相性が悪いので使用していない。
+# [plugins.zsh-autocomplete]
+# github = "marlonrichert/zsh-autocomplete"

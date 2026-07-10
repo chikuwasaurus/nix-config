@@ -55,10 +55,10 @@ style = "bold mauve"
 
 [username]
 disabled = true
-format = '[$user]($style)@'
+format = "[$user]($style)@"
 
 [hostname]
-ssh_symbol = '󰢹 '
+ssh_symbol = "󰢹 "
 format = '[$ssh_symbol$hostname]($style)\n'
 
 [directory]
@@ -97,12 +97,12 @@ format = "[$duration]($style) "
 style = "yellow"
 
 [fill]
-symbol = ' '
+symbol = " "
 
 [time]
 disabled = false
-format = '[$time]($style) '
-time_format = '%c'
+format = "[$time]($style) "
+time_format = "%c"
 style = "pink"
 
 [palettes.catppuccin_mocha]

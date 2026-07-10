@@ -4,19 +4,19 @@ dark = "catppuccin-mocha"
 # https://github.com/yazi-rs/plugins/tree/main/git.yazi
 [git]
 # style
-modified  = { fg = "yellow", bold = true }
-added     = { fg = "green", bold = true }
+modified = { fg = "yellow", bold = true }
+added = { fg = "green", bold = true }
 untracked = { fg = "red", bold = true }
-deleted   = { fg = "red", bold = true }
-updated   = { fg = "red", bold = true }
-ignored   = { fg = "darkgray" }
+deleted = { fg = "red", bold = true }
+updated = { fg = "red", bold = true }
+ignored = { fg = "darkgray" }
 
 # sign
-modified_sign  = "M"
-added_sign     = "A"
+modified_sign = "M"
+added_sign = "A"
 untracked_sign = "?"
-deleted_sign   = "!"
-updated_sign   = "U"
-ignored_sign   = "-"
-clean_sign     = ""
-unknown_sign   = " "
+deleted_sign = "!"
+updated_sign = "U"
+ignored_sign = "-"
+clean_sign = ""
+unknown_sign = " "

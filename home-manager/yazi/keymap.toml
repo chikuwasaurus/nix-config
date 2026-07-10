@@ -1,11 +1,11 @@
 # https://github.com/yazi-rs/plugins/tree/main/vcs-files.yazi
 [[mgr.prepend_keymap]]
-on   = [ "g", "c" ]
-run  = "plugin vcs-files"
+on = ["g", "c"]
+run = "plugin vcs-files"
 desc = "Show Git file changes"
 
 # https://github.com/Lil-Dank/lazygit.yazi
 [[mgr.prepend_keymap]]
-on   = "<C-g>"
-run  = "plugin lazygit"
+on = "<C-g>"
+run = "plugin lazygit"
 desc = "run lazygit"

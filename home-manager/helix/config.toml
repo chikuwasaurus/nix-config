@@ -3,8 +3,8 @@ theme = "catppuccin_mocha"
 [editor]
 color-modes = true
 bufferline = "always"
-trim-final-newlines=true
-trim-trailing-whitespace=true
+trim-final-newlines = true
+trim-trailing-whitespace = true
 line-number = "relative"
 cursorline = true
 
@@ -15,8 +15,23 @@ render = true
 focus-lost = true
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name", "read-only-indicator", "file-modification-indicator"]
-right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-indent-style", "file-type"]
+left = [
+  "mode",
+  "spinner",
+  "version-control",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator"
+]
+right = [
+  "diagnostics",
+  "selections",
+  "register",
+  "position",
+  "file-encoding",
+  "file-indent-style",
+  "file-type"
+]
 
 [editor.cursor-shape]
 normal = "block"
@@ -42,28 +57,28 @@ A-r = ":reload-all"
 #
 # https://github.com/jesseduffield/lazygit/discussions/4399#discussioncomment-13071651
 C-g = [
-  ':write-all',
-  ':sh rm -f /tmp/helix-lazygit-file',
-  ':new',
-  ':insert-output HELIX_LAZYGIT_FILE=/tmp/helix-lazygit-file lazygit',
+  ":write-all",
+  ":sh rm -f /tmp/helix-lazygit-file",
+  ":new",
+  ":insert-output HELIX_LAZYGIT_FILE=/tmp/helix-lazygit-file lazygit",
   ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-  ':buffer-close!',
-  ':open %sh{cat /tmp/helix-lazygit-file 2>/dev/null || echo %{buffer_name}}',
-  ':redraw',
-  ':reload-all'
+  ":buffer-close!",
+  ":open %sh{cat /tmp/helix-lazygit-file 2>/dev/null || echo %{buffer_name}}",
+  ":redraw",
+  ":reload-all"
 ]
 # Pick a file with yazi and hand it back to Helix through --chooser-file.
 # This works around the lack of an integrated terminal in Helix.
 #
 # https://github.com/helix-editor/helix/discussions/12934#discussioncomment-12438498
 C-y = [
-  ':write-all',
-  ':sh rm -f /tmp/helix-yazi-file',
+  ":write-all",
+  ":sh rm -f /tmp/helix-yazi-file",
   ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/helix-yazi-file',
   ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-  ':open %sh{cat /tmp/helix-yazi-file 2>/dev/null || echo %{buffer_name}}',
-  ':redraw',
-  ':reload-all'
+  ":open %sh{cat /tmp/helix-yazi-file 2>/dev/null || echo %{buffer_name}}",
+  ":redraw",
+  ":reload-all"
 ]
 # Launch scooter from Helix for project-wide search and replace.
 # Use --no-stdin and redirect scooter's TUI to the real terminal so
@@ -72,10 +87,10 @@ C-y = [
 #
 # https://github.com/helix-editor/helix/discussions/3793#discussioncomment-13817834
 C-r = [
-  ':write-all',
-  ':insert-output scooter --no-stdin >/dev/tty',
-  ':redraw',
-  ':reload-all'
+  ":write-all",
+  ":insert-output scooter --no-stdin >/dev/tty",
+  ":redraw",
+  ":reload-all"
 ]
 
 [keys.select]
