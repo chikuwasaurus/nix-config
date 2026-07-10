@@ -20,3 +20,7 @@ language-servers = ["codebook"]
 [[language]]
 name = "bash"
 auto-format = true
+
+[[language]]
+name = "toml"
+auto-format = true
