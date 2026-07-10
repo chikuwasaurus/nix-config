@@ -3,6 +3,16 @@
 command = "codebook-lsp"
 args = ["serve"]
 
+[language-server.bash-language-server]
+# bash-language-server includes groff-formatted man output in hover text.
+# Helix does not handle groff's ANSI SGR sequences there, so disable them.
+command = "env"
+args = [
+  "GROFF_NO_SGR=1",
+  "bash-language-server",
+  "start",
+]
+
 [[language]]
 name = "markdown"
 language-servers = ["codebook"]
