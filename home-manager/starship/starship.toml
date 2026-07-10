@@ -3,10 +3,11 @@
 palette = "catppuccin_mocha"
 
 format = """
-$os\
-$shell\
 $username\
 $hostname\
+$line_break\
+$os\
+$shell\
 $directory\
 $git_branch\
 $git_state\
@@ -52,6 +53,14 @@ CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+
+[username]
+disabled = true
+format = '[$user]($style)@'
+
+[hostname]
+ssh_symbol = '󰢹 '
+format = '[$ssh_symbol$hostname]($style) '
 
 [directory]
 style = "bold blue"
