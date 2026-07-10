@@ -36,6 +36,7 @@ in
     # '')
 
     atuin
+    bash-language-server
     bat
     bottom
     btop
@@ -91,6 +92,7 @@ in
     scooter
     sd
     sheldon
+    shellcheck
     shfmt
     starship
     taplo
