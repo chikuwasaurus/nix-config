@@ -95,8 +95,8 @@ in
     shellcheck
     shfmt
     starship
-    taplo
     tlrc
+    tombi
     uv
     vscode-json-languageserver
     xh
