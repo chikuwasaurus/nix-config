@@ -27,11 +27,6 @@ disabled = false
 format = "[$symbol]($style) "
 style = "bold lavender"
 
-[shell]
-disabled = false
-format = "[$indicator]($style) "
-style = "bold mauve"
-
 [os.symbols]
 Windows = ""
 Ubuntu = "󰕈"
@@ -53,6 +48,11 @@ CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+
+[shell]
+disabled = false
+format = "[$indicator]($style) "
+style = "bold mauve"
 
 [username]
 disabled = true
