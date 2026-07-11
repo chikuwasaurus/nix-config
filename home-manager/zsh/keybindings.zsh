@@ -56,8 +56,9 @@ bindkey '^O^G' open_lazygit
 bindkey '^O^Y' open_yazi
 
 # Start selecting a region in the current ZLE buffer.
-# Move the cursor after this, then copy the selected region with Ctrl-x Ctrl-y.
-bindkey '^X ' set-mark-command
+# Move the cursor after this with Ctrl-b Ctrl-f Ctrl-a Ctrl-e,
+# then copy the selected region with Ctrl-x Ctrl-y.
+bindkey '^X^S' set-mark-command
 
 # Deactivate the selected ZLE region.
 bindkey '^X^G' deactivate-region
@@ -67,7 +68,7 @@ bindkey '^X^G' deactivate-region
 copy-region-or-buffer-to-clipboard() {
 	emulate -L zsh
 
-	local text start end
+	local text start end source
 
 	if ((REGION_ACTIVE)); then
 		if ((MARK < CURSOR)); then
@@ -79,11 +80,51 @@ copy-region-or-buffer-to-clipboard() {
 		fi
 
 		text=${BUFFER[$start,$end]}
+		source='selection'
 	else
 		text=$BUFFER
+		source='buffer'
 	fi
 
-	print -rn -- "$text" | pbcopy
+	if copy-to-clipboard "$text"; then
+		zle -M "Copied ${source} to clipboard (${#text} chars)"
+	else
+		zle -M 'Clipboard is not available'
+		return 1
+	fi
+}
+
+# Copy the given text to the clipboard using pbcopy, wl-copy, xclip,
+# or OSC 52 as a fallback for remote, VM, and container environments.
+# Returns 0 on success and 1 when no clipboard backend is available.
+copy-to-clipboard() {
+	emulate -L zsh
+
+	local text=$1 encoded
+
+	if (($+commands[pbcopy])); then
+		# Native macOS
+		print -rn -- "$text" | pbcopy
+	elif [[ -n $WAYLAND_DISPLAY ]] && (($+commands['wl-copy'])); then
+		# Linux desktop / Wayland
+		print -rn -- "$text" | wl-copy
+	elif [[ -n $DISPLAY ]] && (($+commands[xclip])); then
+		# Linux desktop / X11
+		print -rn -- "$text" | xclip -selection clipboard
+	elif [[ -t 1 ]] && (($+commands[base64])); then
+		# Send an OSC 52 escape sequence through the current terminal.
+		# This allows copying to the host clipboard from SSH sessions,
+		# virtual machines, or containers such as Apple Container.
+		encoded=$(
+			print -rn -- "$text" |
+				base64 |
+				tr -d '\n'
+		)
+
+		printf '\e]52;c;%s\a' "$encoded" >/dev/tty
+	else
+		return 1
+	fi
 }
 
 zle -N copy-region-or-buffer-to-clipboard
