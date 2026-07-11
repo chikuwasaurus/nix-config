@@ -21,7 +21,6 @@
       "anki"
       "arc"
       "chatgpt"
-      "chatgpt-atlas"
       "claude"
       "cleanshot"
       "codex-app"
