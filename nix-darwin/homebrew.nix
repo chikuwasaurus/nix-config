@@ -32,6 +32,7 @@
       "karabiner-elements"
       "logi-options+"
       "monitorcontrol"
+      "nani"
       "obsidian"
       "ogdesign-eagle"
       "orbstack"
