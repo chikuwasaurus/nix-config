@@ -45,6 +45,11 @@ alias ll='eza -lahHF --git --git-repos-no-status --icons=always --color=always'
 alias lt='eza --tree --all --git-ignore --icons=always --color=always'
 alias rm="gomi"
 
+# Use macOS's native whatis database for keyword searches.
+# Nix's man-db handles GNU/Nix manpages better, but its `man -k` does not
+# reliably include macOS system manpages such as zsh.
+alias mank="/usr/bin/man -k"
+
 # Show other users' processes
 # https://github.com/dalance/procs#permissions-issues
 alias procs="sudo procs"
