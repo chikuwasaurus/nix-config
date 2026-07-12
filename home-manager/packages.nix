@@ -103,6 +103,7 @@ in
     yazi
     yq
     zoxide
+    zstd
   ]
   ++ [
     czg
