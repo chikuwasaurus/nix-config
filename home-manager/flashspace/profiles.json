@@ -115,13 +115,7 @@
           "symbolIconName": "book"
         },
         {
-          "apps": [
-            {
-              "bundleIdentifier": "com.apple.Notes",
-              "iconPath": "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
-              "name": "Notes"
-            }
-          ],
+          "apps": [],
           "display": "Studio Display",
           "id": "BDFE60BD-9B17-4B78-BA4E-0C9FF427D57F",
           "name": "Note",
