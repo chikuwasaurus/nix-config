@@ -24,8 +24,8 @@
           "apps": [
             {
               "autoOpen": true,
-              "bundleIdentifier": "com.openai.chat",
-              "iconPath": "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
+              "bundleIdentifier": "com.apple.Safari.WebApp.4A281615-B933-4060-AF6E-83BBC2BCA1E1",
+              "iconPath": "/Users/kyohei/Applications/ChatGPT.app/Contents/Resources/ApplicationIcon.icns",
               "name": "ChatGPT"
             }
           ],
