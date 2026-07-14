@@ -36,12 +36,14 @@
       "obsidian"
       "ogdesign-eagle"
       "orbstack"
+      "otty"
       "pixelsnap"
       "proxyman"
       "raycast"
       "slack"
       "tableplus"
       "tailscale-app"
+      "typora"
       "zed"
     ];
 
