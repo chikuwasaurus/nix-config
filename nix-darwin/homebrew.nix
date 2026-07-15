@@ -23,7 +23,6 @@
       "chatgpt"
       "claude"
       "cleanshot"
-      "codex-app"
       "cursor"
       "figma"
       "flashspace"
