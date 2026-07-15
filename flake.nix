@@ -54,7 +54,7 @@
               nixpkgs.hostPlatform = "aarch64-darwin";
 
               nixpkgs.overlays = [
-                llm-agents.overlays.default
+                llm-agents.overlays.shared-nixpkgs
               ];
             }
             home-manager.darwinModules.home-manager
@@ -71,7 +71,7 @@
           pkgs = import nixpkgs {
             system = "aarch64-linux";
             overlays = [
-              llm-agents.overlays.default
+              llm-agents.overlays.shared-nixpkgs
             ];
           };
           modules = [
