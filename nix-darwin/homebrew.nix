@@ -21,6 +21,7 @@
       "anki"
       "arc"
       "chatgpt"
+      "chatgpt-classic"
       "claude"
       "cleanshot"
       "cursor"
