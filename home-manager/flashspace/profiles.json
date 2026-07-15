@@ -27,6 +27,12 @@
               "bundleIdentifier": "com.apple.Safari.WebApp.4A281615-B933-4060-AF6E-83BBC2BCA1E1",
               "iconPath": "/Users/kyohei/Applications/ChatGPT.app/Contents/Resources/ApplicationIcon.icns",
               "name": "ChatGPT"
+            },
+            {
+              "autoOpen": true,
+              "bundleIdentifier": "com.apple.Safari.WebApp.577328CA-9424-4E7C-A414-4A60025452F3",
+              "iconPath": "/Users/kyohei/Applications/ChatGPT.app/Contents/Resources/ApplicationIcon.icns",
+              "name": "ChatGPT"
             }
           ],
           "display": "Studio Display",
