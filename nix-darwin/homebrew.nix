@@ -14,7 +14,6 @@
     brews = [
       "mas"
       "container"
-      "socktainer"
     ];
 
     casks = [
