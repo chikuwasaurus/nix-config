@@ -58,6 +58,7 @@
       "Keepa - Price Tracker" = 1533805339;
       "Keynote" = 361285480;
       "Kindle" = 302584613;
+      "LINE" = 539883307;
       "Logic Pro" = 1615087040;
       "Motion" = 6746637149;
       "Noir" = 1592917505;
