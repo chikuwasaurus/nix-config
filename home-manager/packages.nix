@@ -43,6 +43,7 @@ in
     bun
     carapace
     codebook
+    container
     coreutils
     curl
     delta
