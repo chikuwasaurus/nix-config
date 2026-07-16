@@ -11,3 +11,7 @@ Host mac-mini
 Host macbook-air
   HostName kyoheis-macbook-air
   User kyohei
+
+Host omarchy
+  HostName omarchy
+  User kyohei
