@@ -72,7 +72,7 @@ This setup uses:
 
 1. Create and Run machine:
 
-    see: [./containers/nix-alpine/README.md]
+    see: [nix-alpine](./containers/nix-alpine/README.md)
 
 2. Apply dotfiles inside the container:
 
