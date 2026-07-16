@@ -52,7 +52,6 @@
               networking.hostName = hostname;
               networking.localHostName = hostname;
               nixpkgs.hostPlatform = "aarch64-darwin";
-
               nixpkgs.overlays = [
                 llm-agents.overlays.shared-nixpkgs
               ];
@@ -61,15 +60,12 @@
             nix-homebrew.darwinModules.nix-homebrew
           ];
         };
-    in
-    {
-      darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
-      darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
 
-      homeConfigurations."kyohei@apple-container" =
+      mkHome =
+        system:
         home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
-            system = "aarch64-linux";
+            inherit system;
             overlays = [
               llm-agents.overlays.shared-nixpkgs
             ];
@@ -78,5 +74,11 @@
             ./home-manager/home.nix
           ];
         };
+    in
+    {
+      darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
+      darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
+      homeConfigurations."kyohei@apple-container" = mkHome "aarch64-linux";
+      homeConfigurations."kyohei@omarchy" = mkHome "x86_64-linux";
     };
 }

@@ -54,8 +54,10 @@ alias mank="/usr/bin/man -k"
 # https://github.com/dalance/procs#permissions-issues
 alias procs="sudo procs"
 
-# Use tailscale as CLI
-alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+# Use the app-bundled Tailscale CLI on macOS.
+if [[ "$OSTYPE" == darwin* ]]; then
+  alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+fi
 
 # Treat Nerd Font Private Use Area glyphs as printable in less.
 # Without this, icons from tools like eza may disappear or break when viewed

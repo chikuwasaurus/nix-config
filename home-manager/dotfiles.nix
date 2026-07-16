@@ -1,5 +1,7 @@
 {
   config,
+  lib,
+  pkgs,
   ...
 }:
 
@@ -29,20 +31,16 @@ in
 
   # ~/.config
   xdg.configFile = {
-    "aerospace".source = mkLink "aerospace";
     "atuin".source = mkLink "atuin";
     "bat".source = mkLink "bat";
     "bottom".source = mkLink "bottom";
     "btop".source = mkLink "btop";
-    "container".source = mkLink "container";
     "delta".source = mkLink "delta";
     "eza".source = mkLink "eza";
-    "flashspace".source = mkLink "flashspace";
     "ghostty".source = mkLink "ghostty";
     "helix".source = mkLink "helix";
     "herdr".source = mkLink "herdr";
     "hunk".source = mkLink "hunk";
-    "karabiner".source = mkLink "karabiner";
     "lazygit".source = mkLink "lazygit";
     "nushell".source = mkLink "nushell";
     "scooter".source = mkLink "scooter";
@@ -53,5 +51,11 @@ in
     "zed".source = mkLink "zed";
     "zsh".source = mkLink "zsh";
     "zsh-abbr".source = mkLink "zsh-abbr";
+  }
+  // lib.optionalAttrs pkgs.stdenv.isDarwin {
+    "aerospace".source = mkLink "aerospace";
+    "container".source = mkLink "container";
+    "flashspace".source = mkLink "flashspace";
+    "karabiner".source = mkLink "karabiner";
   };
 }

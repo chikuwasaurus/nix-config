@@ -18,6 +18,10 @@ ai:
     nix flake update llm-agents
     sudo darwin-rebuild switch --flake .
 
+# Apply Home Manager on Omarchy
+omarchy:
+    home-manager switch --flake .#kyohei@omarchy -b backup
+
 # Apply Home Manager inside Apple container
 container:
     home-manager switch --flake .#kyohei@apple-container -b backup

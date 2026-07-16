@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 let
   # Nix-managed wrapper for czg.
@@ -43,7 +43,6 @@ in
     bun
     carapace
     codebook
-    container
     coreutils
     curl
     delta
@@ -114,5 +113,11 @@ in
     codex
     herdr
     hunk
-  ]);
+  ])
+  ++ lib.optionals pkgs.stdenv.isDarwin [
+    container
+  ]
+  ++ lib.optionals pkgs.stdenv.isLinux [
+    tailscale
+  ];
 }
