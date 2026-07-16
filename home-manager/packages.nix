@@ -119,6 +119,5 @@ in
     container
   ]
   ++ lib.optionals pkgs.stdenv.isLinux [
-    tailscale
   ];
 }
