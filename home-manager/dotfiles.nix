@@ -46,14 +46,12 @@ in
     "scooter".source = mkLink "scooter";
     "sheldon".source = mkLink "sheldon";
     "starship.toml".source = mkLink "starship/starship.toml";
-    "wezterm".source = mkLink "wezterm";
     "yazi".source = mkLink "yazi";
     "zed".source = mkLink "zed";
     "zsh".source = mkLink "zsh";
     "zsh-abbr".source = mkLink "zsh-abbr";
   }
   // lib.optionalAttrs pkgs.stdenv.isDarwin {
-    "aerospace".source = mkLink "aerospace";
     "container".source = mkLink "container";
     "flashspace".source = mkLink "flashspace";
     "karabiner".source = mkLink "karabiner";
