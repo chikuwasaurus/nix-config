@@ -24,6 +24,22 @@
           "apps": [
             {
               "autoOpen": true,
+              "bundleIdentifier": "com.apple.Safari",
+              "iconPath": "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
+              "name": "Safari"
+            }
+          ],
+          "display": "Studio Display",
+          "id": "7DD19C0B-3839-462A-B900-3CCD7E9A1C4D",
+          "name": "Browser",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+2",
+          "symbolIconName": "safari"
+        },
+        {
+          "apps": [
+            {
+              "autoOpen": true,
               "bundleIdentifier": "com.apple.Safari.WebApp.4A281615-B933-4060-AF6E-83BBC2BCA1E1",
               "iconPath": "/Users/kyohei/Applications/ChatGPT.app/Contents/Resources/ApplicationIcon.icns",
               "name": "ChatGPT"
@@ -39,24 +55,8 @@
           "id": "97E0AA4F-CA09-4997-87D6-F653F936A7F3",
           "name": "Chat",
           "openAppsOnActivation": true,
-          "shortcut": "opt+2",
-          "symbolIconName": "ellipsis.message"
-        },
-        {
-          "apps": [
-            {
-              "autoOpen": true,
-              "bundleIdentifier": "com.apple.Safari",
-              "iconPath": "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
-              "name": "Safari"
-            }
-          ],
-          "display": "Studio Display",
-          "id": "7DD19C0B-3839-462A-B900-3CCD7E9A1C4D",
-          "name": "Browser",
-          "openAppsOnActivation": true,
           "shortcut": "opt+3",
-          "symbolIconName": "safari"
+          "symbolIconName": "ellipsis.message"
         },
         {
           "apps": [
@@ -93,15 +93,14 @@
             {
               "autoOpen": true,
               "bundleIdentifier": "com.openai.codex",
-              "iconPath": "/Applications/Codex.app/Contents/Resources/electron.icns",
-              "name": "Codex"
+              "iconPath": "/Applications/ChatGPT.app/Contents/Resources/electron.icns",
+              "name": "ChatGPT"
             }
           ],
           "display": "Studio Display",
           "id": "3DA90D9E-2ED5-42E2-97BC-3269832DDFA7",
           "name": "Agent",
           "openAppsOnActivation": true,
-          "shortcut": "opt+5",
           "symbolIconName": "wand.and.sparkles"
         },
         {
@@ -117,7 +116,6 @@
           "id": "677ACF3B-F0A6-4CE7-9AD4-74323237B772",
           "name": "Book",
           "openAppsOnActivation": true,
-          "shortcut": "opt+6",
           "symbolIconName": "book"
         },
         {
@@ -126,7 +124,6 @@
           "id": "BDFE60BD-9B17-4B78-BA4E-0C9FF427D57F",
           "name": "Note",
           "openAppsOnActivation": false,
-          "shortcut": "opt+7",
           "symbolIconName": "note.text"
         },
         {
@@ -142,7 +139,6 @@
           "id": "27F41FA9-C2A2-4F3B-B113-B8FB8F405307",
           "name": "Calendar",
           "openAppsOnActivation": true,
-          "shortcut": "opt+8",
           "symbolIconName": "calendar"
         },
         {
@@ -158,7 +154,6 @@
           "id": "BBBC561D-3012-40CD-8B9C-67BB5D119F7B",
           "name": "Reminder",
           "openAppsOnActivation": true,
-          "shortcut": "opt+9",
           "symbolIconName": "checklist"
         },
         {
@@ -174,7 +169,6 @@
           "id": "59AC9B13-38D4-4AD0-81CF-0E9C9EDF5443",
           "name": "Journal",
           "openAppsOnActivation": true,
-          "shortcut": "opt+0",
           "symbolIconName": "text.book.closed"
         },
         {
