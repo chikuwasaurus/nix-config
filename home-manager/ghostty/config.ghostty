@@ -49,7 +49,7 @@
 # resize-overlay-duration = 4s 200ms
 
 # command = zsh -l -c 'exec nu'
-background-opacity = 0.8
+background-opacity = 0.9
 background-blur-radius = 20
 font-feature = -calt
 font-size = 13
