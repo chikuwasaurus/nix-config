@@ -114,3 +114,6 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 
 # macOS Terminal.app に ~/.zsh_sessions を作成させない
 export SHELL_SESSIONS_DISABLE=1
+
+# Colorize man pages.
+export MANPAGER="sh -c 'col -bx | bat --style=plain --language=man'"
