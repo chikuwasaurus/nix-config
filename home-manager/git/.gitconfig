@@ -92,3 +92,6 @@
 	# hunk
 	hdiff = "-c core.pager=\"hunk pager\" diff"
 	hshow = "-c core.pager=\"hunk pager\" show"
+
+[pull]
+	ff = only
