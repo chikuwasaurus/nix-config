@@ -40,6 +40,18 @@
       ...
     }:
     let
+      mkHomeManagerModule = homeModule: {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users."kyohei".imports = [
+            ./home-manager/common.nix
+            homeModule
+          ];
+          backupFileExtension = "backup";
+        };
+      };
+
       mkDarwin =
         hostname:
         nix-darwin.lib.darwinSystem {
@@ -56,8 +68,9 @@
                 llm-agents.overlays.shared-nixpkgs
               ];
             }
-            home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
+            home-manager.darwinModules.home-manager
+            (mkHomeManagerModule ./home-manager/nix-darwin.nix)
           ];
         };
 
@@ -71,25 +84,26 @@
             ];
           };
           modules = [
-            ./home-manager/home.nix
+            {
+              home.username = "kyohei";
+              home.homeDirectory = "/home/kyohei";
+            }
+            ./home-manager/common.nix
           ];
         };
     in
     {
       # NOTE: 'nixos' is the default hostname
       nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         modules = [
           ./nixos/configuration.nix
-          home-manager.nixosModules.home-manager
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users."kyohei" = ./nixos/home.nix;
-              backupFileExtension = "backup";
-            };
+            nixpkgs.overlays = [
+              llm-agents.overlays.shared-nixpkgs
+            ];
           }
+          home-manager.nixosModules.home-manager
+          (mkHomeManagerModule ./home-manager/nixos.nix)
         ];
       };
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";

@@ -66,16 +66,15 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.kyohei = {
     isNormalUser = true;
+    home = "/home/kyohei";
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user.
       "studio-display" # Allow this user to control the Studio Display without sudo.
     ];
-    packages = with pkgs; [
-      tree
-    ];
+    packages = with pkgs; [ ];
   };
 
-  services.getty.autologinUser = "kyohei";
+  # services.getty.autologinUser = "kyohei";
 
   programs.hyprland.enable = true;
 
