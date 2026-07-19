@@ -76,6 +76,22 @@
         };
     in
     {
+      # NOTE: 'nixos' is the default hostname
+      nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./nixos/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users."kyohei" = ./nixos/home.nix;
+              backupFileExtension = "backup";
+            };
+          }
+        ];
+      };
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
       darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
       homeConfigurations."kyohei@apple-container" = mkHome "aarch64-linux";
