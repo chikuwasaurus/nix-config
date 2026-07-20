@@ -19,21 +19,4 @@
     brave
     ghostty
   ];
-
-  programs.bash = {
-    enable = true;
-    sessionVariables = {
-      EDITOR = "hx";
-    };
-    shellAliases = {
-      btw = "echo 'i use hyprland btw'";
-    };
-    profileExtra = ''
-      if [ -z "$WAYLAND_DISPLAY" ] \
-         && [ "$XDG_VTNR" = "1" ] \
-         && [ -z "$SSH_CONNECTION" ]; then
-         exec start-hyprland
-      fi
-    '';
-  };
 }

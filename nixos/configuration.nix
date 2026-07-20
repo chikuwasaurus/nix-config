@@ -72,6 +72,7 @@
       "studio-display" # Allow this user to control the Studio Display without sudo.
     ];
     packages = with pkgs; [ ];
+    shell = pkgs.zsh;
   };
 
   # services.getty.autologinUser = "kyohei";
@@ -79,6 +80,17 @@
   programs.hyprland.enable = true;
 
   programs.firefox.enable = true;
+
+  programs.zsh = {
+    enable = true;
+    loginShellInit = ''
+      if [ -z "$WAYLAND_DISPLAY" ] \
+         && [ "$XDG_VTNR" = "1" ] \
+         && [ -z "$SSH_CONNECTION" ]; then
+         exec start-hyprland
+      fi
+    '';
+  };
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
