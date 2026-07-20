@@ -80,6 +80,60 @@ keybind = global:cmd+shift+backquote=toggle_quick_terminal
 # keybind = shift+ctrl+f=text:\x1b[1;S-f
 
 
+# Make Ctrl+Shift+W behave like Cmd+W on macOS.
+keybind = ctrl+shift+w=close_surface
+
+# Make Ctrl+Alt+W behave like Cmd+Alt+W on macOS.
+keybind = ctrl+alt+w=close_tab:this
+
+
+# Align keybindings with Herdr across macOS and Linux.
+
+# Leader key
+keybind = ctrl+,=activate_key_table_once:leader
+
+# Tabs
+keybind = leader/t=new_tab
+# keybind = leader/w=close_tab:this
+keybind = leader/n=next_tab
+keybind = leader/p=previous_tab
+
+# Splits
+keybind = leader/v=new_split:right
+keybind = leader/-=new_split:down
+keybind = leader/x=close_surface
+keybind = leader/z=toggle_split_zoom
+keybind = leader/h=goto_split:left
+keybind = leader/j=goto_split:down
+keybind = leader/k=goto_split:up
+keybind = leader/l=goto_split:right
+
+# Config
+keybind = leader/shift+r=reload_config
+
+# Exit
+keybind = leader/escape=deactivate_key_table
+
+# Catch unbound keys
+keybind = leader/catch_all=activate_key_table_once:leader
+# keybind = leader/catch_all=deactivate_key_table
+
+# Enter resize mode
+keybind = leader/r=activate_key_table:resize
+
+# Resize splits repeatedly
+keybind = resize/h=resize_split:left,10
+keybind = resize/j=resize_split:down,10
+keybind = resize/k=resize_split:up,10
+keybind = resize/l=resize_split:right,10
+
+# Exit resize mode
+keybind = resize/escape=deactivate_key_table
+
+# Catch unbound keys in resize mode
+keybind = resize/catch_all=ignore
+
+
 # Vim-mode keybindings for Ghostty.
 #
 # Note: We're missing a number of actions to produce a better vim experience.
