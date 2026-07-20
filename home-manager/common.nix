@@ -10,10 +10,7 @@ let
   mkLink = path: config.lib.file.mkOutOfStoreSymlink "${nixConfigPath}/home-manager/${path}";
 in
 {
-  imports = [
-    # ./packages.nix
-    # ./dotfiles.nix
-  ];
+  imports = [ ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

@@ -93,7 +93,6 @@
         };
     in
     {
-      # NOTE: 'nixos' is the default hostname
       nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
         modules = [
           ./nixos/configuration.nix
