@@ -163,7 +163,6 @@ in
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".gitconfig".source = mkLink "git/.gitconfig";
     ".ssh".source = mkLink "ssh";
     ".zshenv".source = mkLink "zsh/.zshenv";
 
@@ -189,6 +188,7 @@ in
     "eza".source = mkLink "eza";
     "gh".source = mkLink "gh";
     "ghostty".source = mkLink "ghostty";
+    "git".source = mkLink "git";
     "helix".source = mkLink "helix";
     "herdr".source = mkLink "herdr";
     "hunk".source = mkLink "hunk";
