@@ -1,2 +1,8 @@
 [shell]
 launch_apps_as_systemd_services = true  # launch apps as transient systemd scopes
+
+[keybinds]
+left = ["left", "ctrl+h"]
+right = ["right", "ctrl+l"]
+up = ["up", "ctrl+k"]
+down = ["down", "ctrl+j"]
