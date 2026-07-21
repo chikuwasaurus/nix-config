@@ -187,6 +187,7 @@ in
     "btop".source = mkLink "btop";
     "delta".source = mkLink "delta";
     "eza".source = mkLink "eza";
+    "gh".source = mkLink "gh";
     "ghostty".source = mkLink "ghostty";
     "helix".source = mkLink "helix";
     "herdr".source = mkLink "herdr";

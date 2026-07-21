@@ -58,6 +58,9 @@ Backups.backupdb
 MobileBackups.trash
 tmbootpicker.efi
 
+# gh
+**/gh/hosts.yml
+
 # herdr
 **/herdr/*
 !**/herdr/config.toml
