@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+  nixConfigPath = "${config.home.homeDirectory}/Developer/nix-config";
+  mkLink = path: config.lib.file.mkOutOfStoreSymlink "${nixConfigPath}/home-manager/${path}";
+in
 {
   # Use a dark theme for GTK applications.
   gtk = {
@@ -19,4 +23,9 @@
     brave
     ghostty
   ];
+
+  xdg.configFile = {
+    "hypr".source = mkLink "hypr";
+    "noctalia".source = mkLink "noctalia";
+  };
 }

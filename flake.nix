@@ -10,8 +10,14 @@
     # pre-built binaries more likely to be fetched instead of rebuilt locally.
     #
     # https://github.com/numtide/llm-agents.nix#binary-cache
-    extra-substituters = [ "https://cache.numtide.com" ];
-    extra-trusted-public-keys = [ "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g=" ];
+    extra-substituters = [
+      "https://cache.numtide.com"
+      "https://noctalia.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+     "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
+     "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
   };
 
   inputs = {
@@ -27,6 +33,7 @@
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     llm-agents.url = "github:numtide/llm-agents.nix";
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
   };
 
   outputs =
@@ -37,6 +44,7 @@
       nix-darwin,
       nix-homebrew,
       llm-agents,
+      noctalia,
       ...
     }:
     let
@@ -103,6 +111,7 @@
           }
           home-manager.nixosModules.home-manager
           (mkHomeManagerModule ./home-manager/nixos.nix)
+          noctalia.nixosModules.default
         ];
       };
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";

@@ -77,30 +77,35 @@
 
   # services.getty.autologinUser = "kyohei";
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
   programs.firefox.enable = true;
 
   programs.zsh = {
     enable = true;
     loginShellInit = ''
-      if [ -z "$WAYLAND_DISPLAY" ] \
-         && [ "$XDG_VTNR" = "1" ] \
-         && [ -z "$SSH_CONNECTION" ]; then
-         exec start-hyprland
+      if uwsm check may-start; then
+        exec uwsm start hyprland.desktop
       fi
     '';
+  };
+
+  programs.noctalia = {
+    enable = true;
+    # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
+    recommendedServices.enable = true;
+    systemd.enable = true;
   };
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     asdbctl
-    hyprpaper
     kitty
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    waybar
-    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -159,10 +164,18 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    extra-substituters = [
+      "https://noctalia.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
 
   fonts = {
     packages = with pkgs; [

@@ -1,0 +1,2 @@
+[location]
+address = "Okinawa, Japan"  # geocoded when auto_locate = false and non-empty
