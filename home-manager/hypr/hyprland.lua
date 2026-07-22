@@ -335,7 +335,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 
 -- Complicated input
-hl.bind("CTRL + bracketleft", hl.dsp.send_shortcut({ mods = "", key = "escape" }))
+hl.bind("CTRL + semicolon", hl.dsp.send_shortcut({ mods = "", key = "escape" }))
 -- hl.bind("CTRL + H", hl.dsp.send_shortcut({ mods = "", key = "backspace" }), { repeating = true })
 
 

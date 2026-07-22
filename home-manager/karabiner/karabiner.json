@@ -409,11 +409,11 @@
             ]
           },
           {
-            "description": "Control-[ to Escape then Eisu",
+            "description": "Control-; to Escape then Eisu",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "open_bracket",
+                  "key_code": "semicolon",
                   "modifiers": {
                     "mandatory": [
                       "control"
