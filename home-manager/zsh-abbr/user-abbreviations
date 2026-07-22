@@ -1,5 +1,6 @@
 abbr -g "cg"="~/Developer/nix-config"
 abbr -g "pc"="pbcopy"
+abbr -g "wlc"="wl-copy"
 abbr -g "x"="xargs"
 abbr "a"="abbr"
 abbr "cpul"="sysctl -n hw.logicalcpu"
