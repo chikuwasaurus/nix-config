@@ -22,7 +22,6 @@ in
   home.packages = with pkgs; [
     brave
     ghostty
-    wl-clipboard
   ];
 
   xdg.configFile = {
