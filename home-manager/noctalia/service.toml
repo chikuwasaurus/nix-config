@@ -1,2 +1,17 @@
+[idle.behavior.lock]
+enabled = true
+timeout = 600
+action = "lock"
+
+[idle.behavior.screen-off]
+enabled = true
+timeout = 660
+action = "screen_off"  # turns monitors off, and back on when you return
+
+[idle.behavior.suspend]
+enabled = true
+timeout = 900
+action = "lock_and_suspend"
+
 [location]
 address = "Okinawa, Japan"  # geocoded when auto_locate = false and non-empty
