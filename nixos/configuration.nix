@@ -109,9 +109,6 @@
       idle = {
         timeout = 300;
       };
-      cursor = {
-        size = 24;
-      };
       keyboard = {
         layout = "us";
       };

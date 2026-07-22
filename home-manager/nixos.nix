@@ -30,4 +30,11 @@ in
     # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm
     "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
   };
+
+  home.pointerCursor = {
+    enable = true;
+    package = pkgs.adwaita-icon-theme;
+    name = "Adwaita";
+    size = 24;
+  };
 }
