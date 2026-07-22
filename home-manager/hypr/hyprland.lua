@@ -243,6 +243,9 @@ hl.config({
         kb_options = "ctrl:nocaps",
         kb_rules   = "",
 
+        repeat_rate = 50, -- default: 25
+        repeat_delay = 250, -- default: 600
+
         follow_mouse = 1,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
