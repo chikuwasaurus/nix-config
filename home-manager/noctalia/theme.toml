@@ -2,3 +2,6 @@
 mode = "dark"  # dark | light | auto
 source = "builtin"  # builtin | wallpaper | community | custom
 builtin = "Catppuccin"  # bundled palette name
+
+[theme.templates]
+builtin_ids = ["hyprland"]
