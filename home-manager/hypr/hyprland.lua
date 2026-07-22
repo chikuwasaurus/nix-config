@@ -39,15 +39,17 @@ hl.monitor({
 local ipc = "noctalia msg "
 
 -- Set programs that you use
-local terminal        = "ghostty"
-local browser         = "firefox"
-local fileManager     = "ghostty -e yazi ~/Developer"
-local launcher        = ipc .. "panel-toggle launcher"
-local control_center  = ipc .. "panel-toggle control-center"
-local clipboard       = ipc .. "panel-toggle clipboard"
-local translator      = ipc .. "panel-toggle launcher '/tr '"
-local settings_toggle = ipc .. "settings-toggle"
-local window_switcher = ipc .. "window-switcher"
+local terminal              = "ghostty"
+local browser               = "firefox"
+local fileManager           = "ghostty -e yazi ~/Developer"
+local launcher              = ipc .. "panel-toggle launcher"
+local control_center        = ipc .. "panel-toggle control-center"
+local clipboard             = ipc .. "panel-toggle clipboard"
+local translator            = ipc .. "panel-toggle launcher '/tr '"
+local settings_toggle       = ipc .. "settings-toggle"
+local window_switcher       = ipc .. "window-switcher"
+local screenshot_fullscreen = ipc .. "screenshot-fullscreen"
+local screenshot_region     = ipc .. "screenshot-region"
 
 
 -------------------
@@ -289,6 +291,8 @@ hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(clipboard))
 hl.bind(mainMod .. " + CTRL + T", hl.dsp.exec_cmd(translator))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(settings_toggle))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(window_switcher))
+hl.bind(mainMod .. " + CTRL + 3", hl.dsp.exec_cmd(screenshot_fullscreen))
+hl.bind(mainMod .. " + CTRL + 4", hl.dsp.exec_cmd(screenshot_region))
 local closeWindowBind = hl.bind(mainMod .. " + W", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm stop"))
