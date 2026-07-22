@@ -2,6 +2,7 @@
 launch_apps_as_systemd_services = true  # launch apps as transient systemd scopes
 
 [keybinds]
+cancel = ["escape", "ctrl+c"]
 left = ["left", "ctrl+h"]
 right = ["right", "ctrl+l"]
 up = ["up", "ctrl+k"]
