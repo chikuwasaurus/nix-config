@@ -34,6 +34,10 @@
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     llm-agents.url = "github:numtide/llm-agents.nix";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -45,6 +49,7 @@
       nix-homebrew,
       llm-agents,
       noctalia,
+      noctalia-greeter,
       ...
     }:
     let
@@ -112,6 +117,7 @@
           home-manager.nixosModules.home-manager
           (mkHomeManagerModule ./home-manager/nixos.nix)
           noctalia.nixosModules.default
+          noctalia-greeter.nixosModules.default
         ];
       };
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";

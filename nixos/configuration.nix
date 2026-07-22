@@ -86,11 +86,11 @@
 
   programs.zsh = {
     enable = true;
-    loginShellInit = ''
-      if uwsm check may-start; then
-        exec uwsm start hyprland.desktop
-      fi
-    '';
+    # loginShellInit = ''
+    #   if uwsm check may-start; then
+    #     exec uwsm start hyprland.desktop
+    #   fi
+    # '';
   };
 
   programs.noctalia = {
@@ -99,6 +99,27 @@
     recommendedServices.enable = true;
     systemd.enable = true;
   };
+
+  programs.noctalia-greeter = {
+    enable = true;
+    settings = {
+      session = {
+        default = "Hyprland (uwsm-managed)";
+      };
+      idle = {
+        timeout = 300;
+      };
+      cursor = {
+        size = 24;
+      };
+      keyboard = {
+        layout = "us";
+      };
+    };
+  };
+
+  # Sync Noctalia Shell theme with Nocalia Greeter
+  security.polkit.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -121,7 +142,7 @@
 
   # Enable keyring.
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.login.enableGnomeKeyring = true;
+  # security.pam.services.login.enableGnomeKeyring = true;
 
   # Grant read/write access to the Studio Display HID interface for
   # members of the "studio-display" group.
