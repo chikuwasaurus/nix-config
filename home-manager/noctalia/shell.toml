@@ -3,6 +3,9 @@ launch_apps_as_systemd_services = true  # launch apps as transient systemd scope
 polkit_agent = true  # register Noctalia's native polkit authentication agent
 screen_time_enabled = true  # track per-app usage time for the Control Center screen-time view
 
+[shell.animation]
+enabled = false
+
 [shell.greeter_sync]
 auto_sync = true  # auto sync Greeter and Greeter Sync
 
