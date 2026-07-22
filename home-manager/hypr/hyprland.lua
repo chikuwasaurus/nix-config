@@ -40,7 +40,7 @@ local ipc = "noctalia msg "
 
 -- Set programs that you use
 local terminal        = "ghostty"
-local browser         = "brave"
+local browser         = "firefox"
 local fileManager     = "ghostty -e yazi ~/Developer"
 local launcher        = ipc .. "panel-toggle launcher"
 local control_center  = ipc .. "panel-toggle control-center"
