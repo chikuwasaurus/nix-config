@@ -7,6 +7,7 @@ trim-final-newlines = true
 trim-trailing-whitespace = true
 line-number = "relative"
 cursorline = true
+default-yank-register = "+"
 
 [editor.indent-guides]
 render = true
