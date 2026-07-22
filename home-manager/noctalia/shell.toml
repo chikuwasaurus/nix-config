@@ -2,6 +2,8 @@
 launch_apps_as_systemd_services = true  # launch apps as transient systemd scopes
 polkit_agent = true  # register Noctalia's native polkit authentication agent
 screen_time_enabled = true  # track per-app usage time for the Control Center screen-time view
+clipboard_auto_paste = "off"  # off | auto | ctrl_v | ctrl_shift_v | shift_insert
+clipboard_history_max_entries = 10000  # unpinned history cap (10–10000); pinned entries are exempt
 
 [shell.animation]
 enabled = false
