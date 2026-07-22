@@ -47,7 +47,8 @@ in
   #  /etc/profiles/per-user/kyohei/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "hx";
+    VISUAL = "hx";
   };
 
   home.sessionPath = [

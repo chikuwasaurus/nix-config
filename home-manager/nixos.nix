@@ -28,5 +28,7 @@ in
   xdg.configFile = {
     "hypr".source = mkLink "hypr";
     "noctalia".source = mkLink "noctalia";
+    # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm
+    "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
   };
 }
