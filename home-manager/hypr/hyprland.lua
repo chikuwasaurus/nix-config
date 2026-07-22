@@ -41,11 +41,12 @@ local ipc = "noctalia msg "
 -- Set programs that you use
 local terminal        = "ghostty"
 local browser         = "brave"
+local fileManager     = "ghostty -e yazi ~/Developer"
 local launcher        = ipc .. "panel-toggle launcher"
 local control_center  = ipc .. "panel-toggle control-center"
+local clipboard       = ipc .. "panel-toggle clipboard"
 local settings_toggle = ipc .. "settings-toggle"
 local window_switcher = ipc .. "window-switcher"
-local fileManager     = "ghostty -e yazi ~/Developer"
 
 
 -------------------
@@ -276,11 +277,12 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(control_center))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(clipboard))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(settings_toggle))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(window_switcher))
-hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(fileManager))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm stop"))
