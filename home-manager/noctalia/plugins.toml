@@ -1,6 +1,11 @@
 [plugins]
-# Fully-qualified ids ("<author>/<plugin>") that are active.
-enabled = ["noctalia/translator"]
+enabled = ["noctalia/translator", "noctalia/screen_recorder"]
 
 [plugin_settings."noctalia/translator"]
 target_lang = "ja"
+
+[plugin_settings."noctalia/screen_recorder"]
+audio_codec = "aac"
+copy_to_clipboard = true
+frame_rate = 30
+video_codec = "hevc"

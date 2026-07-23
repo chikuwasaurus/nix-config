@@ -53,6 +53,7 @@ local settingsToggle       = ipc .. "settings-toggle"
 local windowSwitcher       = ipc .. "window-switcher"
 local screenshotFullscreen = ipc .. "screenshot-fullscreen"
 local screenshotRegion     = ipc .. "screenshot-region"
+local screenRecord         = ipc .. "plugin noctalia/screen_recorder:service all toggle"
 
 
 -------------------
@@ -313,6 +314,7 @@ hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(settingsToggle))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(windowSwitcher))
 hl.bind(mainMod .. " + CTRL + 3", hl.dsp.exec_cmd(screenshotFullscreen))
 hl.bind(mainMod .. " + CTRL + 4", hl.dsp.exec_cmd(screenshotRegion))
+hl.bind(mainMod .. " + CTRL + 5", hl.dsp.exec_cmd(screenRecord))
 local closeWindowBind = hl.bind(mainMod .. " + W", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm stop"))

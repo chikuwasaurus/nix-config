@@ -1,0 +1,16 @@
+[bar.default]
+end = [
+  "media",
+  "tray",
+  "notifications",
+  "screenshot",
+  "recorder",
+  "clipboard",
+  "network",
+  "bluetooth",
+  "volume",
+  "brightness",
+  "battery",
+  "control-center",
+  "session"
+]
