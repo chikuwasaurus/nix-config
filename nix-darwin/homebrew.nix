@@ -11,6 +11,13 @@
     user = "kyohei";
     onActivation.cleanup = "zap";
 
+    taps = [
+      {
+        name = "TabularisDB/tabularis";
+        trusted = true;
+      }
+    ];
+
     brews = [
       "mas"
     ];
@@ -40,6 +47,7 @@
       "raycast"
       "slack"
       "tableplus"
+      "tabularis"
       "tailscale-app"
       "typora"
       "zed"
