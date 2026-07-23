@@ -46,6 +46,7 @@ local processMonitor       = "ghostty -e btop"
 local launcher             = ipc .. "panel-toggle launcher"
 local controlCenter        = ipc .. "panel-toggle control-center"
 local clipboard            = ipc .. "panel-toggle clipboard"
+local session              = ipc .. "panel-toggle launcher '/session '"
 local emoji                = ipc .. "panel-toggle launcher '/emo '"
 local translator           = ipc .. "panel-toggle launcher '/tr '"
 local settingsToggle       = ipc .. "settings-toggle"
@@ -291,8 +292,9 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(processMonitor))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(controlCenter))
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(clipboard))
-hl.bind(mainMod .. " + CTRL + T", hl.dsp.exec_cmd(translator))
+hl.bind(mainMod .. " + CTRL + Q", hl.dsp.exec_cmd(session))
 hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd(emoji))
+hl.bind(mainMod .. " + CTRL + T", hl.dsp.exec_cmd(translator))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(settingsToggle))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(windowSwitcher))
 hl.bind(mainMod .. " + CTRL + 3", hl.dsp.exec_cmd(screenshotFullscreen))
