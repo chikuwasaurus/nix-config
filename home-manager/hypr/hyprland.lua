@@ -42,6 +42,7 @@ local ipc = "noctalia msg "
 local terminal             = "ghostty"
 local browser              = "firefox"
 local fileManager          = "ghostty -e yazi ~/Developer"
+local processMonitor       = "ghostty -e btop"
 local launcher             = ipc .. "panel-toggle launcher"
 local controlCenter        = ipc .. "panel-toggle control-center"
 local clipboard            = ipc .. "panel-toggle clipboard"
@@ -285,6 +286,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(processMonitor))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(controlCenter))
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(clipboard))
