@@ -70,9 +70,15 @@ local screenshotRegion     = ipc .. "screenshot-region"
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
 
--- hl.on("hyprland.start", function()
---   hl.exec_cmd("noctalia")
--- end)
+hl.on("hyprland.start", function()
+  hl.exec_cmd("ghostty", {
+      workspace = "1 silent",
+  })
+
+  hl.exec_cmd("firefox", {
+      workspace = "2 silent",
+  })
+end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
