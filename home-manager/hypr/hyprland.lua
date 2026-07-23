@@ -135,6 +135,14 @@ hl.config({
         layout = "dwindle",
     },
 
+    dwindle = {
+        -- 0 -> split follows mouse
+        -- 1 -> always split to the left (new = left or top)
+        -- 2 -> always split to the right (new = right or bottom)
+        force_split = 2,
+        -- preserve_split = true,
+    },
+
     decoration = {
         rounding       = 10,
         rounding_power = 2,
