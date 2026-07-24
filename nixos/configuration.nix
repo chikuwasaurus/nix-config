@@ -71,6 +71,7 @@
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user.
       "studio-display" # Allow this user to control the Studio Display without sudo.
+      "input" # Allow the user to access devices under /dev/input.
     ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;
@@ -123,6 +124,7 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     asdbctl
+    evtest # Identify and read keyboard input devices.
     ghostty
     gpu-screen-recorder
     kitty
@@ -144,13 +146,16 @@
   services.gnome.gnome-keyring.enable = true;
   # security.pam.services.login.enableGnomeKeyring = true;
 
-  # Grant read/write access to the Studio Display HID interface for
-  # members of the "studio-display" group.
-  #
-  # 05ac: Apple USB vendor ID
-  # 1114: Apple Studio Display product ID
   services.udev.extraRules = ''
+    # Grant read/write access to the Studio Display HID interface for
+    # members of the "studio-display" group.
+    #
+    # 05ac: Apple USB vendor ID
+    # 1114: Apple Studio Display product ID
     SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="05ac", ATTRS{idProduct}=="1114", GROUP:="studio-display", MODE:="0660"
+
+    # Create a stable device path for keyd's virtual keyboard.
+    SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="keyd virtual keyboard", GROUP="input", MODE="0660", SYMLINK+="input/by-id/keyd-virtual-keyboard"
   '';
 
   # Enable the OpenSSH daemon.

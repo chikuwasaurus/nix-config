@@ -1,5 +1,9 @@
 [plugins]
-enabled = ["noctalia/translator", "noctalia/screen_recorder"]
+enabled = [
+  "noctalia/translator",
+  "noctalia/screen_recorder",
+  "noctalia/bongocat"
+]
 
 [plugin_settings."noctalia/translator"]
 target_lang = "ja"

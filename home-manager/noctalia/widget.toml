@@ -1,2 +1,10 @@
+[widget.cat]
+audio_spectrum = true
+input_devices = ["/dev/input/by-id/keyd-virtual-keyboard"]
+rave_mode = true
+tappy_mode = true
+type = "noctalia/bongocat:cat"
+use_mpris_filter = true
+
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"

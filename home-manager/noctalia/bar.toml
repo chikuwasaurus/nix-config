@@ -1,4 +1,5 @@
 [bar.default]
+center = ["clock", "cat"]
 end = [
   "media",
   "tray",
