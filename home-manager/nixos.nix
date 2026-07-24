@@ -22,6 +22,7 @@ in
   home.packages = with pkgs; [ ];
 
   xdg.configFile = {
+    "fcitx5".source = mkLink "fcitx5";
     "hypr".source = mkLink "hypr";
     "noctalia".source = mkLink "noctalia";
     # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm

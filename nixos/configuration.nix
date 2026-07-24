@@ -175,6 +175,10 @@
 
             # Tap Tab normally, or activate the Emacs layer while held.
             tab = "overload(tab_emacs, tab)";
+
+            # Preserve Right Super as Right Super
+            rightmeta = "rightmeta";
+
             # capslock = "overload(control, esc)";
           };
 
@@ -208,6 +212,27 @@
           };
         };
       };
+    };
+  };
+
+  # IME
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+
+    fcitx5 = {
+      # Hyprland
+      waylandFrontend = true;
+
+      addons = with pkgs; [
+        fcitx5-mozc-ut
+        fcitx5-gtk
+
+        # Install Catppuccin themes with rounded corners
+        (catppuccin-fcitx5.override {
+          withRoundedCorners = true;
+        })
+      ];
     };
   };
 
