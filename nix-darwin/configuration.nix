@@ -14,16 +14,15 @@
     hostPlatform = "aarch64-darwin";
   };
 
-  nix = {
-    package = pkgs.nix;
-    settings.experimental-features = [
+  nix.settings = {
+    experimental-features = [
       "nix-command"
       "flakes"
     ];
-    extra-substituters = [
+    substituters = [
       "https://cache.numtide.com"
     ];
-    extra-trusted-public-keys = [
+    trusted-public-keys = [
       "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
     ];
   };
