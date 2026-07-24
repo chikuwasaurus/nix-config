@@ -265,7 +265,7 @@ hl.config({
         kb_layout  = "us",
         kb_variant = "",
         kb_model   = "",
-        kb_options = "ctrl:nocaps",
+        kb_options = "",
         kb_rules   = "",
 
         repeat_rate = 50, -- default: 25
@@ -375,11 +375,6 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
-
-
--- Complicated input
-hl.bind("CTRL + semicolon", hl.dsp.send_shortcut({ mods = "", key = "escape" }))
--- hl.bind("CTRL + H", hl.dsp.send_shortcut({ mods = "", key = "backspace" }), { repeating = true })
 
 -- Zoom
 local MIN_ZOOM = 1.0

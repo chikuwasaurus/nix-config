@@ -156,6 +156,61 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable a key remapping daemon.
+  services.keyd = {
+    enable = true;
+
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+
+        settings = {
+          main = {
+            # Use Caps Lock as Control while held.
+            capslock = "layer(control)";
+
+            # Use the Control keys as Escape.
+            leftcontrol = "esc";
+            rightcontrol = "esc";
+
+            # Tap Tab normally, or activate the Emacs layer while held.
+            tab = "overload(tab_emacs, tab)";
+            # capslock = "overload(control, esc)";
+          };
+
+          control = {
+            # Send Escape when Ctrl+semicolon is pressed.
+            semicolon = "esc";
+          };
+
+          tab_emacs = {
+            # Character movement.
+            b = "left";
+            f = "right";
+
+            # Line movement.
+            p = "up";
+            n = "down";
+
+            # Move to the beginning or end of the line.
+            a = "home";
+            e = "end";
+
+            # Editing commands.
+            h = "backspace";
+            d = "delete";
+            m = "enter";
+            g = "esc";
+            semicolon = "esc";
+
+            # Select to the end of the line and delete.
+            k = "macro(S-end delete)";
+          };
+        };
+      };
+    };
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
