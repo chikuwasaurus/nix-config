@@ -23,6 +23,11 @@ use = "Lil-Dank/lazygit"
 rev = "e73fd74"
 hash = "6ea5f37c7f219671ec504cb8311f889d"
 
+[[plugin.deps]]
+use = "XYenon/clipboard"
+rev = "d4d19ea"
+hash = "2cfc56d62f9ca0c62ce356e4364c3d89"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "0f9204b"
