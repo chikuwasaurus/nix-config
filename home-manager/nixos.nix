@@ -19,9 +19,7 @@ in
   };
 
   # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    ghostty
-  ];
+  home.packages = with pkgs; [ ];
 
   xdg.configFile = {
     "hypr".source = mkLink "hypr";
