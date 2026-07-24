@@ -58,6 +58,10 @@ Backups.backupdb
 MobileBackups.trash
 tmbootpicker.efi
 
+# fcitx5
+**/fcitx5/conf/notifications.conf
+**/fcitx5/conf/cached_layouts
+
 # gh
 **/gh/hosts.yml
 
