@@ -150,6 +150,7 @@ in
     xh
     yazi
     yq
+    zk
     zoxide
     zsh
     zstd
