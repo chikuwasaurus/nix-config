@@ -170,6 +170,10 @@ hl.config({
     animations = {
         enabled = false,
     },
+
+    binds = {
+        scroll_event_delay = 20,
+    },
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -377,6 +381,35 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 hl.bind("CTRL + semicolon", hl.dsp.send_shortcut({ mods = "", key = "escape" }))
 -- hl.bind("CTRL + H", hl.dsp.send_shortcut({ mods = "", key = "backspace" }), { repeating = true })
 
+-- Zoom
+local MIN_ZOOM = 1.0
+local MAX_ZOOM = 3.0
+local ZOOM_STEP = 0.2
+
+local function set_zoom(value)
+    local zoom = math.max(MIN_ZOOM, math.min(MAX_ZOOM, value))
+    hl.config({ cursor = { zoom_factor = zoom } })
+end
+
+local function zoom_by(offset)
+    local current = hl.get_config("cursor.zoom_factor")
+    set_zoom(current + offset)
+end
+
+-- zoom in
+hl.bind(mainMod .. " + CTRL + mouse_up", function()
+    zoom_by(ZOOM_STEP)
+end)
+
+-- zoom out
+hl.bind(mainMod .. " + CTRL + mouse_down", function()
+    zoom_by(-ZOOM_STEP)
+end)
+
+-- reset
+hl.bind(mainMod .. " + CTRL + 0", function()
+    set_zoom(MIN_ZOOM)
+end)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
