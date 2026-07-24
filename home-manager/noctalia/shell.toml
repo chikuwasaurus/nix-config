@@ -1,4 +1,5 @@
 [shell]
+avatar_path = "~/.config/noctalia/avatar.png"
 launch_apps_as_systemd_services = true  # launch apps as transient systemd scopes
 polkit_agent = true  # register Noctalia's native polkit authentication agent
 screen_time_enabled = true  # track per-app usage time for the Control Center screen-time view
