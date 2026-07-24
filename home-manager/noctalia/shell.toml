@@ -14,7 +14,7 @@ auto_sync = true  # auto sync Greeter and Greeter Sync
 
 [keybinds]
 cancel = ["escape", "ctrl+c"]
-left = ["left", "ctrl+h"]
-right = ["right", "ctrl+l"]
-up = ["up", "ctrl+k"]
-down = ["down", "ctrl+j"]
+left = ["left", "ctrl+h", "ctrl+b"]
+right = ["right", "ctrl+l", "ctrl+f"]
+up = ["up", "ctrl+k", "ctrl+p"]
+down = ["down", "ctrl+j", "ctrl+n"]
