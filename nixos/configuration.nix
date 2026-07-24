@@ -13,6 +13,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./flatpak.nix
   ];
 
   # Use the systemd-boot EFI boot loader.

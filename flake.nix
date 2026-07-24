@@ -38,6 +38,7 @@
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -50,6 +51,7 @@
       llm-agents,
       noctalia,
       noctalia-greeter,
+      nix-flatpak,
       ...
     }:
     let
@@ -118,6 +120,7 @@
           (mkHomeManagerModule ./home-manager/nixos.nix)
           noctalia.nixosModules.default
           noctalia-greeter.nixosModules.default
+          nix-flatpak.nixosModules.nix-flatpak
         ];
       };
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";

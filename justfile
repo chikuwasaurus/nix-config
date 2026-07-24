@@ -2,9 +2,19 @@
 nixos:
     sudo nixos-rebuild switch --flake .
 
+nixos-update:
+    nix flake update
+    sudo nixos-rebuild switch --flake .
+    flatpak update
+
 # Build and apply macOS system and Home Manager changes
 darwin:
     sudo darwin-rebuild switch --flake .
+
+darwin-update:
+    nix flake update
+    sudo darwin-rebuild switch --flake .
+    brew upgrade
 
 # Apply Home Manager on Omarchy
 omarchy:
