@@ -288,6 +288,7 @@
 
   fonts = {
     packages = with pkgs; [
+      noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
@@ -295,10 +296,21 @@
     ];
 
     fontconfig.defaultFonts = {
-      serif = [ "Noto Serif CJK JP" ];
-      sansSerif = [ "Noto Sans CJK JP" ];
-      emoji = [ "Noto Color Emoji" ];
-      monospace = [ "UDEV Gothic 35NF" ];
+      serif = [
+        "Noto Serif"
+        "Noto Serif CJK JP"
+      ];
+      sansSerif = [
+        "Noto Sans"
+        "Noto Sans CJK JP"
+      ];
+      monospace = [
+        "UDEV Gothic 35NF"
+        "Noto Sans Mono CJK JP"
+      ];
+      emoji = [
+        "Noto Color Emoji"
+      ];
     };
   };
 }
