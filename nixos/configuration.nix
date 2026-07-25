@@ -33,7 +33,14 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    # Make the Japanese locale available for locale-sensitive applications
+    # while keeping English as the system-wide default.
+    extraLocales = [
+      "ja_JP.UTF-8/UTF-8"
+    ];
+  };
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
