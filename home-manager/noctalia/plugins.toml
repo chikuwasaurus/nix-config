@@ -2,7 +2,7 @@
 enabled = [
   "noctalia/translator",
   "noctalia/screen_recorder",
-  "noctalia/bongocat"
+  # "noctalia/bongocat"
 ]
 
 [plugin_settings."noctalia/translator"]

@@ -1,5 +1,5 @@
 [bar.default]
-center = ["clock", "cat"]
+# center = ["clock", "cat"]
 end = [
   "media",
   "tray",
