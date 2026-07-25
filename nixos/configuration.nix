@@ -61,8 +61,12 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  # Create a dedicated group for accessing the Apple Studio Display's HID interface.
-  users.groups."studio-display" = { };
+  users.groups = {
+    # Create a dedicated group for accessing the Apple Studio Display's HID interface.
+    "studio-display" = { };
+    # Create a group that can access the keyd IPC socket.
+    "keyd" = { };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.kyohei = {
@@ -72,6 +76,7 @@
       "wheel" # Enable ‘sudo’ for the user.
       "studio-display" # Allow this user to control the Studio Display without sudo.
       "input" # Allow the user to access devices under /dev/input.
+      "keyd" # Allow the application mapper to communicate with keyd.
     ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;
@@ -127,6 +132,7 @@
     evtest # Identify and read keyboard input devices.
     ghostty
     gpu-screen-recorder
+    config.services.keyd.package # Make the keyd CLI tools available system-wide.
     kitty
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wl-clipboard
@@ -219,6 +225,13 @@
       };
     };
   };
+
+  # Allow keyd to switch its effective group to the keyd group.
+  # see: https://github.com/NixOS/nixpkgs/issues/290161
+  systemd.services.keyd.serviceConfig.CapabilityBoundingSet =
+    lib.mkAfter [
+      "CAP_SETGID"
+    ];
 
   # IME
   i18n.inputMethod = {

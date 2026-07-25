@@ -76,6 +76,10 @@ tmbootpicker.efi
 **/karabiner/automatic_backups
 **/karabiner/assets
 
+# keyd
+**/keyd/*
+!**/keyd/app.conf
+
 # nushell
 **/nushell/history.txt
 

@@ -24,6 +24,7 @@ in
   xdg.configFile = {
     "fcitx5".source = mkLink "fcitx5";
     "hypr".source = mkLink "hypr";
+    "keyd".source = mkLink "keyd";
     "noctalia".source = mkLink "noctalia";
     # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm
     "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
@@ -61,5 +62,27 @@ in
         }
       '';
     };
+  };
+
+  # Run the application mapper as a systemd user service.
+  systemd.user.services.keyd-application-mapper = {
+    Unit = {
+      Description = "Application-specific keyd mapper";
+      After = [ "graphical-session.target" ];
+      PartOf = [ "graphical-session.target" ];
+    };
+
+    Service = {
+      # Keep the process in the foreground so systemd can supervise it.
+      ExecStart = "${pkgs.keyd}/bin/keyd-application-mapper";
+
+      # Restart the mapper if it exits unexpectedly.
+      Restart = "on-failure";
+      RestartSec = 1;
+    };
+
+    Install.WantedBy = [
+      "graphical-session.target"
+    ];
   };
 }
