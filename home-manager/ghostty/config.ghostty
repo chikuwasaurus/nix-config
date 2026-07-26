@@ -90,7 +90,7 @@ keybind = ctrl+alt+w=close_tab:this
 # Align keybindings with Herdr across macOS and Linux.
 
 # Leader key
-keybind = ctrl+,=activate_key_table_once:leader
+keybind = ctrl+q=activate_key_table_once:leader
 
 # Key table definition
 keybind = leader/
