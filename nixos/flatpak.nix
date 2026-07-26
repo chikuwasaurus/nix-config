@@ -30,6 +30,7 @@ in
         "com.github.tchx84.Flatseal"
         "io.github.flattool.Warehouse"
         "com.obsproject.Studio"
+        "org.kde.kdenlive"
       ]
       ++ fromRemote "flatpark" [
         "dev.tabularis.Tabularis"
