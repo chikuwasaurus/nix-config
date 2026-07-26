@@ -31,6 +31,7 @@
       "cleanshot"
       "cursor"
       "figma"
+      "firefox"
       "flashspace"
       "ghostty"
       "google-chrome"
