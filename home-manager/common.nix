@@ -137,6 +137,7 @@ in
     procs
     qpdf
     ripgrep
+    rumdl
     scooter
     sd
     sheldon
