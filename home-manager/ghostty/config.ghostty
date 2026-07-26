@@ -92,6 +92,9 @@ keybind = ctrl+alt+w=close_tab:this
 # Leader key
 keybind = ctrl+,=activate_key_table_once:leader
 
+# Key table definition
+keybind = leader/
+
 # Tabs
 keybind = leader/t=new_tab
 # keybind = leader/w=close_tab:this
@@ -113,6 +116,7 @@ keybind = leader/shift+r=reload_config
 
 # Exit
 keybind = leader/escape=deactivate_key_table
+keybind = leader/q=deactivate_key_table
 
 # Catch unbound keys
 keybind = leader/catch_all=activate_key_table_once:leader
@@ -120,6 +124,9 @@ keybind = leader/catch_all=activate_key_table_once:leader
 
 # Enter resize mode
 keybind = leader/r=activate_key_table:resize
+
+# Key table definition
+keybind = resize/
 
 # Resize splits repeatedly
 keybind = resize/h=resize_split:left,10
@@ -129,6 +136,7 @@ keybind = resize/l=resize_split:right,10
 
 # Exit resize mode
 keybind = resize/escape=deactivate_key_table
+keybind = resize/q=deactivate_key_table
 
 # Catch unbound keys in resize mode
 keybind = resize/catch_all=ignore
