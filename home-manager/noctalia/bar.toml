@@ -1,4 +1,6 @@
 [bar.default]
+concave_edge_corners = false
+margin_ends = 10
 # center = ["clock", "cat"]
 end = [
   "media",

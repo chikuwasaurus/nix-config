@@ -6,5 +6,8 @@ tappy_mode = true
 type = "noctalia/bongocat:cat"
 use_mpris_filter = true
 
+[widget.clock]
+format = "{:%a %H:%M}"
+
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"
