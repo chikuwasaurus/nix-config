@@ -13,9 +13,19 @@ args = [
   "start",
 ]
 
+[language-server.zk]
+command = "zk"
+args = ["lsp"]
+required-root-patterns = [".zk"]
+
 [[language]]
 name = "markdown"
-language-servers = ["codebook"]
+roots = [".zk"]
+language-servers = [
+  "codebook",
+  "zk",
+  "rumdl",
+]
 
 [[language]]
 name = "bash"
