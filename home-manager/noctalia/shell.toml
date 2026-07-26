@@ -12,9 +12,12 @@ enabled = false
 [shell.greeter_sync]
 auto_sync = true  # auto sync Greeter and Greeter Sync
 
+[shell.launcher.providers.session]
+global = true
+
 [keybinds]
-cancel = ["escape", "ctrl+c"]
-left = ["left", "ctrl+h", "ctrl+b"]
-right = ["right", "ctrl+l", "ctrl+f"]
-up = ["up", "ctrl+k", "ctrl+p"]
-down = ["down", "ctrl+j", "ctrl+n"]
+cancel = ["escape"]
+left = ["left", "ctrl+b"]
+right = ["right", "ctrl+f"]
+up = ["up", "ctrl+p"]
+down = ["down", "ctrl+n"]
