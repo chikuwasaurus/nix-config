@@ -13,10 +13,12 @@
     extra-substituters = [
       "https://cache.numtide.com"
       "https://noctalia.cachix.org"
+      "https://helix.cachix.org"
     ];
     extra-trusted-public-keys = [
       "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+      "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
     ];
   };
 
@@ -39,10 +41,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    helix.url = "github:helix-editor/helix";
   };
 
   outputs =
-    {
+    inputs@{
       self,
       nixpkgs,
       home-manager,
@@ -64,6 +67,9 @@
             homeModule
           ];
           backupFileExtension = "backup";
+          extraSpecialArgs = {
+            inherit inputs;
+          };
         };
       };
 
@@ -97,6 +103,9 @@
             overlays = [
               llm-agents.overlays.shared-nixpkgs
             ];
+          };
+          extraSpecialArgs = {
+            inherit inputs;
           };
           modules = [
             {

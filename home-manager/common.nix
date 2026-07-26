@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   ...
@@ -116,7 +117,7 @@ in
     go
     gomi
     gping
-    helix
+    # helix
     hyperfine
     jq
     jujutsu
@@ -161,6 +162,12 @@ in
     herdr
     hunk
   ]);
+
+  programs.helix = {
+    enable = true;
+    package =
+      inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
