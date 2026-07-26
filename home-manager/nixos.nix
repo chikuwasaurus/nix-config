@@ -45,27 +45,7 @@ in
     enable = true;
     package = null;
 
-    profiles."8oj7uhz3.default" = {
-      settings = {
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-      };
-
-      userContent = ''
-        @-moz-document domain("chatgpt.com") {
-          /*
-           * Use the Japanese-aware sans-serif fallback instead of Firefox's
-           * system-ui fallback on ChatGPT.
-           */
-          body,
-          button,
-          input,
-          select,
-          textarea {
-            font-family: sans-serif !important;
-          }
-        }
-      '';
-    };
+    profiles."8oj7uhz3.default" = { };
   };
 
   programs.ghostty = {

@@ -335,5 +335,17 @@
         "Noto Color Emoji"
       ];
     };
+
+    fontconfig.localConf = ''
+      <!-- Firefox may resolve CSS ui-sans-serif separately from sans-serif,
+           causing Noto Sans CJK KR to be selected despite defaultFonts. -->
+      <alias binding="strong">
+        <family>ui-sans-serif</family>
+        <prefer>
+          <family>Noto Sans</family>
+          <family>Noto Sans CJK JP</family>
+        </prefer>
+      </alias>
+    '';
   };
 }
