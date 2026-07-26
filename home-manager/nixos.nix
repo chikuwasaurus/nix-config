@@ -43,9 +43,15 @@ in
 
   programs.firefox = {
     enable = true;
-    package = null;
 
-    profiles."8oj7uhz3.default" = { };
+    profiles.default = {
+      id = 0;
+      isDefault = true;
+      settings = {
+        # Enable experimental PWA-style taskbar tabs.
+        "browser.taskbarTabs.enabled" = true;
+      };
+    };
   };
 
   programs.ghostty = {
