@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ... }:
 
 let
   nixConfigPath = "${config.home.homeDirectory}/Developer/nix-config";
@@ -62,6 +66,12 @@ in
         }
       '';
     };
+  };
+
+  programs.ghostty = {
+    enable = true;
+    package =
+      inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
 
   # Run the application mapper as a systemd user service.
