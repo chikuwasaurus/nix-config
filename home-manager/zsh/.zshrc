@@ -116,4 +116,5 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 export SHELL_SESSIONS_DISABLE=1
 
 # Colorize man pages.
+export MANROFFOPT='-c'
 export MANPAGER="sh -c 'col -bx | bat --style=plain --language=man'"
