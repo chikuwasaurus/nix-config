@@ -60,6 +60,10 @@ in
       inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
 
+  programs.obsidian = {
+    enable = true;
+  };
+
   # Run the application mapper as a systemd user service.
   systemd.user.services.keyd-application-mapper = {
     Unit = {

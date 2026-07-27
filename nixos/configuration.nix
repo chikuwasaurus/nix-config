@@ -183,6 +183,7 @@
           main = {
             # Use Caps Lock as Control while held.
             capslock = "layer(control)";
+            # capslock = "overload(control, esc)";
 
             # Use the Control keys as Escape.
             leftcontrol = "esc";
@@ -193,39 +194,20 @@
 
             # Preserve Right Super as Right Super
             rightmeta = "rightmeta";
-
-            # capslock = "overload(control, esc)";
           };
 
           control = {
+            h = "backspace";
             # Send Escape when Ctrl+semicolon is pressed.
             semicolon = "esc";
           };
-
-          tab_emacs = {
-            # Character movement.
-            b = "left";
-            f = "right";
-
-            # Line movement.
-            p = "up";
-            n = "down";
-
-            # Move to the beginning or end of the line.
-            a = "home";
-            e = "end";
-
-            # Editing commands.
-            h = "backspace";
-            d = "delete";
-            m = "enter";
-            g = "esc";
-            semicolon = "esc";
-
-            # Select to the end of the line and delete.
-            k = "macro(S-end delete)";
-          };
         };
+
+
+        extraConfig = ''
+          # Define the composite layer so app.conf can modify it.
+          [control+shift]
+        '';
       };
     };
   };
@@ -354,5 +336,10 @@
         };
       };
     };
+  };
+
+  # Allow unfree packages
+  nixpkgs = {
+    config.allowUnfree = true;
   };
 }
