@@ -15,3 +15,7 @@ Host macbook-air
 Host omarchy
   HostName omarchy
   User kyohei
+
+Host nixos
+  HostName nixos
+  User kyohei

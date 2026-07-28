@@ -180,6 +180,9 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable tailscale client daemon.
+  services.tailscale.enable = true;
+
   # Enable a key remapping daemon.
   services.keyd = {
     enable = true;
