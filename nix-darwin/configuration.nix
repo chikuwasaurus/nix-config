@@ -1,8 +1,5 @@
-{
-  self,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
+
 {
   imports = [
     ./homebrew.nix
@@ -34,9 +31,6 @@
 
     # Required when changing user settings on your Mac
     primaryUser = "kyohei";
-
-    # The Git revision of the top-level flake from which this configuration was built.
-    configurationRevision = self.rev or self.dirtyRev or null;
 
     defaults = {
       dock = {
