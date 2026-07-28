@@ -25,6 +25,15 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
+  # Enable the BlueZ Bluetooth stack.
+  hardware.bluetooth.enable = true;
+
+  # Enable power profile management.
+  services.power-profiles-daemon.enable = true;
+
+  # Expose battery level, charging state, and AC power information.
+  services.upower.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
