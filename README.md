@@ -26,25 +26,25 @@ Supported configurations:
 
 1. Install [Nix](https://nixos.org/download/#nix-install-macos):
 
-    ```sh
-    sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
-    ```
+   ```sh
+   sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
+   ```
 
 2. Clone this repository:
 
-    ```sh
-    git clone https://github.com/chikuwasaurus/nix-config.git ~/Developer/nix-config
-    cd ~/Developer/nix-config
-    ```
+   ```sh
+   git clone https://github.com/chikuwasaurus/nix-config.git ~/Developer/nix-config
+   cd ~/Developer/nix-config
+   ```
 
 3. Build and apply the [nix-darwin](https://github.com/nix-darwin/nix-darwin) configuration
 (this will also install Homebrew automatically):
 
-    ```sh
-    sudo nix run \
-        --extra-experimental-features "nix-command flakes" \
-        nix-darwin/master#darwin-rebuild -- switch --flake .
-    ```
+   ```sh
+   sudo nix run \
+       --extra-experimental-features "nix-command flakes" \
+       nix-darwin/master#darwin-rebuild -- switch --flake .
+   ```
 
 4. Restart your machine
 
@@ -52,27 +52,27 @@ Supported configurations:
 
 - Build and apply macOS system and Home Manager changes:
 
-    ```sh
-    just switch
-    ```
+  ```sh
+  just switch
+  ```
 
 - Update flake inputs (dependencies):
 
-    ```sh
-    just update
-    ```
+  ```sh
+  just update
+  ```
 
 - Update packages and Homebrew only:
 
-    ```sh
-    just packages
-    ```
+  ```sh
+  just packages
+  ```
 
 - Update only AI CLI:
 
-    ```sh
-    just ai
-    ```
+  ```sh
+  just ai
+  ```
 
 ## Linux (Apple container machine)
 
@@ -80,13 +80,13 @@ Supported configurations:
 
 1. Create and Run machine:
 
-    see: [nix-alpine](./containers/nix-alpine/README.md)
+   see: [nix-alpine](./containers/nix-alpine/README.md)
 
 2. Apply dotfiles inside the container:
 
-    ```sh
-    nix run github:nix-community/home-manager -- switch --flake .#kyohei@apple-container
-    ```
+   ```sh
+   nix run github:nix-community/home-manager -- switch --flake .#kyohei@apple-container
+   ```
 
 3. Restart your container machine
 
@@ -94,10 +94,11 @@ Supported configurations:
 
 - Apply Home Manager changes inside Apple container:
 
-    ```sh
-    just container
-    ```
+   ```sh
+   just container
+   ```
 
 ### Note
 
-Running Home Manager inside the container updates files under the mounted host home directory.
+Running Home Manager inside the container updates files
+under the mounted host home directory.
