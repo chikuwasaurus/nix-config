@@ -26,6 +26,7 @@ language-servers = [
   "zk",
   "rumdl",
 ]
+auto-format = true
 
 [[language]]
 name = "bash"
