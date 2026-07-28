@@ -12,13 +12,11 @@
     # https://github.com/numtide/llm-agents.nix#binary-cache
     extra-substituters = [
       "https://cache.numtide.com"
-      "https://noctalia.cachix.org"
       "https://helix.cachix.org"
       "https://ghostty.cachix.org"
     ];
     extra-trusted-public-keys = [
       "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
-      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
       "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
       "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
     ];
@@ -37,7 +35,6 @@
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     llm-agents.url = "github:numtide/llm-agents.nix";
-    noctalia.url = "github:noctalia-dev/noctalia/cachix";
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,7 +52,6 @@
       nix-darwin,
       nix-homebrew,
       llm-agents,
-      noctalia,
       noctalia-greeter,
       nix-flatpak,
       ...
@@ -130,7 +126,6 @@
           }
           home-manager.nixosModules.home-manager
           (mkHomeManagerModule ./home-manager/nixos.nix)
-          noctalia.nixosModules.default
           noctalia-greeter.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
         ];
