@@ -118,3 +118,6 @@ export SHELL_SESSIONS_DISABLE=1
 # Colorize man pages.
 export MANROFFOPT='-c'
 export MANPAGER="sh -c 'col -bx | bat --style=plain --language=man'"
+
+# zk
+export ZK_NOTEBOOK_DIR="$HOME/Developer/notes"
