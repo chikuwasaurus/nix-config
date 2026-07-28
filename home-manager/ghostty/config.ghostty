@@ -67,7 +67,7 @@ shell-integration-features = ssh-env,ssh-terminfo
 
 
 # https://ghostty.org/docs/config/keybind/reference#toggle_quick_terminal
-keybind = global:cmd+shift+backquote=toggle_quick_terminal
+keybind = cmd+shift+backquote=toggle_quick_terminal
 
 
 # Shift + Emacs-style cursor movement.
