@@ -201,9 +201,6 @@
             leftcontrol = "esc";
             rightcontrol = "esc";
 
-            # Tap Tab normally, or activate the Emacs layer while held.
-            tab = "overload(tab_emacs, tab)";
-
             # Preserve Right Super as Right Super
             rightmeta = "rightmeta";
           };
