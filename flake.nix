@@ -133,6 +133,5 @@
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
       darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
       homeConfigurations."kyohei@apple-container" = mkHome "aarch64-linux";
-      homeConfigurations."kyohei@omarchy" = mkHome "x86_64-linux";
     };
 }
