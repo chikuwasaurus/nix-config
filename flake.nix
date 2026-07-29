@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of kyohei";
+  description = "Nix Configuration";
 
   nixConfig = {
     # Use numtide's binary cache for llm-agents.nix.
