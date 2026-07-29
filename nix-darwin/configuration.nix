@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  hostname,
+  ...
+}:
 
 {
   imports = [
@@ -178,5 +182,10 @@
   # https://nix-community.github.io/home-manager/index.xhtml#sec-install-nix-darwin-module
   users.users."kyohei" = {
     home = "/Users/kyohei";
+  };
+
+  networking = {
+    hostName = hostname;
+    localHostName = hostname;
   };
 }

@@ -75,15 +75,10 @@
         hostname:
         nix-darwin.lib.darwinSystem {
           specialArgs = {
-            inherit self;
+            inherit hostname;
           };
           modules = [
             ./nix-darwin/configuration.nix
-            {
-              networking.hostName = hostname;
-              networking.localHostName = hostname;
-              nixpkgs.hostPlatform = "aarch64-darwin";
-            }
             nix-homebrew.darwinModules.nix-homebrew
             home-manager.darwinModules.home-manager
             (mkHomeManagerModule ./home-manager/nix-darwin.nix)
