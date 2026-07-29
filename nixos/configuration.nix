@@ -6,6 +6,7 @@
   config,
   lib,
   pkgs,
+  username,
   ...
 }:
 
@@ -85,9 +86,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kyohei = {
+  users.users.${username} = {
     isNormalUser = true;
-    home = "/home/kyohei";
+    home = "/home/${username}";
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user.
       "studio-display" # Allow this user to control the Studio Display without sudo.
@@ -98,7 +99,7 @@
     shell = pkgs.zsh;
   };
 
-  # services.getty.autologinUser = "kyohei";
+  # services.getty.autologinUser = username;
 
   programs.hyprland = {
     enable = true;

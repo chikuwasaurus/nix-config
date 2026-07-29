@@ -1,6 +1,7 @@
 {
   pkgs,
   hostname,
+  username,
   ...
 }:
 
@@ -34,7 +35,7 @@
     stateVersion = 7;
 
     # Required when changing user settings on your Mac
-    primaryUser = "kyohei";
+    primaryUser = username;
 
     defaults = {
       dock = {
@@ -52,7 +53,7 @@
         ShowStatusBar = true; # Show status bar
         FXPreferredViewStyle = "clmv"; # Column view by default
         NewWindowTarget = "Other"; # Open ~/Downloads by default
-        NewWindowTargetPath = "file:///Users/kyohei/Downloads"; # Open ~/Downloads by default
+        NewWindowTargetPath = "file:///Users/${username}/Downloads"; # Open ~/Downloads by default
       };
 
       magicmouse = {
@@ -180,8 +181,8 @@
 
   # Define the user's home directory for nix-darwin/home-manager.
   # https://nix-community.github.io/home-manager/index.xhtml#sec-install-nix-darwin-module
-  users.users."kyohei" = {
-    home = "/Users/kyohei";
+  users.users.${username} = {
+    home = "/Users/${username}";
   };
 
   networking = {

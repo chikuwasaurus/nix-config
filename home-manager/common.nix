@@ -2,25 +2,22 @@
   inputs,
   config,
   pkgs,
+  username,
   ...
 }:
 
 let
-  # username = "kyohei";
   nixConfigPath = "${config.home.homeDirectory}/Developer/nix-config";
   mkLink = path: config.lib.file.mkOutOfStoreSymlink "${nixConfigPath}/home-manager/${path}";
+  homeDirectory = if pkgs.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
 in
 {
   imports = [ ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  # home.username = username;
-  # home.homeDirectory =
-  #   if pkgs.stdenv.isDarwin then
-  #     "/Users/${username}"
-  #   else
-  #     "/home/${username}";
+  home.username = username;
+  home.homeDirectory = homeDirectory;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -45,7 +42,7 @@ in
   #
   # or
   #
-  #  /etc/profiles/per-user/kyohei/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/${username}/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     EDITOR = "hx";

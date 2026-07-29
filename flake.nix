@@ -56,26 +56,13 @@
       ...
     }:
     let
-      mkHomeManagerModule = homeModule: {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          users."kyohei".imports = [
-            ./home-manager/common.nix
-            homeModule
-          ];
-          backupFileExtension = "backup";
-          extraSpecialArgs = {
-            inherit inputs;
-          };
-        };
-      };
+      username = "kyohei";
 
       mkDarwin =
         hostname:
         nix-darwin.lib.darwinSystem {
           specialArgs = {
-            inherit hostname;
+            inherit inputs username hostname;
           };
           modules = [
             ./nix-darwin/configuration.nix
@@ -85,6 +72,36 @@
           ];
         };
 
+      mkNixOS =
+        hostname:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs username hostname;
+          };
+          modules = [
+            ./nixos/configuration.nix
+            nix-flatpak.nixosModules.nix-flatpak
+            home-manager.nixosModules.home-manager
+            (mkHomeManagerModule ./home-manager/nixos.nix)
+            noctalia-greeter.nixosModules.default
+          ];
+        };
+
+      mkHomeManagerModule = homeModule: {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.${username}.imports = [
+            ./home-manager/common.nix
+            homeModule
+          ];
+          backupFileExtension = "backup";
+          extraSpecialArgs = {
+            inherit inputs username;
+          };
+        };
+      };
+
       mkHome =
         system:
         home-manager.lib.homeManagerConfiguration {
@@ -92,27 +109,15 @@
             inherit system;
           };
           extraSpecialArgs = {
-            inherit inputs;
+            inherit inputs username;
           };
           modules = [
-            {
-              home.username = "kyohei";
-              home.homeDirectory = "/home/kyohei";
-            }
             ./home-manager/common.nix
           ];
         };
     in
     {
-      nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-        modules = [
-          ./nixos/configuration.nix
-          home-manager.nixosModules.home-manager
-          (mkHomeManagerModule ./home-manager/nixos.nix)
-          noctalia-greeter.nixosModules.default
-          nix-flatpak.nixosModules.nix-flatpak
-        ];
-      };
+      nixosConfigurations."nixos" = mkNixOS "nixos";
       darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
       darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
       homeConfigurations."kyohei@apple-container" = mkHome "aarch64-linux";

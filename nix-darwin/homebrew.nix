@@ -1,14 +1,19 @@
 {
+  username,
+  ...
+}:
+
+{
   nix-homebrew = {
     enable = true;
-    user = "kyohei";
+    user = username;
     enableRosetta = false;
     autoMigrate = true;
   };
 
   homebrew = {
     enable = true;
-    user = "kyohei";
+    user = username;
     onActivation.cleanup = "zap";
 
     taps = [

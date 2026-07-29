@@ -2,7 +2,8 @@
   inputs,
   config,
   pkgs,
-  ... }:
+  ...
+}:
 
 let
   nixConfigPath = "${config.home.homeDirectory}/Developer/nix-config";
