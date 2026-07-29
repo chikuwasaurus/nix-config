@@ -16,9 +16,10 @@ Supported configurations:
 
 | Configuration            | Platform        | Architecture     |
 | ------------------------ | --------------- | ---------------- |
-| `Kyoheis-Mac-mini`       | macOS           | `aarch64-darwin` |
-| `Kyoheis-MacBook-Air`    | macOS           | `aarch64-darwin` |
+| `mac-mini`               | macOS           | `aarch64-darwin` |
+| `macbook-air`            | macOS           | `aarch64-darwin` |
 | `kyohei@apple-container` | Linux container | `aarch64-linux`  |
+| `nixos`                  | NixOS           | `x86_64-linux`   |
 
 ## macOS
 

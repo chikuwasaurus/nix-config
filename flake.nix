@@ -118,8 +118,8 @@
     in
     {
       nixosConfigurations."nixos" = mkNixOS "nixos";
-      darwinConfigurations."Kyoheis-Mac-mini" = mkDarwin "Kyoheis-Mac-mini";
-      darwinConfigurations."Kyoheis-MacBook-Air" = mkDarwin "Kyoheis-MacBook-Air";
-      homeConfigurations."kyohei@apple-container" = mkHome "aarch64-linux";
+      darwinConfigurations."mac-mini" = mkDarwin "mac-mini";
+      darwinConfigurations."macbook-air" = mkDarwin "macbook-air";
+      homeConfigurations."${username}@apple-container" = mkHome "aarch64-linux";
     };
 }
