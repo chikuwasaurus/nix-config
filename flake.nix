@@ -51,7 +51,6 @@
       home-manager,
       nix-darwin,
       nix-homebrew,
-      llm-agents,
       noctalia-greeter,
       nix-flatpak,
       ...
@@ -84,9 +83,6 @@
               networking.hostName = hostname;
               networking.localHostName = hostname;
               nixpkgs.hostPlatform = "aarch64-darwin";
-              nixpkgs.overlays = [
-                llm-agents.overlays.shared-nixpkgs
-              ];
             }
             nix-homebrew.darwinModules.nix-homebrew
             home-manager.darwinModules.home-manager
@@ -99,9 +95,6 @@
         home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             inherit system;
-            overlays = [
-              llm-agents.overlays.shared-nixpkgs
-            ];
           };
           extraSpecialArgs = {
             inherit inputs;
@@ -119,11 +112,6 @@
       nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
         modules = [
           ./nixos/configuration.nix
-          {
-            nixpkgs.overlays = [
-              llm-agents.overlays.shared-nixpkgs
-            ];
-          }
           home-manager.nixosModules.home-manager
           (mkHomeManagerModule ./home-manager/nixos.nix)
           noctalia-greeter.nixosModules.default

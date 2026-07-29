@@ -157,7 +157,7 @@ in
     zsh
     zstd
   ]
-  ++ (with pkgs.llm-agents; [
+  ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
     claude-code
     codex
     herdr
