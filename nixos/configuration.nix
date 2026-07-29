@@ -14,6 +14,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./disko.nix
     ./flatpak.nix
   ];
 
@@ -34,6 +35,8 @@
 
   # Expose battery level, charging state, and AC power information.
   services.upower.enable = true;
+
+  zramSwap.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";

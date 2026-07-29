@@ -42,6 +42,10 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     helix.url = "github:helix-editor/helix";
     ghostty.url = "github:ghostty-org/ghostty";
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -53,6 +57,7 @@
       nix-homebrew,
       noctalia-greeter,
       nix-flatpak,
+      disko,
       ...
     }:
     let
@@ -84,6 +89,7 @@
             home-manager.nixosModules.home-manager
             (mkHomeManagerModule ./home-manager/nixos.nix)
             noctalia-greeter.nixosModules.default
+            disko.nixosModules.disko
           ];
         };
 
