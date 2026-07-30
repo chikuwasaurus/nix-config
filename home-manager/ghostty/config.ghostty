@@ -96,7 +96,7 @@ keybind = ctrl+q=activate_key_table_once:leader
 keybind = leader/
 
 # Tabs
-keybind = leader/t=new_tab
+keybind = leader/c=new_tab
 # keybind = leader/w=close_tab:this
 keybind = leader/n=next_tab
 keybind = leader/p=previous_tab
