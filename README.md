@@ -54,25 +54,13 @@ Supported configurations:
 - Build and apply macOS system and Home Manager changes:
 
   ```sh
-  just switch
+  just darwin
   ```
 
 - Update flake inputs (dependencies):
 
   ```sh
-  just update
-  ```
-
-- Update packages and Homebrew only:
-
-  ```sh
-  just packages
-  ```
-
-- Update only AI CLI:
-
-  ```sh
-  just ai
+  just darwin-update
   ```
 
 ## Linux (Apple container machine)
