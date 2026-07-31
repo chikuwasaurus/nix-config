@@ -20,6 +20,29 @@ Supported configurations:
 | `macbook-air`            | macOS           | `aarch64-darwin` |
 | `kyohei@apple-container` | Linux container | `aarch64-linux`  |
 
+## Development
+
+Enter the reproducible repository development environment:
+
+```sh
+nix develop
+```
+
+Format Nix, shell, TOML, JSON, YAML, Markdown, Lua, Justfiles, and Dockerfiles:
+
+```sh
+nix fmt
+```
+
+Run formatting, lint, syntax, and test checks:
+
+```sh
+nix flake check -L
+```
+
+The same commands are also available through `just dev`, `just fmt`, and
+`just check`.
+
 ## NixOS
 
 ### Initial Setup

@@ -1,7 +1,24 @@
+# Show available recipes.
+default:
+    @just --list
+
+# Enter the devshell
+dev:
+    nix develop
+
+# Run format
+fmt:
+    nix fmt
+
+# Run checks
+check:
+    nix flake check -L
+
 # Build and apply NixOS system and Home Manager changes
 nixos:
     sudo nixos-rebuild switch --flake .
 
+# Update inputs and apply the NixOS configuration
 nixos-update:
     nix flake update
     sudo nixos-rebuild switch --flake .
@@ -11,6 +28,7 @@ nixos-update:
 darwin:
     sudo darwin-rebuild switch --flake .
 
+# Update inputs and apply the nix-darwin configuration
 darwin-update:
     nix flake update
     sudo darwin-rebuild switch --flake .

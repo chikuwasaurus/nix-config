@@ -125,11 +125,89 @@
             ./home-manager/common.nix
           ];
         };
+
+      inherit (nixpkgs) lib;
+
+      systems = [
+        "aarch64-darwin"
+        "x86_64-darwin"
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
+
+      forAllSystems = lib.genAttrs systems;
+      pkgsFor = system: nixpkgs.legacyPackages.${system};
     in
     {
       nixosConfigurations."nixos" = mkNixOS "nixos";
-      darwinConfigurations."mac-mini" = mkDarwin "mac-mini";
-      darwinConfigurations."macbook-air" = mkDarwin "macbook-air";
+      darwinConfigurations = {
+        "mac-mini" = mkDarwin "mac-mini";
+        "macbook-air" = mkDarwin "macbook-air";
+      };
       homeConfigurations."${username}@apple-container" = mkHome "aarch64-linux";
+
+      # nix fmt
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = pkgsFor system;
+        in
+        pkgs.nixfmt-tree
+      );
+
+      # nix develop
+      devshells = forAllSystems (
+        system:
+        let
+          pkgs = pkgsFor system;
+        in
+        {
+          default = pkgs.mkShellNoCC {
+            packages = with pkgs; [
+              nixfmt
+              statix
+              deadnix
+              just
+            ];
+          };
+        }
+      );
+
+      # nix flake check
+      checks = forAllSystems (
+        system:
+        let
+          pkgs = pkgsFor system;
+        in
+        {
+          statix =
+            pkgs.runCommand "statix-check"
+              {
+                nativeBuildInputs = [
+                  pkgs.statix
+                ];
+
+                src = self;
+              }
+              ''
+                statix check ${self}
+                touch "$out"
+              '';
+
+          deadnix =
+            pkgs.runCommand "deadnix-check"
+              {
+                nativeBuildInputs = [
+                  pkgs.deadnix
+                ];
+
+                src = self;
+              }
+              ''
+                deadnix --fail ${self}
+                touch "$out"
+              '';
+        }
+      );
     };
 }
