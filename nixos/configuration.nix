@@ -299,7 +299,6 @@
       "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
     ];
     trusted-users = [
-      "root"
       username
     ];
   };
