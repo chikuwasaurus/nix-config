@@ -65,6 +65,9 @@ tmbootpicker.efi
 # gh
 **/gh/hosts.yml
 
+# git-hooks
+/.pre-commit-config.yaml
+
 # herdr
 **/herdr/*
 !**/herdr/config.toml

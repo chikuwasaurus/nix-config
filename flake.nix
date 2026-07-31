@@ -46,6 +46,10 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    git-hooks = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -58,6 +62,7 @@
       noctalia-greeter,
       nix-flatpak,
       disko,
+      git-hooks,
       ...
     }:
     let
@@ -151,24 +156,6 @@
         pkgs.nixfmt-tree
       );
 
-      # nix develop
-      devShells = forAllSystems (
-        system:
-        let
-          pkgs = pkgsFor system;
-        in
-        {
-          default = pkgs.mkShellNoCC {
-            packages = with pkgs; [
-              nixfmt
-              statix
-              deadnix
-              just
-            ];
-          };
-        }
-      );
-
       # nix flake check
       checks = forAllSystems (
         system:
@@ -176,14 +163,38 @@
           pkgs = pkgsFor system;
         in
         {
+          git-hooks = git-hooks.lib.${system}.run {
+            src = self;
+            hooks = {
+              nix-flake-check = {
+                enable = true;
+                name = "nix flake check";
+                entry = toString (
+                  pkgs.writeShellScript "nix-flake-check-head" ''
+                    set -euo pipefail
+
+                    repo="$(${pkgs.lib.getExe pkgs.git} rev-parse --show-toplevel)"
+                    rev="$(${pkgs.lib.getExe pkgs.git} rev-parse HEAD)"
+
+                    # Check the committed HEAD only, excluding staged, unstaged, and untracked changes.
+                    exec ${pkgs.lib.getExe pkgs.nix} flake check \
+                      "git+file://$repo?rev=$rev"
+                  ''
+                );
+                pass_filenames = false;
+                always_run = true;
+                stages = [ "pre-push" ];
+              };
+            };
+          };
+
           statix =
             pkgs.runCommand "statix-check"
               {
+                src = self;
                 nativeBuildInputs = [
                   pkgs.statix
                 ];
-
-                src = self;
               }
               ''
                 statix check ${self}
@@ -193,16 +204,37 @@
           deadnix =
             pkgs.runCommand "deadnix-check"
               {
+                src = self;
                 nativeBuildInputs = [
                   pkgs.deadnix
                 ];
-
-                src = self;
               }
               ''
                 deadnix --fail ${self}
                 touch "$out"
               '';
+        }
+      );
+
+      # nix develop
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = pkgsFor system;
+          gitHooks = self.checks.${system}.git-hooks;
+        in
+        {
+          default = pkgs.mkShellNoCC {
+            inherit (gitHooks) shellHook;
+            buildInputs = gitHooks.enabledPackages;
+
+            packages = with pkgs; [
+              nixfmt
+              statix
+              deadnix
+              just
+            ];
+          };
         }
       );
     };
