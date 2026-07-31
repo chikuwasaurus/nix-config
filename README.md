@@ -1,16 +1,15 @@
 # nix-config
 
-Personal macOS configuration managed with
-[nix-darwin](https://github.com/nix-darwin/nix-darwin) and [home-manager](https://github.com/nix-community/home-manager).
+Personal system and user configuration managed with Nix.
 
 ## Overview
 
 This setup uses:
 
-- **Nix flakes** for reproducible configuration
+- **Nix Flakes** for reproducible configuration
+- **NixOS** for NixOS system-level configuration
 - **nix-darwin** for macOS system-level configuration
-- **home-manager** for user-level dotfiles and programs
-- **Homebrew integration** for macOS GUI applications and casks
+- **Home Manager** for user-level dotfiles and programs
 
 Supported configurations:
 
