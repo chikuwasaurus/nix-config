@@ -216,7 +216,6 @@
           };
         };
 
-
         extraConfig = ''
           # Define the composite layer so app.conf can modify it.
           [control+shift]
@@ -227,10 +226,9 @@
 
   # Allow keyd to switch its effective group to the keyd group.
   # see: https://github.com/NixOS/nixpkgs/issues/290161
-  systemd.services.keyd.serviceConfig.CapabilityBoundingSet =
-    lib.mkAfter [
-      "CAP_SETGID"
-    ];
+  systemd.services.keyd.serviceConfig.CapabilityBoundingSet = lib.mkAfter [
+    "CAP_SETGID"
+  ];
 
   # IME
   i18n.inputMethod = {

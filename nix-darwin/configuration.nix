@@ -113,7 +113,11 @@
               enabled = false;
               value = {
                 type = "standard";
-                parameters = [ 32 49 262144 ];
+                parameters = [
+                  32
+                  49
+                  262144
+                ];
               };
             };
 
@@ -122,7 +126,11 @@
               enabled = false;
               value = {
                 type = "standard";
-                parameters = [ 32 49 786432 ];
+                parameters = [
+                  32
+                  49
+                  786432
+                ];
               };
             };
 
