@@ -42,26 +42,27 @@ in
     size = 24;
   };
 
-  programs.firefox = {
-    enable = true;
+  programs = {
+    firefox = {
+      enable = true;
 
-    profiles.default = {
-      id = 0;
-      isDefault = true;
-      settings = {
-        # Enable experimental PWA-style taskbar tabs.
-        "browser.taskbarTabs.enabled" = true;
+      profiles.default = {
+        id = 0;
+        isDefault = true;
+        settings = {
+          # Enable experimental PWA-style taskbar tabs.
+          "browser.taskbarTabs.enabled" = true;
+        };
       };
     };
-  };
+    ghostty = {
+      enable = true;
+      package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    };
 
-  programs.ghostty = {
-    enable = true;
-    package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
-  };
-
-  programs.obsidian = {
-    enable = true;
+    obsidian = {
+      enable = true;
+    };
   };
 
   # Run the application mapper as a systemd user service.

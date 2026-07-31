@@ -7,6 +7,7 @@
   lib,
   pkgs,
   username,
+  hostname,
   ...
 }:
 
@@ -17,250 +18,6 @@
     ./disko.nix
     ./flatpak.nix
   ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "nixos"; # Define your hostname.
-
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
-
-  # Enable the BlueZ Bluetooth stack.
-  hardware.bluetooth.enable = true;
-
-  # Enable power profile management.
-  services.power-profiles-daemon.enable = true;
-
-  # Expose battery level, charging state, and AC power information.
-  services.upower.enable = true;
-
-  zramSwap.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Asia/Tokyo";
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    # Make the Japanese locale available for locale-sensitive applications
-    # while keeping English as the system-wide default.
-    extraLocales = [
-      "ja_JP.UTF-8/UTF-8"
-    ];
-  };
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
-  users.groups = {
-    # Create a dedicated group for accessing the Apple Studio Display's HID interface.
-    "studio-display" = { };
-    # Create a group that can access the keyd IPC socket.
-    "keyd" = { };
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${username} = {
-    isNormalUser = true;
-    home = "/home/${username}";
-    extraGroups = [
-      "wheel" # Enable ‘sudo’ for the user.
-      "studio-display" # Allow this user to control the Studio Display without sudo.
-      "input" # Allow the user to access devices under /dev/input.
-      "keyd" # Allow the application mapper to communicate with keyd.
-    ];
-    packages = with pkgs; [ ];
-    shell = pkgs.zsh;
-  };
-
-  # services.getty.autologinUser = username;
-
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-    # loginShellInit = ''
-    #   if uwsm check may-start; then
-    #     exec uwsm start hyprland.desktop
-    #   fi
-    # '';
-  };
-
-  programs.noctalia = {
-    enable = true;
-    # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
-    recommendedServices.enable = true;
-    systemd.enable = true;
-  };
-
-  programs.noctalia-greeter = {
-    enable = true;
-    settings = {
-      session = {
-        default = "Hyprland (uwsm-managed)";
-      };
-      idle = {
-        timeout = 300;
-      };
-      keyboard = {
-        layout = "us";
-      };
-    };
-  };
-
-  # Sync Noctalia Shell theme with Nocalia Greeter
-  security.polkit.enable = true;
-
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-    asdbctl
-    evtest # Identify and read keyboard input devices.
-    gpu-screen-recorder
-    config.services.keyd.package # Make the keyd CLI tools available system-wide.
-    kitty
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wl-clipboard
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable keyring.
-  services.gnome.gnome-keyring.enable = true;
-  # security.pam.services.login.enableGnomeKeyring = true;
-
-  services.udev.extraRules = ''
-    # Grant read/write access to the Studio Display HID interface for
-    # members of the "studio-display" group.
-    #
-    # 05ac: Apple USB vendor ID
-    # 1114: Apple Studio Display product ID
-    SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="05ac", ATTRS{idProduct}=="1114", GROUP:="studio-display", MODE:="0660"
-
-    # Create a stable device path for keyd's virtual keyboard.
-    SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="keyd virtual keyboard", GROUP="input", MODE="0660", SYMLINK+="input/by-id/keyd-virtual-keyboard"
-  '';
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Enable tailscale client daemon.
-  services.tailscale.enable = true;
-
-  # Enable a key remapping daemon.
-  services.keyd = {
-    enable = true;
-
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-
-        settings = {
-          main = {
-            # Use Caps Lock as Control while held.
-            capslock = "layer(control)";
-            # capslock = "overload(control, esc)";
-
-            # Use the Control keys as Escape.
-            leftcontrol = "esc";
-            rightcontrol = "esc";
-
-            # Preserve Right Super as Right Super
-            rightmeta = "rightmeta";
-          };
-
-          control = {
-            h = "backspace";
-            # Send Escape when Ctrl+semicolon is pressed.
-            semicolon = "esc";
-          };
-        };
-
-        extraConfig = ''
-          # Define the composite layer so app.conf can modify it.
-          [control+shift]
-        '';
-      };
-    };
-  };
-
-  # Allow keyd to switch its effective group to the keyd group.
-  # see: https://github.com/NixOS/nixpkgs/issues/290161
-  systemd.services.keyd.serviceConfig.CapabilityBoundingSet = lib.mkAfter [
-    "CAP_SETGID"
-  ];
-
-  # IME
-  i18n.inputMethod = {
-    enable = true;
-    type = "fcitx5";
-
-    fcitx5 = {
-      # Hyprland
-      waylandFrontend = true;
-
-      addons = with pkgs; [
-        fcitx5-mozc-ut
-        fcitx5-gtk
-
-        # Install Catppuccin themes with rounded corners
-        (catppuccin-fcitx5.override {
-          withRoundedCorners = true;
-        })
-      ];
-    };
-  };
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
@@ -300,6 +57,269 @@
       username
     ];
   };
+
+  # Allow unfree packages
+  nixpkgs = {
+    config.allowUnfree = true;
+  };
+
+  # Use the systemd-boot EFI boot loader.
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+  };
+
+  zramSwap.enable = true;
+
+  # Set your time zone.
+  time.timeZone = "Asia/Tokyo";
+
+  # Select internationalisation properties.
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    # Make the Japanese locale available for locale-sensitive applications
+    # while keeping English as the system-wide default.
+    extraLocales = [
+      "ja_JP.UTF-8/UTF-8"
+    ];
+
+    # IME
+    inputMethod = {
+      enable = true;
+      type = "fcitx5";
+
+      fcitx5 = {
+        # Hyprland
+        waylandFrontend = true;
+
+        addons = with pkgs; [
+          fcitx5-mozc-ut
+          fcitx5-gtk
+
+          # Install Catppuccin themes with rounded corners
+          (catppuccin-fcitx5.override {
+            withRoundedCorners = true;
+          })
+        ];
+      };
+    };
+  };
+
+  # console = {
+  #   font = "Lat2-Terminus16";
+  #   keyMap = "us";
+  #   useXkbConfig = true; # use xkb.options in tty.
+  # };
+
+  users = {
+    groups = {
+      # Create a dedicated group for accessing the Apple Studio Display's HID interface.
+      "studio-display" = { };
+      # Create a group that can access the keyd IPC socket.
+      "keyd" = { };
+    };
+
+    # Define a user account. Don't forget to set a password with ‘passwd’.
+    users.${username} = {
+      isNormalUser = true;
+      home = "/home/${username}";
+      extraGroups = [
+        "wheel" # Enable ‘sudo’ for the user.
+        "studio-display" # Allow this user to control the Studio Display without sudo.
+        "input" # Allow the user to access devices under /dev/input.
+        "keyd" # Allow the application mapper to communicate with keyd.
+      ];
+      packages = [ ];
+      shell = pkgs.zsh;
+    };
+  };
+
+  programs = {
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+    };
+
+    zsh = {
+      enable = true;
+      # loginShellInit = ''
+      #   if uwsm check may-start; then
+      #     exec uwsm start hyprland.desktop
+      #   fi
+      # '';
+    };
+
+    noctalia = {
+      enable = true;
+      # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
+      recommendedServices.enable = true;
+      systemd.enable = true;
+    };
+
+    noctalia-greeter = {
+      enable = true;
+      settings = {
+        session = {
+          default = "Hyprland (uwsm-managed)";
+        };
+        idle = {
+          timeout = 300;
+        };
+        keyboard = {
+          layout = "us";
+        };
+      };
+    };
+
+    # Some programs need SUID wrappers, can be configured further or are
+    # started in user sessions.
+    # programs.mtr.enable = true;
+    # programs.gnupg.agent = {
+    #   enable = true;
+    #   enableSSHSupport = true;
+    # };
+  };
+
+  security = {
+    # Sync Noctalia Shell theme with Nocalia Greeter
+    polkit.enable = true;
+
+    # security.pam.services.login.enableGnomeKeyring = true;
+  };
+
+  # List packages installed in system profile.
+  # You can use https://search.nixos.org/ to find more packages (and options).
+  environment.systemPackages = with pkgs; [
+    asdbctl
+    evtest # Identify and read keyboard input devices.
+    gpu-screen-recorder
+    config.services.keyd.package # Make the keyd CLI tools available system-wide.
+    kitty
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wl-clipboard
+  ];
+
+  networking = {
+    # Define your hostname.
+    hostName = hostname;
+
+    # Configure network connections interactively with nmcli or nmtui.
+    networkmanager.enable = true;
+
+    # Configure network proxy if necessary
+    # networking.proxy.default = "http://user:password@proxy:port/";
+    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+    # Open ports in the firewall.
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether.
+    # networking.firewall.enable = false;
+  };
+
+  # Enable the BlueZ Bluetooth stack.
+  hardware.bluetooth.enable = true;
+
+  # List services that you want to enable:
+  services = {
+    # Enable power profile management.
+    power-profiles-daemon.enable = true;
+
+    # Expose battery level, charging state, and AC power information.
+    upower.enable = true;
+
+    # Enable keyring.
+    gnome.gnome-keyring.enable = true;
+
+    udev.extraRules = ''
+      # Grant read/write access to the Studio Display HID interface for
+      # members of the "studio-display" group.
+      #
+      # 05ac: Apple USB vendor ID
+      # 1114: Apple Studio Display product ID
+      SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="05ac", ATTRS{idProduct}=="1114", GROUP:="studio-display", MODE:="0660"
+
+      # Create a stable device path for keyd's virtual keyboard.
+      SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="keyd virtual keyboard", GROUP="input", MODE="0660", SYMLINK+="input/by-id/keyd-virtual-keyboard"
+    '';
+
+    # Enable the OpenSSH daemon.
+    openssh.enable = true;
+
+    # Enable tailscale client daemon.
+    tailscale.enable = true;
+
+    # Enable a key remapping daemon.
+    keyd = {
+      enable = true;
+
+      keyboards = {
+        default = {
+          ids = [ "*" ];
+
+          settings = {
+            main = {
+              # Use Caps Lock as Control while held.
+              capslock = "layer(control)";
+              # capslock = "overload(control, esc)";
+
+              # Use the Control keys as Escape.
+              leftcontrol = "esc";
+              rightcontrol = "esc";
+
+              # Preserve Right Super as Right Super
+              rightmeta = "rightmeta";
+            };
+
+            control = {
+              h = "backspace";
+              # Send Escape when Ctrl+semicolon is pressed.
+              semicolon = "esc";
+            };
+          };
+
+          extraConfig = ''
+            # Define the composite layer so app.conf can modify it.
+            [control+shift]
+          '';
+        };
+      };
+    };
+
+    # services.getty.autologinUser = username;
+
+    # Enable the X11 windowing system.
+    # services.xserver.enable = true;
+
+    # Configure keymap in X11
+    # services.xserver.xkb.layout = "us";
+    # services.xserver.xkb.options = "eurosign:e,caps:escape";
+
+    # Enable CUPS to print documents.
+    # services.printing.enable = true;
+
+    # Enable sound.
+    # services.pulseaudio.enable = true;
+    # OR
+    # services.pipewire = {
+    #   enable = true;
+    #   pulse.enable = true;
+    # };
+
+    # Enable touchpad support (enabled default in most desktopManager).
+    # services.libinput.enable = true;
+  };
+
+  # Allow keyd to switch its effective group to the keyd group.
+  # see: https://github.com/NixOS/nixpkgs/issues/290161
+  systemd.services.keyd.serviceConfig.CapabilityBoundingSet = lib.mkAfter [
+    "CAP_SETGID"
+  ];
+
+  # Copy the NixOS configuration file and link it from the resulting system
+  # (/run/current-system/configuration.nix). This is useful in case you
+  # accidentally delete configuration.nix.
+  # system.copySystemConfiguration = true;
 
   fonts = {
     packages = with pkgs; [
@@ -348,10 +368,5 @@
         };
       };
     };
-  };
-
-  # Allow unfree packages
-  nixpkgs = {
-    config.allowUnfree = true;
   };
 }
