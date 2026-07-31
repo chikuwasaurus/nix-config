@@ -152,7 +152,7 @@
       );
 
       # nix develop
-      devshells = forAllSystems (
+      devShells = forAllSystems (
         system:
         let
           pkgs = pkgsFor system;
