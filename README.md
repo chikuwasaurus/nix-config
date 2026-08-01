@@ -22,26 +22,23 @@ Supported configurations:
 
 ## Development
 
-Enter the reproducible repository development environment:
+Enter the dev shell:
 
 ```sh
-nix develop
+just dev
 ```
 
-Format Nix, shell, TOML, JSON, YAML, Markdown, Lua, Justfiles, and Dockerfiles:
+Run format:
 
 ```sh
-nix fmt
+just fmt
 ```
 
-Run formatting, lint, syntax, and test checks:
+Run checks:
 
 ```sh
-nix flake check -L
+just check
 ```
-
-The same commands are also available through `just dev`, `just fmt`, and
-`just check`.
 
 ## NixOS
 

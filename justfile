@@ -2,7 +2,7 @@
 default:
     @just --list
 
-# Enter the devshell
+# Enter the dev shell
 dev:
     nix develop
 

@@ -233,6 +233,7 @@
               statix
               deadnix
               just
+              git
             ];
           };
         }
