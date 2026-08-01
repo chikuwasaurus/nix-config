@@ -30,6 +30,8 @@ setopt EXTENDED_HISTORY
 # setopt SHARE_HISTORY
 # Prevent accidental Ctrl-D (EOF: End Of File) from exiting the shell.
 setopt IGNORE_EOF
+# 隠しファイルを補完に表示する
+setopt GLOB_DOTS
 
 # zsh のビルトインコマンドに対して help コマンドを使えるようにする
 unalias run-help 2>/dev/null
