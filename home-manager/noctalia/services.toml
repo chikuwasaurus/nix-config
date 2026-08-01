@@ -11,7 +11,7 @@
 [idle.behavior.suspend]
 enabled = true
 # timeout = 900
-timeout = 3600
+timeout = 1800
 action = "lock_and_suspend"
 
 [location]
