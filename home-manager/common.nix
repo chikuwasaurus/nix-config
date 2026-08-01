@@ -180,6 +180,11 @@ in
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
 
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
     helix = {
       enable = true;
       package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;

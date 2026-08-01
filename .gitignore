@@ -58,6 +58,9 @@ Backups.backupdb
 MobileBackups.trash
 tmbootpicker.efi
 
+# direnv
+/.direnv/
+
 # fcitx5
 **/fcitx5/conf/notifications.conf
 **/fcitx5/conf/cached_layouts

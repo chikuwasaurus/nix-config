@@ -123,3 +123,6 @@ export MANPAGER="sh -c 'col -bx | bat --style=plain --language=man'"
 
 # zk
 export ZK_NOTEBOOK_DIR="$HOME/Developer/notes"
+
+# direnv
+eval "$(direnv hook zsh)"
