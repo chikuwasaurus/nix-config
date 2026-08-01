@@ -23,9 +23,6 @@ in
     style.name = "adwaita-dark";
   };
 
-  # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [ ];
-
   xdg.configFile = {
     "fcitx5".source = mkLink "fcitx5";
     "hypr".source = mkLink "hypr";
@@ -35,11 +32,18 @@ in
     "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
   };
 
-  home.pointerCursor = {
-    enable = true;
-    package = pkgs.adwaita-icon-theme;
-    name = "Adwaita";
-    size = 24;
+  home = {
+    pointerCursor = {
+      enable = true;
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+      size = 24;
+    };
+
+    # Packages that should be installed to the user profile.
+    packages = with pkgs; [
+      brave-origin
+    ];
   };
 
   programs = {
