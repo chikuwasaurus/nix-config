@@ -119,6 +119,8 @@ in
         lazydocker
         lazygit
         less
+        lua
+        lua-language-server
         nixd # Nix LSP
         nixfmt # Nix formatter
         nodejs_24
