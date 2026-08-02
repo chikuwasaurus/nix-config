@@ -43,6 +43,7 @@ local terminal             = "ghostty"
 local browser              = "firefox"
 local fileManager          = "ghostty -e yazi ~/Developer"
 local processMonitor       = "ghostty -e btop"
+local note                 = "ghostty -e zsh -c 'exec zk daily'"
 local launcher             = ipc .. "panel-toggle launcher"
 local controlCenter        = ipc .. "panel-toggle control-center"
 local clipboard            = ipc .. "panel-toggle clipboard"
@@ -308,6 +309,7 @@ hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(processMonitor))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(note))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(controlCenter))
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(clipboard))
