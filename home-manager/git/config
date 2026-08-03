@@ -1,5 +1,6 @@
 [init]
 	defaultBranch = main
+
 [user]
 	email = 285532703+chikuwasaurus@users.noreply.github.com
 	name = Chikuwa Saurus
@@ -23,10 +24,6 @@
 
 [merge]
 	conflictStyle = zdiff3
-
-[ghq]
-	root = ~/Developer
-	user = chikuwasaurus
 
 [alias]
 	# status
