@@ -1,7 +1,8 @@
 [theme]
-mode = "dark"  # dark | light | auto
-source = "builtin"  # builtin | wallpaper | community | custom
 builtin = "Catppuccin"  # bundled palette name
+mode = "dark"  # dark | light | auto
+source = "wallpaper"  # builtin | wallpaper | community | custom
+wallpaper_scheme = "m3-content"
 
 [theme.templates]
 builtin_ids = ["hyprland"]
