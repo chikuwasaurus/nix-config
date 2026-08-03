@@ -39,3 +39,14 @@ auto-format = true
 [[language]]
 name = "nix"
 auto-format = true
+
+[[language]]
+name = "git-config"
+file-types = [
+  "gitconfig",
+  { glob = ".git/config" },
+  { glob = ".config/git/config" },
+  { glob = "**/git/config" },
+  { glob = ".gitconfig" },
+  { glob = ".gitmodules" },
+]
