@@ -78,6 +78,9 @@ tmbootpicker.efi
 # hunk
 **/hunk/state.json
 
+# hyprland
+**/hypr/noctalia.lua
+
 # karabiner
 **/karabiner/automatic_backups
 **/karabiner/assets
