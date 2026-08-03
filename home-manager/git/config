@@ -92,10 +92,57 @@
 
 [pull]
 	ff = only
+	# rebase = true
 
 [credential "https://github.com"]
 	helper =
 	helper = ! gh auth git-credential
+
 [credential "https://gist.github.com"]
 	helper =
 	helper = ! gh auth git-credential
+
+# see: https://blog.gitbutler.com/how-git-core-devs-configure-git
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+
+[push]
+    autoSetupRemote = true
+    followTags = true
+
+[fetch]
+    all = true
+    prune = true
+    # pruneTags = true
+
+[help]
+    autocorrect = prompt
+
+[commit]
+    verbose = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+# [core]
+# 	excludesfile = ~/.gitignore
+# 	fsmonitor = true
+# 	untrackedCache = true
