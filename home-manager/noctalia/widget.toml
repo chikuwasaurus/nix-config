@@ -11,3 +11,6 @@ format = "%a %b %e%t%H:%M"
 
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
