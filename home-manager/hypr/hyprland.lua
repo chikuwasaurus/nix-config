@@ -72,15 +72,15 @@ local screenRecord         = ipc .. "plugin noctalia/screen_recorder:service all
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
 
-hl.on("hyprland.start", function()
-  hl.exec_cmd("ghostty", {
-      workspace = "1 silent",
-  })
+-- hl.on("hyprland.start", function()
+--   hl.exec_cmd("ghostty", {
+--       workspace = "1 silent",
+--   })
 
-  hl.exec_cmd("firefox", {
-      workspace = "2 silent",
-  })
-end)
+--   hl.exec_cmd("firefox", {
+--       workspace = "2 silent",
+--   })
+-- end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
