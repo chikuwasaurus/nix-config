@@ -87,7 +87,7 @@
         KeyRepeat = 2; # Fast key repeat (1-2 is very fast)
         InitialKeyRepeat = 15; # Initial key repeat delay
         ApplePressAndHoldEnabled = false; # Repeat keys by holding down
-        "com.apple.keyboard.fnState" = true; # Use F1, F2, etc. keys as standard function keys.
+        "com.apple.keyboard.fnState" = false; # Use F1, F2, etc. keys as standard function keys.
 
         # Trackpad
         "com.apple.trackpad.forceClick" = false;
