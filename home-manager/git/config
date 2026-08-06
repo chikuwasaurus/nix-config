@@ -127,8 +127,8 @@
     prune = true
     # pruneTags = true
 
-[help]
-    autocorrect = prompt
+# [help]
+#     autocorrect = prompt
 
 [commit]
     verbose = true
@@ -140,7 +140,7 @@
 [rebase]
 	autoSquash = true
 	autoStash = true
-	updateRefs = true
+	# updateRefs = true
 
 # [core]
 # 	excludesfile = ~/.gitignore
