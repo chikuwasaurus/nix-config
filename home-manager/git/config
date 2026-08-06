@@ -104,8 +104,8 @@
 
 # see: https://blog.gitbutler.com/how-git-core-devs-configure-git
 
-[column]
-    ui = auto
+# [column]
+#     ui = auto
 
 [branch]
     sort = -committerdate
