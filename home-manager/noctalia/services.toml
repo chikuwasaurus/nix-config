@@ -1,7 +1,7 @@
-[idle.behavior.lock]
-enabled = true
-timeout = 600
-action = "lock"
+# [idle.behavior.lock]
+# enabled = true
+# timeout = 600
+# action = "lock"
 
 # [idle.behavior.screen-off]
 # enabled = true
