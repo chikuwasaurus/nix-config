@@ -21,6 +21,10 @@
         name = "TabularisDB/tabularis";
         trusted = true;
       }
+      {
+        name = "BarutSRB/tap"; # omniwm
+        trusted = true;
+      }
     ];
 
     brews = [
@@ -41,6 +45,7 @@
       "monitorcontrol"
       "obsidian"
       "ogdesign-eagle"
+      "omniwm"
       "orbstack"
       "pixelsnap"
       "raycast"
