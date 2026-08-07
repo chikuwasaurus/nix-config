@@ -146,3 +146,7 @@
 # 	excludesfile = ~/.gitignore
 # 	fsmonitor = true
 # 	untrackedCache = true
+
+[remote "origin"]
+    fetch = +refs/pull/*/head:refs/remotes/origin/pr/* # GitHub, Codeberg
+    fetch = +refs/merge-requests/*/head:refs/remotes/origin/mr/* # GitLab
