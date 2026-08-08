@@ -144,7 +144,7 @@ in
         vscode-json-languageserver
         xh
         yazi
-        yq
+        yq-go
         zk
         zoxide
         zsh
