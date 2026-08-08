@@ -1,5 +1,5 @@
 # Disable Ctrl-S / Ctrl-Q terminal flow control to use ctrl-s for forward search
-stty -ixon
+# stty -ixon
 
 # 履歴ファイルの保存先
 mkdir -p "$HOME/.local/state/zsh"
