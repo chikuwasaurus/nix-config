@@ -1,7 +1,7 @@
 [theme]
 builtin = "Catppuccin"  # bundled palette name
 mode = "dark"  # dark | light | auto
-source = "wallpaper"  # builtin | wallpaper | community | custom
+source = "builtin"  # builtin | wallpaper | community | custom
 wallpaper_scheme = "m3-content"
 
 [theme.templates]
