@@ -289,6 +289,9 @@
     # Enable boltd to manage the Thunderbolt connection to the Studio Display.
     hardware.bolt.enable = true;
 
+    # Keep AccountsService enabled for greeter avatars.
+    accounts-daemon.enable = true;
+
     # services.getty.autologinUser = username;
 
     # Enable the X11 windowing system.
