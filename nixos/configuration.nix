@@ -181,8 +181,26 @@
   };
 
   security = {
-    # Sync Noctalia Shell theme with Nocalia Greeter
-    polkit.enable = true;
+    polkit = {
+      enable = true;
+      enablePkexecWrapper = true;
+
+      extraConfig = ''
+        polkit.addRule(function(action, subject) {
+          // Sync Noctalia Shell theme with Nocalia Greeter.
+          // Allow active local users in the wheel group to sync the
+          // Noctalia desktop appearance to the greeter without authentication.
+          if (
+            action.id == "org.noctalia.greeter.apply-appearance" &&
+            subject.isInGroup("wheel") &&
+            subject.local &&
+            subject.active
+          ) {
+            return polkit.Result.YES;
+          }
+        });
+      '';
+    };
 
     # security.pam.services.login.enableGnomeKeyring = true;
   };
