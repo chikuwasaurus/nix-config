@@ -158,7 +158,7 @@
         };
       };
 
-      hitoolbox.AppleFnUsageType = "Start Dictation";
+      hitoolbox.AppleFnUsageType = "Change Input Source";
     };
 
     # Disabled because Karabiner-Elements now owns these key remaps.
