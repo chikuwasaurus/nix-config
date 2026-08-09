@@ -11,17 +11,17 @@ let
 in
 {
   # Use a dark theme for GTK applications.
-  gtk = {
-    enable = true;
-    colorScheme = "dark";
-  };
+  # gtk = {
+  #   enable = true;
+  #   colorScheme = "dark";
+  # };
 
   # Use a dark theme for Qt applications.
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita";
-    style.name = "adwaita-dark";
-  };
+  # qt = {
+  #   enable = true;
+  #   platformTheme.name = "adwaita";
+  #   style.name = "adwaita-dark";
+  # };
 
   xdg.configFile = {
     "fcitx5".source = mkLink "fcitx5";

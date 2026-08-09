@@ -51,6 +51,7 @@ local clipboard            = ipc .. "panel-toggle clipboard"
 local session              = ipc .. "panel-toggle session"
 local emoji                = ipc .. "panel-toggle launcher '/emo '"
 local translator           = ipc .. "panel-toggle launcher '/tr ja '"
+local themeModeToggle      = ipc .. "theme-mode-toggle"
 local settingsToggle       = ipc .. "settings-toggle"
 local windowSwitcher       = ipc .. "window-switcher"
 local screenshotFullscreen = ipc .. "screenshot-fullscreen"
@@ -318,6 +319,7 @@ hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(clipboard))
 hl.bind(mainMod .. " + CTRL + Q", hl.dsp.exec_cmd(session))
 hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd(emoji))
 hl.bind(mainMod .. " + CTRL + T", hl.dsp.exec_cmd(translator))
+hl.bind(mainMod .. " + CTRL + M", hl.dsp.exec_cmd(themeModeToggle))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(settingsToggle))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(windowSwitcher))
 hl.bind(mainMod .. " + CTRL + 3", hl.dsp.exec_cmd(screenshotFullscreen))

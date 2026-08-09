@@ -17,4 +17,4 @@ end = [
   "session"
 ]
 margin_ends = 10
-start = ["launcher", "wallpaper", "wallhaven", "workspaces"]
+start = ["launcher", "theme_mode", "wallpaper", "wallhaven", "workspaces"]
