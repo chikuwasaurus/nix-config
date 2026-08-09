@@ -12,9 +12,3 @@
 # enabled = true
 # timeout = 1800
 # action = "lock_and_suspend"
-
-[location]
-address = "Okinawa, Japan"  # geocoded when auto_locate = false and non-empty
-custom_schedule = true
-sunrise = "04:00"
-sunset = "19:00"
