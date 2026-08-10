@@ -349,6 +349,19 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + K",    hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + J",  hl.dsp.window.move({ direction = "down" }))
 
+-- Switch to a submap called `resize`.
+hl.bind(mainMod .. " + R", hl.dsp.submap("resize"))
+-- Start a submap called "resize".
+hl.define_submap("resize", function()
+    -- Risize window with [HJKL] keys
+    hl.bind("H", hl.dsp.window.resize({ x = -8, y = 0, relative = true}), { repeating = true })
+    hl.bind("L", hl.dsp.window.resize({ x = 8, y = 0, relative = true}), { repeating = true })
+    hl.bind("K", hl.dsp.window.resize({ x = 0, y = -8, relative = true}), { repeating = true })
+    hl.bind("J", hl.dsp.window.resize({ x = 0, y = 8, relative = true}), { repeating = true })
+    -- Use `reset` to go back to the global submap
+    hl.bind("escape", hl.dsp.submap("reset"))
+end)
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
