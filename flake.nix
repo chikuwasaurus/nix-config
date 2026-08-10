@@ -2,14 +2,6 @@
   description = "Nix Configuration";
 
   nixConfig = {
-    # Use numtide's binary cache for llm-agents.nix.
-    #
-    # Keep llm-agents.nix on its own pinned nixpkgs input instead of
-    # `inputs.nixpkgs.follows = "nixpkgs"`.
-    # This matches the nixpkgs revision used by llm-agents.nix CI and makes
-    # pre-built binaries more likely to be fetched instead of rebuilt locally.
-    #
-    # https://github.com/numtide/llm-agents.nix#binary-cache
     extra-substituters = [
       "https://cache.numtide.com"
       "https://helix.cachix.org"
