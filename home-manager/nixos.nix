@@ -10,24 +10,13 @@ let
   mkLink = path: config.lib.file.mkOutOfStoreSymlink "${nixConfigPath}/home-manager/${path}";
 in
 {
-  # Use a dark theme for GTK applications.
-  # gtk = {
-  #   enable = true;
-  #   colorScheme = "dark";
-  # };
-
-  # Use a dark theme for Qt applications.
-  # qt = {
-  #   enable = true;
-  #   platformTheme.name = "adwaita";
-  #   style.name = "adwaita-dark";
-  # };
-
   xdg.configFile = {
     "fcitx5".source = mkLink "fcitx5";
     "hypr".source = mkLink "hypr";
     "keyd".source = mkLink "keyd";
     "noctalia".source = mkLink "noctalia";
+    "nwg-look".source = mkLink "nwg-look";
+    "qt6ct".source = mkLink "qt6ct";
     # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm
     "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
   };
@@ -43,6 +32,14 @@ in
     # Packages that should be installed to the user profile.
     packages = with pkgs; [
       brave-origin
+
+      # GTK 3/4 Applications theme
+      # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=gtk-34-applications#gtk-34-applications
+      adw-gtk3
+      nwg-look
+      # Qt Applications theme
+      # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=qt-applications#qt-applications
+      qt6Packages.qt6ct
     ];
   };
 
