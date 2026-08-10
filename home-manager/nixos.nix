@@ -66,25 +66,32 @@ in
     };
   };
 
-  # Run the application mapper as a systemd user service.
-  systemd.user.services.keyd-application-mapper = {
-    Unit = {
-      Description = "Application-specific keyd mapper";
-      After = [ "graphical-session.target" ];
-      PartOf = [ "graphical-session.target" ];
+  systemd.user = {
+    # Run the application mapper as a systemd user service.
+    services.keyd-application-mapper = {
+      Unit = {
+        Description = "Application-specific keyd mapper";
+        After = [ "graphical-session.target" ];
+        PartOf = [ "graphical-session.target" ];
+      };
+
+      Service = {
+        # Keep the process in the foreground so systemd can supervise it.
+        ExecStart = "${pkgs.keyd}/bin/keyd-application-mapper";
+
+        # Restart the mapper if it exits unexpectedly.
+        Restart = "on-failure";
+        RestartSec = 1;
+      };
+
+      Install.WantedBy = [
+        "graphical-session.target"
+      ];
     };
 
-    Service = {
-      # Keep the process in the foreground so systemd can supervise it.
-      ExecStart = "${pkgs.keyd}/bin/keyd-application-mapper";
-
-      # Restart the mapper if it exits unexpectedly.
-      Restart = "on-failure";
-      RestartSec = 1;
+    sessionVariables = {
+      # Set the Qt platform theme for systemd user services such as XDG portals.
+      QT_QPA_PLATFORMTHEME = "qt6ct";
     };
-
-    Install.WantedBy = [
-      "graphical-session.target"
-    ];
   };
 }

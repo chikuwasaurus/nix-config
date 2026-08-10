@@ -93,6 +93,9 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
+-- See https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=qt-applications#qt-applications
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+
 
 -----------------------
 ----- PERMISSIONS -----

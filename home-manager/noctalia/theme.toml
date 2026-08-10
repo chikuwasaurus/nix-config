@@ -5,4 +5,4 @@ source = "builtin"  # builtin | wallpaper | community | custom
 wallpaper_scheme = "m3-content"
 
 [theme.templates]
-builtin_ids = ["gtk3", "gtk4", "hyprland"]
+builtin_ids = ["gtk3", "gtk4", "hyprland", "kcolorscheme", "qt"]
