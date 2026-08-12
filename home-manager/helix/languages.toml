@@ -50,3 +50,7 @@ file-types = [
   { glob = ".gitconfig" },
   { glob = ".gitmodules" },
 ]
+
+[[language]]
+name = "python"
+auto-format = true
