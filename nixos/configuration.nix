@@ -346,6 +346,10 @@
   # system.copySystemConfiguration = true;
 
   fonts = {
+    # Disable NixOS default font packages added by the graphical desktop module via Hyprland.
+    # Otherwise, fonts such as Liberation and FreeFont become available to applications.
+    enableDefaultPackages = false;
+
     packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
