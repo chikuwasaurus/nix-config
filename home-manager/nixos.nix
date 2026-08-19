@@ -44,6 +44,10 @@ in
   };
 
   programs = {
+    anki = {
+      enable = true;
+    };
+
     firefox = {
       enable = true;
 
@@ -56,6 +60,7 @@ in
         };
       };
     };
+
     ghostty = {
       enable = true;
       package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
