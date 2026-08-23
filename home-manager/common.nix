@@ -9,7 +9,8 @@
 let
   nixConfigPath = "${config.home.homeDirectory}/Developer/nix-config";
   mkLink = path: config.lib.file.mkOutOfStoreSymlink "${nixConfigPath}/home-manager/${path}";
-  homeDirectory = if pkgs.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
+  homeDirectory =
+    if pkgs.stdenv.hostPlatform.isDarwin then "/Users/${username}" else "/home/${username}";
 in
 {
   imports = [ ];
