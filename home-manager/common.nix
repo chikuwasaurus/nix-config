@@ -79,7 +79,6 @@ in
         atuin
         bash-language-server
         bat
-        bottom
         btop
         bun
         carapace
