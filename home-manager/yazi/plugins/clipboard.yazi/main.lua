@@ -22,7 +22,12 @@ local get_yanked_paths = ya.sync(function(state)
 	local paths = {}
 	for _, v in pairs(cx.yanked) do
 		local url = v.url or v
-		local is_regular = url.spec and url.spec.is_regular or url.is_regular
+		local is_regular
+		if url.spec then
+			is_regular = url.spec.is_regular
+		else
+			is_regular = url.is_regular
+		end
 		ya.dbg(
 			"Clipboard",
 			"check yanked",
@@ -280,12 +285,12 @@ function M:copy_windows_cmd(paths)
 		[[
 Add-Type -AssemblyName System.Windows.Forms
 $col = [System.Collections.Specialized.StringCollection]::new()
-Get-Content '%s' | ForEach-Object {
+Get-Content -LiteralPath '%s' -Encoding UTF8 | ForEach-Object {
   if ($_.Length -gt 0) {
     $null = $col.Add($_)
   }
 }
-Remove-Item '%s' -ErrorAction SilentlyContinue
+Remove-Item -LiteralPath '%s' -ErrorAction SilentlyContinue
 [System.Windows.Forms.Clipboard]::SetFileDropList($col)
 ]],
 		tmp_ps,

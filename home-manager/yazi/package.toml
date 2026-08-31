@@ -1,22 +1,22 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "ae1335e"
-hash = "88e56a64b7ce7c4314427452343fef17"
+rev = "c591a36"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "159eaba"
-hash = "7de446280b1ba8c49ffd86dbc24bbbe6"
+rev = "ea92cf4"
+hash = "9776f378459072b6c2875eae5addc49d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "ae1335e"
-hash = "bc5da419b4337d0122ac531e705fa7b6"
+rev = "c591a36"
+hash = "853240b2454c93a93fd03fc9fd7e06e8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "ae1335e"
-hash = "7b625412411be411153886894d9acaf"
+rev = "c591a36"
+hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
@@ -25,10 +25,15 @@ hash = "6ea5f37c7f219671ec504cb8311f889d"
 
 [[plugin.deps]]
 use = "XYenon/clipboard"
-rev = "d4d19ea"
-hash = "2cfc56d62f9ca0c62ce356e4364c3d89"
+rev = "b25ec96"
+hash = "9f07d7de37a430833ef33b92c0bcf8cb"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "0f9204b"
-hash = "7dfe41c9c3d9be76da8a844263d0bbed"
+rev = "20b47bf"
+hash = "ce320f877fe709b189433941aba747c4"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-latte"
+rev = "20b47bf"
+hash = "273ee53369ccfbf7feb9b0c65e387ed8"
