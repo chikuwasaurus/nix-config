@@ -52,6 +52,7 @@
       "slack"
       "tabularis"
       "tailscale-app"
+      "tolaria"
       "typora"
       "zed"
     ];
