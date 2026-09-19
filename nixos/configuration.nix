@@ -156,21 +156,6 @@
       systemd.enable = true;
     };
 
-    noctalia-greeter = {
-      enable = true;
-      settings = {
-        session = {
-          default = "Hyprland (uwsm-managed)";
-        };
-        idle = {
-          timeout = 300;
-        };
-        keyboard = {
-          layout = "us";
-        };
-      };
-    };
-
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;
@@ -309,6 +294,21 @@
 
     # Keep AccountsService enabled for greeter avatars.
     accounts-daemon.enable = true;
+
+    displayManager.noctalia-greeter = {
+      enable = true;
+      settings = {
+        session = {
+          default = "Hyprland (uwsm-managed)";
+        };
+        idle = {
+          timeout = 300;
+        };
+        keyboard = {
+          layout = "us";
+        };
+      };
+    };
 
     # services.getty.autologinUser = username;
 

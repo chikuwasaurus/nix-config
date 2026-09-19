@@ -27,10 +27,6 @@
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     llm-agents.url = "github:numtide/llm-agents.nix";
-    noctalia-greeter = {
-      url = "github:noctalia-dev/noctalia-greeter";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     helix.url = "github:helix-editor/helix";
     ghostty.url = "github:ghostty-org/ghostty";
@@ -51,7 +47,6 @@
       home-manager,
       nix-darwin,
       nix-homebrew,
-      noctalia-greeter,
       nix-flatpak,
       disko,
       git-hooks,
@@ -85,7 +80,6 @@
             nix-flatpak.nixosModules.nix-flatpak
             home-manager.nixosModules.home-manager
             (mkHomeManagerModule ./home-manager/nixos.nix)
-            noctalia-greeter.nixosModules.default
             disko.nixosModules.disko
           ];
         };
