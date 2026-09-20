@@ -1,6 +1,17 @@
 [mgr]
 show_hidden = true
 
+# https://yazi-rs.github.io/docs/configuration/yazi/#opener
+[opener]
+image = [
+  { run = 'firefox "%s1"', orphan = true, desc = "Open image in Firefox", for = "linux" },
+]
+
+[open]
+prepend_rules = [
+  { mime = "image/*", use = "image" },
+]
+
 # https://github.com/yazi-rs/plugins/tree/main/git.yazi
 [[plugin.prepend_fetchers]]
 url = "*"
