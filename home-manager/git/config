@@ -13,6 +13,7 @@
 
 [include]
 	path = ~/.config/delta/catppuccin.gitconfig
+	path = ~/.config/git/config.platform
 
 [delta]
 	navigate = true  # use n and N to move between diff sections
@@ -93,14 +94,6 @@
 [pull]
 	ff = only
 	# rebase = true
-
-[credential "https://github.com"]
-	helper =
-	helper = ! gh auth git-credential
-
-[credential "https://gist.github.com"]
-	helper =
-	helper = ! gh auth git-credential
 
 # see: https://blog.gitbutler.com/how-git-core-devs-configure-git
 

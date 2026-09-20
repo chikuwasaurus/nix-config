@@ -16,6 +16,11 @@ in
   xdg.configFile = {
     "container".source = mkLink "container";
     "flashspace".source = mkLink "flashspace";
+    "git/config.platform".text = ''
+      [credential]
+          helper =
+          helper = osxkeychain
+    '';
     "karabiner".source = mkLink "karabiner";
   };
 }

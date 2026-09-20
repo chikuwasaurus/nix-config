@@ -12,6 +12,11 @@ in
 {
   xdg.configFile = {
     "fcitx5".source = mkLink "fcitx5";
+    "git/config.platform".text = ''
+      [credential]
+          helper =
+          helper = ! gh auth git-credential
+    '';
     "hypr".source = mkLink "hypr";
     "keyd".source = mkLink "keyd";
     "noctalia".source = mkLink "noctalia";
