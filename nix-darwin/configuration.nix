@@ -135,7 +135,7 @@
             };
 
             # Spotlight > "Show Spotlight search"
-            # Shortcut: Command + Shift + Space
+            # Shortcut: Option + Command + Space
             "64" = {
               enabled = true;
               value = {
@@ -143,9 +143,14 @@
                 parameters = [
                   32 # ASCII: Space
                   49 # macOS key code: Space
-                  1179648 # Command (1048576) + Shift (131072) modifier mask
+                  1572864 # Command (1048576) + Option (524288) modifier mask
                 ];
               };
+            };
+
+            # Spotlight > "Show Finder search window"
+            "65" = {
+              enabled = false;
             };
           };
         };
