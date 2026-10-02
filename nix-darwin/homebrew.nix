@@ -50,6 +50,7 @@
       "pixelsnap"
       "raycast"
       "slack"
+      "snapzy"
       "tabularis"
       "tailscale-app"
       "tolaria"
