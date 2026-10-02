@@ -108,6 +108,71 @@
       CustomUserPreferences = {
         "com.apple.symbolichotkeys" = {
           AppleSymbolicHotKeys = {
+            # 28 = Save picture of screen as a file (Shift + Command + 3)
+            "28" = {
+              enabled = false;
+              value = {
+                type = "standard";
+                parameters = [
+                  51
+                  20
+                  1179648
+                ];
+              };
+            };
+
+            # 29 = Copy picture of screen to the clipboard (Control + Shift + Command + 3)
+            "29" = {
+              enabled = false;
+              value = {
+                type = "standard";
+                parameters = [
+                  51
+                  20
+                  1441792
+                ];
+              };
+            };
+
+            # 30 = Save picture of selected area as a file (Shift + Command + 4)
+            "30" = {
+              enabled = false;
+              value = {
+                type = "standard";
+                parameters = [
+                  52
+                  21
+                  1179648
+                ];
+              };
+            };
+
+            # 31 = Copy picture of selected area to the clipboard (Control + Shift + Command + 4)
+            "31" = {
+              enabled = false;
+              value = {
+                type = "standard";
+                parameters = [
+                  52
+                  21
+                  1441792
+                ];
+              };
+            };
+
+            # 184 = Screenshot and recording options (Shift + Command + 5)
+            "184" = {
+              enabled = false;
+              value = {
+                type = "standard";
+                parameters = [
+                  53
+                  23
+                  1179648
+                ];
+              };
+            };
+
             # 60 = Select previous input source (Ctrl + Space)
             "60" = {
               enabled = false;
