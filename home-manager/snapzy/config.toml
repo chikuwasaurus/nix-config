@@ -226,22 +226,22 @@ key = ""
 modifiers = []
 
 [shortcuts.global.annotate]
-enabled = true
+enabled = false
 key = "A"
 modifiers = ["command", "shift"]
 
 [shortcuts.global.video_editor]
-enabled = true
+enabled = false
 key = "E"
 modifiers = ["command", "shift"]
 
 [shortcuts.global.cloud_uploads]
-enabled = true
+enabled = false
 key = "L"
 modifiers = ["command", "shift"]
 
 [shortcuts.global.shortcut_list]
-enabled = true
+enabled = false
 key = "K"
 modifiers = ["command", "shift"]
 
@@ -261,7 +261,7 @@ key = "1"
 modifiers = ["command", "shift"]
 
 [shortcuts.global.history]
-enabled = true
+enabled = false
 key = "H"
 modifiers = ["command", "shift"]
 
