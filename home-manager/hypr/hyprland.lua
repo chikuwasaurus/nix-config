@@ -82,6 +82,17 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("firefox", {
       workspace = "2 silent",
   })
+
+  hl.exec_cmd([[
+    for f in "${XDG_DATA_HOME:-$HOME/.local/share}"/applications/firefox.webapp-*.desktop; do
+      if grep -qx 'Name=ChatGPT' "$f"; then
+        eval "$(sed -n 's/^Exec=//p' "$f")"
+        break
+      fi
+    done
+  ]], {
+    workspace = "3 silent",
+  })
 end)
 
 -------------------------------
