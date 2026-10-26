@@ -79,6 +79,8 @@ keybind = cmd+shift+backquote=toggle_quick_terminal
 # keybind = shift+ctrl+b=text:\x1b[1;S-b
 # keybind = shift+ctrl+f=text:\x1b[1;S-f
 
+# Paste from the regular clipboard instead of PRIMARY selection.
+keybind = shift+insert=paste_from_clipboard
 
 # Make Ctrl+Shift+W behave like Cmd+W on macOS.
 keybind = ctrl+shift+w=close_surface

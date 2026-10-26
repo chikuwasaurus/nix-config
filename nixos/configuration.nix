@@ -270,8 +270,8 @@
               leftcontrol = "esc";
               rightcontrol = "esc";
 
-              # Preserve Right Super as Right Super
-              rightmeta = "rightmeta";
+              # Tap Right Command for Fcitx5; hold for Meta shortcuts.
+              rightmeta = "overload(meta, rightmeta)";
             };
 
             control = {
@@ -279,11 +279,21 @@
               # Send Escape when Ctrl+semicolon is pressed.
               semicolon = "esc";
             };
+
+            meta = {
+              c = "C-insert";
+              v = "S-insert";
+              x = "C-x";
+            };
           };
 
           extraConfig = ''
             # Define the composite layer so app.conf can modify it.
             [control+shift]
+
+            # Preserve Super+Control+C for Hyprland.
+            [control+meta]
+            c = M-C-c
           '';
         };
       };
