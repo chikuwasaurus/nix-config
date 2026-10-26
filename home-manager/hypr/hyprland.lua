@@ -42,6 +42,14 @@ local ipc = "noctalia msg "
 -- Set programs that you use
 local terminal             = "ghostty"
 local browser              = "firefox"
+local aichat              = [[
+    for f in "${XDG_DATA_HOME:-$HOME/.local/share}"/applications/firefox.webapp-*.desktop; do
+    if grep -qx 'Name=ChatGPT' "$f"; then
+        eval "$(sed -n 's/^Exec=//p' "$f")"
+        break
+    fi
+    done
+]]
 local fileManager          = "ghostty -e yazi ~/Developer"
 local processMonitor       = "ghostty -e btop"
 local note                 = "ghostty -e zsh -c 'exec zk daily'"
@@ -75,22 +83,15 @@ local screenRecord         = ipc .. "plugin noctalia/screen_recorder:service all
 -- end)
 
 hl.on("hyprland.start", function()
-  hl.exec_cmd("ghostty", {
+  hl.exec_cmd(terminal, {
       workspace = "1 silent",
   })
 
-  hl.exec_cmd("firefox", {
+  hl.exec_cmd(browser, {
       workspace = "2 silent",
   })
 
-  hl.exec_cmd([[
-    for f in "${XDG_DATA_HOME:-$HOME/.local/share}"/applications/firefox.webapp-*.desktop; do
-      if grep -qx 'Name=ChatGPT' "$f"; then
-        eval "$(sed -n 's/^Exec=//p' "$f")"
-        break
-      fi
-    done
-  ]], {
+  hl.exec_cmd(aichat, {
     workspace = "3 silent",
   })
 end)
