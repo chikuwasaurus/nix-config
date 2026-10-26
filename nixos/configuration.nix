@@ -16,7 +16,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./disko.nix
-    ./flatpak.nix
+    # ./flatpak.nix
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,

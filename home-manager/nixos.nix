@@ -37,6 +37,8 @@ in
     # Packages that should be installed to the user profile.
     packages = with pkgs; [
       brave-origin
+      kdePackages.kdenlive
+      tabularis
 
       # GTK 3/4 Applications theme
       # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=gtk-34-applications#gtk-34-applications
@@ -69,6 +71,10 @@ in
     ghostty = {
       enable = true;
       package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    };
+
+    obs-studio = {
+      enable = true;
     };
 
     obsidian = {

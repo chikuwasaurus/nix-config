@@ -272,22 +272,6 @@
         "type": "github"
       }
     },
-    "nix-flatpak": {
-      "locked": {
-        "lastModified": 1790428548,
-        "narHash": "sha256-OsZ/I7v3ArCrk0XOUvkiU1dFtGtE1qZTHRGjvBXIKUU=",
-        "owner": "gmodena",
-        "repo": "nix-flatpak",
-        "rev": "f1f045fc8b35ff59f88982c1752d3f3a42ca6a61",
-        "type": "github"
-      },
-      "original": {
-        "owner": "gmodena",
-        "ref": "latest",
-        "repo": "nix-flatpak",
-        "type": "github"
-      }
-    },
     "nix-homebrew": {
       "inputs": {
         "brew-src": "brew-src"
@@ -376,7 +360,6 @@
         "home-manager": "home-manager_2",
         "llm-agents": "llm-agents",
         "nix-darwin": "nix-darwin",
-        "nix-flatpak": "nix-flatpak",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_4"
       }

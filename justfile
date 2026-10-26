@@ -22,7 +22,7 @@ nixos:
 nixos-update:
     nix flake update
     sudo nixos-rebuild switch --flake .
-    flatpak update
+    # flatpak update
 
 # Build and apply macOS system and Home Manager changes
 darwin:

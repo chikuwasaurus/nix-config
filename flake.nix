@@ -27,7 +27,7 @@
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     llm-agents.url = "github:numtide/llm-agents.nix";
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    # nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     helix.url = "github:helix-editor/helix";
     ghostty.url = "github:ghostty-org/ghostty";
     disko = {
@@ -47,7 +47,7 @@
       home-manager,
       nix-darwin,
       nix-homebrew,
-      nix-flatpak,
+      # nix-flatpak,
       disko,
       git-hooks,
       ...
@@ -77,7 +77,7 @@
           };
           modules = [
             ./nixos/configuration.nix
-            nix-flatpak.nixosModules.nix-flatpak
+            # nix-flatpak.nixosModules.nix-flatpak
             home-manager.nixosModules.home-manager
             (mkHomeManagerModule ./home-manager/nixos.nix)
             disko.nixosModules.disko
