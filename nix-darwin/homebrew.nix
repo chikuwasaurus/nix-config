@@ -59,7 +59,6 @@
     ];
 
     masApps = {
-      "AdGuard Mini" = 1440147259;
       "Control Panel for Twitter" = 1668516167;
       "Control Panel for YouTube" = 6478456678;
       "Dropover" = 1355679052;
@@ -78,6 +77,7 @@
       "Photomator" = 1444636541;
       "Pixelmator Pro" = 6746662575;
       "TextSniper" = 1528890965;
+      "uBlock Origin Lite" = 6745342698;
       "Wappalyzer - Technology profiler" = 1520333300;
       "Xcode" = 497799835;
     };
