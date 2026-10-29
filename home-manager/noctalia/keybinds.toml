@@ -1,0 +1,6 @@
+[keybinds]
+cancel = ["escape"]
+left = ["left", "ctrl+b"]
+right = ["right", "ctrl+f"]
+up = ["up", "ctrl+p"]
+down = ["down", "ctrl+n"]
