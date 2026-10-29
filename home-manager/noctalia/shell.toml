@@ -16,6 +16,9 @@ privilege_command = "pkexec"
 [shell.launcher.providers.session]
 global = true
 
+[shell.window_switcher]
+mru = true
+
 [keybinds]
 cancel = ["escape"]
 left = ["left", "ctrl+b"]
