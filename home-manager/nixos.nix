@@ -39,6 +39,7 @@ in
       brave-origin
       kdePackages.kdenlive
       tabularis
+      zed-editor
 
       # GTK 3/4 Applications theme
       # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=gtk-34-applications#gtk-34-applications
