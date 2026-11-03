@@ -7,7 +7,7 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Layer 2: hold Tab for hjkl arrows, y/u/i/o navigation, brackets, and n/m/,/. window navigation",
+            "description": "Layer 2: hold Tab for b/n/p/f arrows, a/u/d/e navigation",
             "manipulators": [
               {
                 "from": {
@@ -50,7 +50,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "h",
+                  "key_code": "b",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -73,7 +73,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "j",
+                  "key_code": "n",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -96,7 +96,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "k",
+                  "key_code": "p",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -119,7 +119,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "l",
+                  "key_code": "f",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -142,7 +142,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "y",
+                  "key_code": "a",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -188,7 +188,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "i",
+                  "key_code": "d",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -211,7 +211,7 @@
                   }
                 ],
                 "from": {
-                  "key_code": "o",
+                  "key_code": "e",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -221,114 +221,6 @@
                 "to": [
                   {
                     "key_code": "end"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "layer2",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "n",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_arrow",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "layer2",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "m",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "down_arrow",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "layer2",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "comma",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "up_arrow",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "layer2",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "period",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "right_arrow",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
                   }
                 ],
                 "type": "basic"
