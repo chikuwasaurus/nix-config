@@ -51,4 +51,4 @@ type = "clock"
 
 [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
 background = true
-background_color = "surface_variant"
+background_color = "surface_container"
