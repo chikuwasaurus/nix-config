@@ -128,6 +128,7 @@
         "studio-display" # Allow this user to control the Studio Display without sudo.
         "input" # Allow the user to access devices under /dev/input.
         "keyd" # Allow the application mapper to communicate with keyd.
+        "ydotool" # Allow the user to control the mouse via ydotool.
       ];
       packages = [ ];
       shell = pkgs.zsh;
@@ -154,6 +155,10 @@
       # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
       recommendedServices.enable = true;
       systemd.enable = true;
+    };
+
+    ydotool = {
+      enable = true;
     };
 
     # Some programs need SUID wrappers, can be configured further or are
@@ -272,6 +277,9 @@
 
               # Tap Right Command for Fcitx5; hold for Meta shortcuts.
               rightmeta = "overload(meta, rightmeta)";
+
+              # Tap Tab normally; hold it to activate mouse controls.
+              tab = "overload(mouse, tab)";
             };
 
             control = {
@@ -285,6 +293,17 @@
               v = "S-insert";
               x = "C-x";
             };
+
+            mouse = {
+              # Move the pointer by 30 units per keypress.
+              h = "command(${pkgs.ydotool}/bin/ydotool mousemove -- -30 0)";
+              j = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 0 30)";
+              k = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 0 -30)";
+              l = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 30 0)";
+
+              # Left-click while Tab is held.
+              space = "leftmouse";
+            };
           };
 
           extraConfig = ''
@@ -294,6 +313,10 @@
             # Preserve Super+Control+C for Hyprland.
             [control+meta]
             c = M-C-c
+
+            # Right-click when Tab and Shift are held.
+            [mouse+shift]
+            space = rightmouse
           '';
         };
       };
@@ -344,11 +367,18 @@
     # services.libinput.enable = true;
   };
 
-  # Allow keyd to switch its effective group to the keyd group.
-  # see: https://github.com/NixOS/nixpkgs/issues/290161
-  systemd.services.keyd.serviceConfig.CapabilityBoundingSet = lib.mkAfter [
-    "CAP_SETGID"
-  ];
+  systemd.services.keyd = {
+    # Allow keyd to switch its effective group to the keyd group.
+    # see: https://github.com/NixOS/nixpkgs/issues/290161
+    serviceConfig.CapabilityBoundingSet = lib.mkAfter [
+      "CAP_SETGID"
+    ];
+
+    # Set the ydotool socket path for keyd mouse commands.
+    environment = {
+      YDOTOOL_SOCKET = "/run/ydotoold/socket";
+    };
+  };
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
