@@ -46,8 +46,8 @@ in
     #  /etc/profiles/per-user/${username}/etc/profile.d/hm-session-vars.sh
     #
     sessionVariables = {
-      EDITOR = "hx";
-      VISUAL = "hx";
+      EDITOR = "ms";
+      VISUAL = "ms";
     };
 
     sessionPath = [
@@ -121,6 +121,7 @@ in
         less
         lua
         lua-language-server
+        inputs.mitos.packages.${pkgs.stdenv.hostPlatform.system}.default
         nixd # Nix LSP
         nixfmt # Nix formatter
         nodejs_24
@@ -186,10 +187,10 @@ in
       nix-direnv.enable = true;
     };
 
-    helix = {
-      enable = true;
-      package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    };
+    # helix = {
+    #   enable = true;
+    #   package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    # };
   };
 
   xdg = {
@@ -213,6 +214,7 @@ in
       "herdr".source = mkLink "herdr";
       "hunk".source = mkLink "hunk";
       "lazygit".source = mkLink "lazygit";
+      "mitos".source = mkLink "mitos";
       "nushell".source = mkLink "nushell";
       "scooter".source = mkLink "scooter";
       "sheldon".source = mkLink "sheldon";

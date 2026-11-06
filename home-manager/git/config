@@ -41,7 +41,7 @@
 	d = diff
 	ds = diff --staged
 	dw = diff --word-diff
-	de = "!git diff HEAD --name-only | fzf -m | xargs ${EDITOR:-hx}"
+	de = "!git diff HEAD --name-only | fzf -m | xargs ${EDITOR}"
 
 	# add / commit
 	a = add

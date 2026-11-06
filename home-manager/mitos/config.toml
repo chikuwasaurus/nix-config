@@ -1,0 +1,48 @@
+[editor]
+color-modes = true
+bufferline = "always"
+trim-final-newlines = true
+trim-trailing-whitespace = true
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+default-yank-register = "+"
+
+[editor.lsp]
+auto-document-highlight = true
+
+[editor.inline-diagnostics]
+cursor-line = "disable"
+
+[editor.indent-guides]
+render = true
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.statusline]
+left = ["mode", "spinner", "branch", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "search-position", "register", "position", "file-encoding", "file-indent-style", "file-type"]
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.soft-wrap]
+enable = false
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
+[keys.select]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
+[theme]
+dark = "catppuccin_mocha"
+light = "catppuccin_mocha"

@@ -13,12 +13,12 @@ cd_dev_project() {
 	zle accept-line
 }
 
-hx_dev_project() {
+editor_dev_project() {
 	local dir
 	dir="$(select_dev_project)"
 	[[ -z "$dir" ]] && return
 
-	BUFFER="cd \"$HOME/Developer/$dir\" && hx ."
+	BUFFER="cd \"$HOME/Developer/$dir\" && \"$EDITOR\" ."
 	zle accept-line
 }
 
@@ -32,11 +32,11 @@ zed_dev_project() {
 }
 
 zle -N cd_dev_project
-zle -N hx_dev_project
+zle -N editor_dev_project
 zle -N zed_dev_project
 
 bindkey '^X^Z' cd_dev_project
-bindkey '^O^H' hx_dev_project
+bindkey '^O^E' editor_dev_project
 bindkey '^O^Z' zed_dev_project
 
 open_lazygit() {
@@ -207,8 +207,8 @@ bindkey '^X^Y' copy-region-or-buffer-to-clipboard
 # }
 
 # select-forward-word() {
-# 	((REGION_ACTIVE)) || zle set-mark-command
 # 	zle forward-word
+# 	((REGION_ACTIVE)) || zle set-mark-command
 # }
 
 # zle -N select-backward-char

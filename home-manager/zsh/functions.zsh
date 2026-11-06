@@ -1,5 +1,5 @@
-# Search with ripgrep, preview matches in fzf, and open selected locations in Helix.
-rgh() {
+# Search with ripgrep, preview matches in fzf, and open selected locations in $EDITOR.
+rge() {
 	rg --hidden --glob '!.git' --column --line-number --no-heading --color=always --smart-case "$*" |
 		fzf \
 			--multi \
@@ -8,11 +8,11 @@ rgh() {
 			--preview 'bat --style=numbers --color=always --highlight-line {2} {1}' \
 			--preview-window 'right,60%,border-left,+{2}+3/3' |
 		awk -F : '{print $1 ":" $2 ":" $3}' |
-		xargs -r hx
+		xargs -r "$EDITOR"
 }
 
-# Search files with fd, preview them in fzf, and open selected files in Helix.
-fdh() {
+# Search files with fd, preview them in fzf, and open selected files in $EDITOR.
+fde() {
 	fd --hidden --exclude .git --follow "$*" |
 		fzf \
 			--multi \
@@ -24,5 +24,5 @@ fdh() {
         fi
       ' \
 			--preview-window 'right,60%,border-left' |
-		xargs -r hx
+		xargs -r "$EDITOR"
 }

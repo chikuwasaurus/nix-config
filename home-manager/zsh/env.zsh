@@ -2,8 +2,8 @@
 # ZDOTDIR を指定しない場合は、代わりに HOME が使われる
 export ZDOTDIR=$HOME/.config/zsh
 
-# editor を helix に設定
-export EDITOR=hx
+# editor を mitos に設定
+export EDITOR=ms
 
 # zsh でターミナルの出力が改行されずに最後の行に到達したとき、末尾に記号(%や#)が表示されないようにする
 # export PROMPT_EOL_MARK=''

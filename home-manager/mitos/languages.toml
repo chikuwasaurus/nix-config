@@ -1,0 +1,56 @@
+# https://github.com/blopker/codebook
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+
+[language-server.bash-language-server]
+# bash-language-server includes groff-formatted man output in hover text.
+# Mitos does not handle groff's ANSI SGR sequences there, so disable them.
+command = "env"
+args = [
+  "GROFF_NO_SGR=1",
+  "bash-language-server",
+  "start",
+]
+
+[language-server.zk]
+command = "zk"
+args = ["lsp"]
+required-root-patterns = [".zk"]
+
+[[language]]
+name = "markdown"
+roots = [".zk"]
+language-servers = [
+  "codebook",
+  "zk",
+  "rumdl",
+]
+auto-format = true
+
+[[language]]
+name = "bash"
+auto-format = true
+
+[[language]]
+name = "toml"
+auto-format = true
+
+[[language]]
+name = "nix"
+auto-format = true
+
+[[language]]
+name = "git-config"
+file-types = [
+  "gitconfig",
+  { glob = ".git/config" },
+  { glob = ".config/git/config" },
+  { glob = "**/git/config" },
+  { glob = ".gitconfig" },
+  { glob = ".gitmodules" },
+]
+
+[[language]]
+name = "python"
+auto-format = true

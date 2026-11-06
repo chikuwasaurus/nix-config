@@ -251,6 +251,24 @@
         "type": "github"
       }
     },
+    "mitos": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1793919702,
+        "narHash": "sha256-YvBXqoBwo+LdahPbiOpLkylHcwK+jeSEubl3/QWbN4c=",
+        "owner": "mitos-editor",
+        "repo": "mitos",
+        "rev": "10580e75ee4a4c609cdb6fc50770d7d3a5529c09",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mitos-editor",
+        "repo": "mitos",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -337,6 +355,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1790185690,
+        "narHash": "sha256-xJ+X4hBtOcAFGBOe5nAMyMUeF9foJBmIOu3NjBqBycU=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "4975466d324710c576dc11ad614684e6bd8cad8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1793795574,
         "narHash": "sha256-pgG/CO+txdf2sA2z6DsM+2G3F9ajfIp/3BMC4wfKMDY=",
         "owner": "nixos",
@@ -359,9 +393,10 @@
         "helix": "helix",
         "home-manager": "home-manager_2",
         "llm-agents": "llm-agents",
+        "mitos": "mitos",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       }
     },
     "rust-overlay": {

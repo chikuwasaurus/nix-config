@@ -29,6 +29,7 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
     # nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     helix.url = "github:helix-editor/helix";
+    mitos.url = "github:mitos-editor/mitos";
     ghostty.url = "github:ghostty-org/ghostty";
     disko = {
       url = "github:nix-community/disko/latest";

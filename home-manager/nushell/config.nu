@@ -17,7 +17,7 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
-$env.config.buffer_editor = "hx"
+$env.config.buffer_editor = "ms"
 $env.config.show_banner = false
 $env.config.highlight_resolved_externals = true
 
