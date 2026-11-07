@@ -16,6 +16,9 @@ in
   xdg.configFile = {
     "container".source = mkLink "container";
     "flashspace".source = mkLink "flashspace";
+    "ghostty/platform.ghostty".text = ''
+      font-size = 16
+    '';
     "git/config.platform".text = ''
       [credential]
           helper =

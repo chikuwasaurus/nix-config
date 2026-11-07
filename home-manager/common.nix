@@ -207,7 +207,7 @@ in
       "delta".source = mkLink "delta";
       "eza".source = mkLink "eza";
       "gh".source = mkLink "gh";
-      "ghostty".source = mkLink "ghostty";
+      "ghostty/config.ghostty".source = mkLink "ghostty/config.ghostty";
       "git/config".source = mkLink "git/config";
       "git/ignore".source = mkLink "git/ignore";
       "helix".source = mkLink "helix";

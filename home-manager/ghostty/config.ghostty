@@ -52,7 +52,10 @@
 background-opacity = 0.9
 background-blur-radius = 20
 font-feature = -calt
-font-size = 13
+# Configure in platform.ghostty.
+# Ghostty renders the same font-size differently on macOS and Linux
+# due to differences in DPI and font scaling.
+# font-size = 13
 adjust-cell-height = 30%
 cursor-style-blink = false
 macos-option-as-alt = true
@@ -194,3 +197,6 @@ keybind = vim/i=deactivate_key_table
 
 # Catch unbound keys
 keybind = vim/catch_all=ignore
+
+# Optional platform-specific overrides
+config-file = ?platform.ghostty

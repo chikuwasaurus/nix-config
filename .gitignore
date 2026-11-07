@@ -68,6 +68,9 @@ tmbootpicker.efi
 # gh
 **/gh/hosts.yml
 
+# ghostty
+**/ghostty/platform.ghostty
+
 # git-hooks
 /.pre-commit-config.yaml
 
