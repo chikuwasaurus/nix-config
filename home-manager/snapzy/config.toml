@@ -230,7 +230,7 @@ key = ""
 modifiers = []
 
 [shortcuts.global.delayed_fullscreen]
-enabled = true
+enabled = false
 key = ""
 modifiers = []
 
@@ -275,7 +275,7 @@ key = "H"
 modifiers = ["command", "shift"]
 
 [shortcuts.global.pick_color]
-enabled = true
+enabled = false
 key = ""
 modifiers = []
 
