@@ -37,11 +37,11 @@ hidden = false
 
 [keys.normal]
 "}" = "goto_next_paragraph"
-"{" = "goto_prev_paragraph"
+"{" = "goto_previous_paragraph"
 
 [keys.select]
 "}" = "goto_next_paragraph"
-"{" = "goto_prev_paragraph"
+"{" = "goto_previous_paragraph"
 
 [theme]
 dark = "catppuccin_mocha"
