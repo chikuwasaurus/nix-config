@@ -36,10 +36,6 @@ in
 
     # Packages that should be installed to the user profile.
     packages = with pkgs; [
-      kdePackages.kdenlive
-      tabularis
-      zed-editor
-
       # GTK 3/4 Applications theme
       # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=gtk-34-applications#gtk-34-applications
       adw-gtk3
@@ -51,10 +47,6 @@ in
   };
 
   programs = {
-    anki = {
-      enable = true;
-    };
-
     firefox = {
       enable = true;
 
@@ -71,14 +63,6 @@ in
     ghostty = {
       enable = true;
       package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    };
-
-    obs-studio = {
-      enable = true;
-    };
-
-    obsidian = {
-      enable = true;
     };
   };
 

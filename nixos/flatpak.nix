@@ -29,6 +29,9 @@ in
         "io.github.flattool.Warehouse"
         "com.obsproject.Studio"
         "org.kde.kdenlive"
+        "net.ankiweb.Anki"
+        "md.obsidian.Obsidian"
+        "dev.zed.Zed"
       ]
       ++ fromRemote "flatpark" [
         "dev.tabularis.Tabularis"
