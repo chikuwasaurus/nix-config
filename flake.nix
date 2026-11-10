@@ -152,6 +152,8 @@
         {
           git-hooks = git-hooks.lib.${system}.run {
             src = self;
+            package = pkgs.prek;
+
             hooks = {
               nix-flake-check = {
                 enable = true;
