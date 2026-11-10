@@ -1,5 +1,7 @@
 {
   config,
+  lib,
+  osConfig,
   pkgs,
   ...
 }:
@@ -16,9 +18,11 @@ in
   xdg.configFile = {
     "container".source = mkLink "container";
     "flashspace".source = mkLink "flashspace";
-    "ghostty/platform.ghostty".text = ''
-      font-size = 16
-    '';
+    "ghostty/platform.ghostty" = lib.mkIf (osConfig.networking.hostName == "mac-mini") {
+      text = ''
+        font-size = 16
+      '';
+    };
     "git/config.platform".text = ''
       [credential]
           helper =
