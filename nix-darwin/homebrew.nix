@@ -35,7 +35,6 @@
       "anki"
       "chatgpt"
       "claude"
-      "cleanshot"
       "figma"
       "firefox"
       "flashspace"
@@ -54,8 +53,6 @@
       "snapzy"
       "tabularis"
       "tailscale-app"
-      "tolaria"
-      "typora"
       "zed"
     ];
 
