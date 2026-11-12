@@ -40,6 +40,7 @@
       "firefox"
       "flashspace"
       "ghostty"
+      "herdr-app"
       "karabiner-elements"
       "logi-options+"
       "monitorcontrol"

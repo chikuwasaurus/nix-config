@@ -35,15 +35,21 @@ in
     };
 
     # Packages that should be installed to the user profile.
-    packages = with pkgs; [
-      # GTK 3/4 Applications theme
-      # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=gtk-34-applications#gtk-34-applications
-      adw-gtk3
-      nwg-look
-      # Qt Applications theme
-      # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=qt-applications#qt-applications
-      qt6Packages.qt6ct
-    ];
+    packages =
+      with pkgs;
+      [
+        # GTK 3/4 Applications theme
+        # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=gtk-34-applications#gtk-34-applications
+        adw-gtk3
+        nwg-look
+        # Qt Applications theme
+        # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=qt-applications#qt-applications
+        qt6Packages.qt6ct
+      ]
+      ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
+        herdr-app
+        herdr-core
+      ]);
   };
 
   programs = {
