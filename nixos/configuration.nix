@@ -278,8 +278,8 @@
               # Tap Right Command for Fcitx5; hold for Meta shortcuts.
               rightmeta = "overload(meta, rightmeta)";
 
-              # Tap Tab normally; hold it to activate mouse controls.
-              tab = "overload(mouse, tab)";
+              # Tap Tab normally; hold it to activate Tab controls.
+              tab = "overload(tab, tab)";
             };
 
             control = {
@@ -294,7 +294,7 @@
               x = "C-x";
             };
 
-            mouse = {
+            tab = {
               # Move the pointer by 30 units per keypress.
               h = "command(${pkgs.ydotool}/bin/ydotool mousemove -- -30 0)";
               j = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 0 30)";
@@ -303,6 +303,12 @@
 
               # Left-click while Tab is held.
               space = "leftmouse";
+
+              # Emacs-style arrow keys while Tab is held.
+              n = "down";
+              p = "up";
+              f = "right";
+              b = "left";
             };
           };
 
@@ -315,7 +321,7 @@
             c = M-C-c
 
             # Right-click when Tab and Shift are held.
-            [mouse+shift]
+            [tab+shift]
             space = rightmouse
           '';
         };
