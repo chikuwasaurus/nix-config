@@ -8,9 +8,9 @@
           "apps": [
             {
               "autoOpen": true,
-              "bundleIdentifier": "dev.herdr.app",
-              "iconPath": "/Applications/Herdr.app/Contents/Resources/Herdr.icns",
-              "name": "Herdr"
+              "bundleIdentifier": "com.mitchellh.ghostty",
+              "iconPath": "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name": "Ghostty"
             }
           ],
           "display": "Studio Display",

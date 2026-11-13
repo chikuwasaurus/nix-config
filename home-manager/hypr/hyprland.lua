@@ -40,8 +40,7 @@ hl.monitor({
 local ipc                  = "noctalia msg "
 
 -- Set programs that you use
-local terminal             = "herdr-app"
-local quickTerminal        = "ghostty"
+local terminal             = "ghostty"
 local browser              = "firefox"
 local agent                = "chatgpt"
 local fileManager          = "ghostty -e yazi ~/Developer"
@@ -318,7 +317,6 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind("ALT + CTRL + T", hl.dsp.exec_cmd(terminal))
-hl.bind("ALT + CTRL + Q", hl.dsp.exec_cmd(quickTerminal))
 hl.bind("ALT + CTRL + B", hl.dsp.exec_cmd(browser))
 hl.bind("ALT + CTRL + G", hl.dsp.exec_cmd(agent))
 hl.bind("ALT + CTRL + F", hl.dsp.exec_cmd(fileManager))
