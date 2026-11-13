@@ -8,9 +8,9 @@
           "apps": [
             {
               "autoOpen": true,
-              "bundleIdentifier": "com.mitchellh.ghostty",
-              "iconPath": "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
-              "name": "Ghostty"
+              "bundleIdentifier": "dev.herdr.app",
+              "iconPath": "/Applications/Herdr.app/Contents/Resources/Herdr.icns",
+              "name": "Herdr"
             }
           ],
           "display": "Studio Display",
@@ -40,23 +40,17 @@
           "apps": [
             {
               "autoOpen": true,
-              "bundleIdentifier": "com.apple.Safari.WebApp.4A281615-B933-4060-AF6E-83BBC2BCA1E1",
-              "iconPath": "/Users/kyohei/Applications/ChatGPT.app/Contents/Resources/ApplicationIcon.icns",
-              "name": "ChatGPT"
-            },
-            {
-              "autoOpen": true,
-              "bundleIdentifier": "com.apple.Safari.WebApp.577328CA-9424-4E7C-A414-4A60025452F3",
-              "iconPath": "/Users/kyohei/Applications/ChatGPT.app/Contents/Resources/ApplicationIcon.icns",
+              "bundleIdentifier": "com.openai.codex",
+              "iconPath": "/Applications/ChatGPT.app/Contents/Resources/electron.icns",
               "name": "ChatGPT"
             }
           ],
           "display": "Studio Display",
-          "id": "97E0AA4F-CA09-4997-87D6-F653F936A7F3",
-          "name": "Chat",
+          "id": "3DA90D9E-2ED5-42E2-97BC-3269832DDFA7",
+          "name": "Agent",
           "openAppsOnActivation": true,
           "shortcut": "opt+3",
-          "symbolIconName": "ellipsis.message"
+          "symbolIconName": "wand.and.sparkles"
         },
         {
           "apps": [
@@ -92,6 +86,22 @@
         {
           "apps": [
             {
+              "autoOpen": true,
+              "bundleIdentifier": "com.tinyspeck.slackmacgap",
+              "iconPath": "/Applications/Slack.app/Contents/Resources/electron.icns",
+              "name": "Slack"
+            }
+          ],
+          "display": "Studio Display",
+          "id": "97E0AA4F-CA09-4997-87D6-F653F936A7F3",
+          "name": "Chat",
+          "openAppsOnActivation": true,
+          "shortcut": "opt+5",
+          "symbolIconName": "ellipsis.message"
+        },
+        {
+          "apps": [
+            {
               "bundleIdentifier": "dev.zed.Zed",
               "iconPath": "/Applications/Zed.app/Contents/Resources/Zed.icns",
               "name": "Zed"
@@ -102,21 +112,6 @@
           "name": "Editor",
           "openAppsOnActivation": true,
           "symbolIconName": "hammer"
-        },
-        {
-          "apps": [
-            {
-              "autoOpen": true,
-              "bundleIdentifier": "com.openai.codex",
-              "iconPath": "/Applications/ChatGPT.app/Contents/Resources/electron.icns",
-              "name": "ChatGPT"
-            }
-          ],
-          "display": "Studio Display",
-          "id": "3DA90D9E-2ED5-42E2-97BC-3269832DDFA7",
-          "name": "Agent",
-          "openAppsOnActivation": true,
-          "symbolIconName": "wand.and.sparkles"
         },
         {
           "apps": [
