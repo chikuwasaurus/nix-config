@@ -47,7 +47,9 @@ in
         qt6Packages.qt6ct
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
-        chatgpt
+        (chatgpt.override {
+          commandLineArgs = "--ozone-platform=wayland";
+        })
         claude-desktop
         herdr-app
         herdr-core
