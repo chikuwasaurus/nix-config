@@ -78,6 +78,16 @@ tmbootpicker.efi
 **/herdr/*
 !**/herdr/config.toml
 
+# herdr-app
+**/herdr-app/*
+!**/herdr-app/settings.json
+!**/herdr-app/keys.json
+!**/herdr-app/mods/
+**/herdr-app/mods/*
+**/herdr-app/mods/**/gpui-kit.d.ts
+**/herdr-app/mods/**/jsconfig.json
+!**/herdr-app/mods/tmux-prefix/
+
 # hunk
 **/hunk/state.json
 

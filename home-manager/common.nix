@@ -212,6 +212,7 @@ in
       "git/ignore".source = mkLink "git/ignore";
       "helix".source = mkLink "helix";
       "herdr".source = mkLink "herdr";
+      "herdr-app".source = mkLink "herdr-app";
       "hunk".source = mkLink "hunk";
       "lazygit".source = mkLink "lazygit";
       "mitos".source = mkLink "mitos";
