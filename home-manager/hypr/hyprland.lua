@@ -51,7 +51,7 @@ local aichat               = [[
     done
 ]]
 local fileManager          = "ghostty -e yazi ~/Developer"
-local processMonitor       = "ghostty -e btop"
+local systemMonitor        = "ghostty -e btop"
 local note                 = "ghostty -e zsh -c 'exec zk daily'"
 local launcher             = ipc .. "panel-toggle launcher"
 local controlCenter        = ipc .. "panel-toggle control-center"
@@ -323,12 +323,12 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(browser))
--- hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(aichat))
-hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(processMonitor))
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(note))
+hl.bind("ALT + CTRL + T", hl.dsp.exec_cmd(terminal))
+hl.bind("ALT + CTRL + B", hl.dsp.exec_cmd(browser))
+hl.bind("ALT + CTRL + G", hl.dsp.exec_cmd(aichat))
+hl.bind("ALT + CTRL + F", hl.dsp.exec_cmd(fileManager))
+hl.bind("ALT + CTRL + S", hl.dsp.exec_cmd(systemMonitor))
+hl.bind("ALT + CTRL + N", hl.dsp.exec_cmd(note))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(controlCenter))
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(clipboard))
@@ -347,8 +347,8 @@ hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("uwsm stop"))
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 -- hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))        -- mode: "fullscreen" or "maximized"
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized" })) -- mode: "fullscreen" or "maximized"
+hl.bind(mainMod .. " + CTRL + F", hl.dsp.window.fullscreen({ mode = "fullscreen" })) -- mode: "fullscreen" or "maximized"
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }))         -- mode: "fullscreen" or "maximized"
 hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))                             -- dwindle only
 
 -- Move focus with mainMod + [HJKL] keys
