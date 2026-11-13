@@ -309,6 +309,10 @@
               p = "up";
               f = "right";
               b = "left";
+              a = "home";
+              e = "end";
+              u = "pageup";
+              d = "pagedown";
             };
           };
 
