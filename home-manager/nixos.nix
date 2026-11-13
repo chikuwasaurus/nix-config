@@ -47,6 +47,8 @@ in
         qt6Packages.qt6ct
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
+        chatgpt
+        claude-desktop
         herdr-app
         herdr-core
       ]);
