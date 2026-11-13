@@ -40,16 +40,10 @@ hl.monitor({
 local ipc                  = "noctalia msg "
 
 -- Set programs that you use
-local terminal             = "ghostty"
+local terminal             = "herdr-app"
+local quickTerminal        = "ghostty"
 local browser              = "firefox"
-local aichat               = [[
-    for f in "${XDG_DATA_HOME:-$HOME/.local/share}"/applications/firefox.webapp-*.desktop; do
-    if grep -qx 'Name=ChatGPT' "$f"; then
-        eval "$(sed -n 's/^Exec=//p' "$f")"
-        break
-    fi
-    done
-]]
+local agent                = "chatgpt"
 local fileManager          = "ghostty -e yazi ~/Developer"
 local systemMonitor        = "ghostty -e btop"
 local note                 = "ghostty -e zsh -c 'exec zk daily'"
@@ -91,7 +85,7 @@ hl.on("hyprland.start", function()
         workspace = "2 silent",
     })
 
-    hl.exec_cmd(aichat, {
+    hl.exec_cmd(agent, {
         workspace = "3 silent",
     })
 end)
@@ -324,8 +318,9 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind("ALT + CTRL + T", hl.dsp.exec_cmd(terminal))
+hl.bind("ALT + CTRL + Q", hl.dsp.exec_cmd(quickTerminal))
 hl.bind("ALT + CTRL + B", hl.dsp.exec_cmd(browser))
-hl.bind("ALT + CTRL + G", hl.dsp.exec_cmd(aichat))
+hl.bind("ALT + CTRL + G", hl.dsp.exec_cmd(agent))
 hl.bind("ALT + CTRL + F", hl.dsp.exec_cmd(fileManager))
 hl.bind("ALT + CTRL + S", hl.dsp.exec_cmd(systemMonitor))
 hl.bind("ALT + CTRL + N", hl.dsp.exec_cmd(note))
