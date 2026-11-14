@@ -334,7 +334,22 @@ hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(windowSwitcher))
 hl.bind(mainMod .. " + CTRL + 3", hl.dsp.exec_cmd(screenshotFullscreen))
 hl.bind(mainMod .. " + CTRL + 4", hl.dsp.exec_cmd(screenshotRegion))
 hl.bind(mainMod .. " + CTRL + 5", hl.dsp.exec_cmd(screenRecord))
-local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+local closeWindowBind = hl.bind(mainMod .. " + Q", function()
+    local window = hl.get_active_window()
+    if not window then return end
+
+    if window.class:lower():find("chatgpt", 1, true) then
+        -- Quit ChatGPT gracefully to avoid leaving background processes running.
+        hl.dispatch(hl.dsp.send_shortcut({
+            mods = "CTRL",
+            key = "Q",
+            window = window,
+        }))
+    else
+        -- Close the active window normally.
+        hl.dispatch(hl.dsp.window.close())
+    end
+end)
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("uwsm stop"))
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
