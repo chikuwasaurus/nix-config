@@ -296,19 +296,23 @@
 
             tab = {
               # Move the pointer by 30 units per keypress.
-              h = "command(${pkgs.ydotool}/bin/ydotool mousemove -- -30 0)";
-              j = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 0 30)";
-              k = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 0 -30)";
-              l = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 30 0)";
+              # h = "command(${pkgs.ydotool}/bin/ydotool mousemove -- -30 0)";
+              # j = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 0 30)";
+              # k = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 0 -30)";
+              # l = "command(${pkgs.ydotool}/bin/ydotool mousemove -- 30 0)";
 
               # Left-click while Tab is held.
               space = "leftmouse";
 
               # Emacs-style arrow keys while Tab is held.
+              h = "left";
+              j = "down";
+              k = "up";
+              l = "right";
+              b = "left";
               n = "down";
               p = "up";
               f = "right";
-              b = "left";
               a = "home";
               e = "end";
               u = "pageup";
