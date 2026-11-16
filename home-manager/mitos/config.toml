@@ -38,6 +38,7 @@ hidden = false
 [keys.normal]
 "}" = "goto_next_paragraph"
 "{" = "goto_previous_paragraph"
+C-g = "@<space>g"
 
 [keys.select]
 "}" = "goto_next_paragraph"
