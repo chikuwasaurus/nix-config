@@ -13,19 +13,14 @@ args = [
   "start",
 ]
 
-[language-server.zk]
-command = "zk"
-args = ["lsp"]
-required-root-patterns = [".zk"]
-
 [[language]]
 name = "markdown"
-roots = [".zk"]
 language-servers = [
   "codebook",
-  "zk",
-  "rumdl",
+  "marksman",
+  { name = "rumdl", only-features = ["diagnostics", "pull-diagnostics", "code-action", "format"] },
 ]
+
 auto-format = true
 
 [[language]]

@@ -121,6 +121,7 @@ in
         less
         lua
         lua-language-server
+        marksman
         mdcat
         inputs.mitos.packages.${pkgs.stdenv.hostPlatform.system}.default
         mo-viewer
@@ -149,7 +150,6 @@ in
         xh
         yazi
         yq-go
-        zk
         zoxide
         zsh
         zstd
