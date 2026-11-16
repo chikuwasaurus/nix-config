@@ -121,7 +121,9 @@ in
         less
         lua
         lua-language-server
+        mdcat
         inputs.mitos.packages.${pkgs.stdenv.hostPlatform.system}.default
+        mo-viewer
         nixd # Nix LSP
         nixfmt # Nix formatter
         nodejs_24
