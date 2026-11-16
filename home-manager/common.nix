@@ -130,6 +130,7 @@ in
         pnpm
         procs
         qpdf
+        racket
         ripgrep
         rumdl
         scooter
