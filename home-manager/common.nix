@@ -191,10 +191,10 @@ in
       nix-direnv.enable = true;
     };
 
-    # helix = {
-    #   enable = true;
-    #   package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    # };
+    helix = {
+      enable = true;
+      package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    };
   };
 
   xdg = {
