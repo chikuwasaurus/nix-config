@@ -89,6 +89,7 @@ in
         deno
         difftastic
         direnv
+        dnsutils
         doggo
         duf
         dust
