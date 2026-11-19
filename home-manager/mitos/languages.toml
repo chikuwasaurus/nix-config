@@ -13,6 +13,9 @@ args = [
   "start",
 ]
 
+[language-server.vscode-json-language-server.config.json.keepLines]
+enable = true
+
 [[language]]
 name = "markdown"
 language-servers = [
