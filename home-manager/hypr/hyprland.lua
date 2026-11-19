@@ -359,8 +359,8 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 -- Switch workspace with mainMod + CTRL + [HJKL] keys
 hl.bind(mainMod .. " + CTRL + H", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + CTRL + K", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + CTRL + J", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.focus({ workspace = "e+1" }))
 
 -- Switch to a submap called `resize`.
 hl.bind(mainMod .. " + R", hl.dsp.submap("resize"))
