@@ -283,7 +283,6 @@
             };
 
             control = {
-              h = "backspace";
               # Send Escape when Ctrl+semicolon is pressed.
               semicolon = "esc";
             };
@@ -324,9 +323,11 @@
             # Define the composite layer so app.conf can modify it.
             [control+shift]
 
-            # Preserve Super+Control+C for Hyprland.
+            # Preserve keys for Hyprland.
             [control+meta]
             c = M-C-c
+            v = M-C-v
+            x = M-C-x
 
             # Right-click when Tab and Shift are held.
             [tab+shift]
