@@ -47,6 +47,7 @@
       "ogdesign-eagle"
       "omniwm"
       "orbstack"
+      "stablyai/orca/orca"
       "pixelsnap"
       "raycast"
       "slack"

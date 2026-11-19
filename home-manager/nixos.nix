@@ -56,6 +56,7 @@ in
         claude-desktop
         herdr-app
         herdr-core
+        orca
         t3code-desktop
       ]);
   };
