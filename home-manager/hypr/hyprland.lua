@@ -316,12 +316,7 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind("ALT + CTRL + T", hl.dsp.exec_cmd(terminal))
-hl.bind("ALT + CTRL + B", hl.dsp.exec_cmd(browser))
-hl.bind("ALT + CTRL + G", hl.dsp.exec_cmd(agent))
-hl.bind("ALT + CTRL + F", hl.dsp.exec_cmd(fileManager))
-hl.bind("ALT + CTRL + S", hl.dsp.exec_cmd(systemMonitor))
-hl.bind("ALT + CTRL + N", hl.dsp.exec_cmd(note))
+hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(controlCenter))
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(clipboard))
@@ -339,10 +334,10 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("uwsm stop"))
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 -- hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+-- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + CTRL + F", hl.dsp.window.fullscreen({ mode = "fullscreen" })) -- mode: "fullscreen" or "maximized"
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }))         -- mode: "fullscreen" or "maximized"
-hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))                             -- dwindle only
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized" })) -- mode: "fullscreen" or "maximized"
+-- hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))                             -- dwindle only
 
 -- Move focus with mainMod + [HJKL] keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
