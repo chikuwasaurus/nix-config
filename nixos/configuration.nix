@@ -304,10 +304,8 @@
               space = "leftmouse";
 
               # Emacs-style arrow keys while Tab is held.
-              h = "left";
-              j = "down";
-              k = "up";
-              l = "right";
+              h = "backspace";
+              k = "macro(S-end delete)";
               b = "left";
               n = "down";
               p = "up";
