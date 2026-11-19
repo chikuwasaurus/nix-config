@@ -45,6 +45,9 @@ in
         # Qt Applications theme
         # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=qt-applications#qt-applications
         qt6Packages.qt6ct
+
+        # Sandbox for Codex
+        bubblewrap
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
         (chatgpt.override {
