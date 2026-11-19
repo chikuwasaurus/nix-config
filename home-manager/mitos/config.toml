@@ -44,6 +44,10 @@ C-g = "@<space>g"
 "}" = "goto_next_paragraph"
 "{" = "goto_previous_paragraph"
 
+[keys.picker]
+"A-[" = "preview_scroll_down"
+"A-]" = "preview_scroll_up"
+
 [theme]
 dark = "catppuccin_mocha"
 light = "catppuccin_mocha"
