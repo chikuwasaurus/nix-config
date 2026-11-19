@@ -51,6 +51,7 @@
       "raycast"
       "slack"
       "snapzy"
+      "t3-code"
       "tabularis"
       "tailscale-app"
       "zed"
