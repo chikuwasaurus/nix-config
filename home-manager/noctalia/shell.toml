@@ -18,3 +18,4 @@ global = true
 
 [shell.window_switcher]
 mru = true
+style = "icons"
