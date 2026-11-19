@@ -12,10 +12,10 @@ const BINDINGS = [
   ["x", "Close pane", "pane.close"],
   ["n", "Next tab", "tab.next"],
   ["p", "Previous tab", "tab.prev"],
-  ["h", "Focus left", "pane.go", { direction: "left" }, true],
-  ["j", "Focus down", "pane.go", { direction: "down" }, true],
-  ["k", "Focus up", "pane.go", { direction: "up" }, true],
-  ["l", "Focus right", "pane.go", { direction: "right" }, true],
+  ["h", "Focus left", "pane.go", { direction: "left" }],
+  ["j", "Focus down", "pane.go", { direction: "down" }],
+  ["k", "Focus up", "pane.go", { direction: "up" }],
+  ["l", "Focus right", "pane.go", { direction: "right" }],
   ["left", "Focus left", "pane.go", { direction: "left" }, true],
   ["down", "Focus down", "pane.go", { direction: "down" }, true],
   ["up", "Focus up", "pane.go", { direction: "up" }, true],
@@ -119,4 +119,3 @@ export default class TmuxPrefix extends View {
       .child(div().text_color(t.muted).child("0–9 tabs (0 = 10) · arrows focus · ? all bindings"));
   }
 }
-
