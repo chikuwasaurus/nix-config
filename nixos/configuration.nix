@@ -271,6 +271,9 @@
               capslock = "layer(control)";
               # capslock = "overload(control, esc)";
 
+              # Use rightalt (altgr) as alt.
+              rightalt = "layer(alt)";
+
               # Use the Control keys as Escape.
               leftcontrol = "esc";
               rightcontrol = "esc";
@@ -283,6 +286,7 @@
             };
 
             control = {
+              h = "backspace";
               # Send Escape when Ctrl+semicolon is pressed.
               semicolon = "esc";
             };
@@ -318,17 +322,35 @@
           };
 
           extraConfig = ''
-            # Define the composite layer so app.conf can modify it.
+            # Preserve the original shortcuts when Ctrl+H is combined with
+            # additional modifiers. Only Ctrl+H should act as Backspace.
             [control+shift]
+            h = C-S-h
 
-            # Preserve keys for Hyprland.
+            [control+alt]
+            h = C-A-h
+
             [control+meta]
+            h = C-M-h
+            # Preserve keys for Hyprland.
             c = M-C-c
             v = M-C-v
             x = M-C-x
 
-            # Right-click when Tab and Shift are held.
+            [control+shift+alt]
+            h = C-S-A-h
+
+            [control+shift+meta]
+            h = C-S-M-h
+
+            [control+alt+meta]
+            h = C-A-M-h
+
+            [control+shift+alt+meta]
+            h = C-S-A-M-h
+
             [tab+shift]
+            # Right-click when Tab and Shift are held.
             space = rightmouse
           '';
         };
