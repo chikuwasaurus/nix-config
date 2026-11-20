@@ -47,11 +47,13 @@
       "https://cache.numtide.com"
       "https://helix.cachix.org"
       "https://ghostty.cachix.org"
+      "https://umbriel.cachix.org"
     ];
     extra-trusted-public-keys = [
       "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
       "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
       "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
+      "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw="
     ];
     trusted-users = [
       username
@@ -89,7 +91,6 @@
       type = "fcitx5";
 
       fcitx5 = {
-        # Hyprland
         waylandFrontend = true;
 
         addons = with pkgs; [
@@ -149,6 +150,8 @@
       #   fi
       # '';
     };
+
+    umbriel.enable = true;
 
     noctalia = {
       enable = true;
@@ -332,7 +335,6 @@
 
             [control+meta]
             h = C-M-h
-            # Preserve keys for Hyprland.
             c = M-C-c
             v = M-C-v
             x = M-C-x
@@ -367,7 +369,7 @@
       enable = true;
       settings = {
         session = {
-          default = "Hyprland (uwsm-managed)";
+          default = "Umbriel";
         };
         idle = {
           timeout = 300;

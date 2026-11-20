@@ -22,6 +22,7 @@ in
     "noctalia".source = mkLink "noctalia";
     "nwg-look".source = mkLink "nwg-look";
     "qt6ct".source = mkLink "qt6ct";
+    "umbriel".source = mkLink "umbriel";
     # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm
     "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
   };

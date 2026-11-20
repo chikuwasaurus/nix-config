@@ -6,11 +6,13 @@
       "https://cache.numtide.com"
       "https://helix.cachix.org"
       "https://ghostty.cachix.org"
+      "https://umbriel.cachix.org"
     ];
     extra-trusted-public-keys = [
       "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
       "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
       "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
+      "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw="
     ];
   };
 
@@ -39,6 +41,7 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    umbriel.url = "github:noctalia-dev/umbriel/cachix";
   };
 
   outputs =
@@ -51,6 +54,7 @@
       nix-flatpak,
       disko,
       git-hooks,
+      umbriel,
       ...
     }:
     let
@@ -82,6 +86,7 @@
             home-manager.nixosModules.home-manager
             (mkHomeManagerModule ./home-manager/nixos.nix)
             disko.nixosModules.disko
+            umbriel.nixosModules.default
           ];
         };
 
