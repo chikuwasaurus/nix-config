@@ -7,10 +7,14 @@ type = "noctalia/bongocat:cat"
 use_mpris_filter = true
 
 [widget.clock]
-format = "%a %b %e%t%H:%M"
+format = "%a %b %e %H:%M"
 
 [widget.recorder]
+enabled = false
 type = "noctalia/screen_recorder:recorder"
+
+[widget.screenshot]
+enabled = false
 
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"

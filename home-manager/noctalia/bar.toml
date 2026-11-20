@@ -1,20 +1,6 @@
 [bar.default]
+center = ["workspaces"]
 concave_edge_corners = false
-# center = ["clock", "cat"]
-end = [
-  "media",
-  "tray",
-  "notifications",
-  "screenshot",
-  "recorder",
-  "clipboard",
-  "network",
-  "bluetooth",
-  "volume",
-  "brightness",
-  "battery",
-  "control-center",
-  "session"
-]
+end = ["media", "tray", "notifications", "screenshot", "recorder", "clipboard", "bluetooth", "network", "volume", "brightness", "battery", "launcher", "control-center", "clock"]
 margin_ends = 10
-start = ["launcher", "theme_mode", "wallpaper", "wallhaven", "workspaces"]
+start = ["session", "theme_mode", "wallpaper", "wallhaven"]
