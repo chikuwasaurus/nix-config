@@ -35,6 +35,7 @@ in
       ]
       ++ fromRemote "flatpark" [
         "dev.tabularis.Tabularis"
+        "ai.storyteller.pdfcraft"
       ];
   };
 }
