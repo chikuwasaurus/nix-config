@@ -185,6 +185,10 @@ natural_scroll = true
 # enabled = true
 # map_to_output = "eDP-1"
 
+[input.cursor]
+follows_focus = true  # Follow keyboard-driven window focus.
+hide_when_typing = true  # Hide after a non-modifier key press.
+
 # ==============================================================================
 # Global shortcut overrides use exact application and shortcut IDs.
 # An empty value disables a shortcut; new IDs still require physical approval.
