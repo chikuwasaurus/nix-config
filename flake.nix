@@ -41,6 +41,8 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter/cachix";
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
     luciole.url = "github:noctalia-dev/luciole/cachix";
   };
@@ -55,6 +57,8 @@
       nix-flatpak,
       disko,
       git-hooks,
+      noctalia,
+      noctalia-greeter,
       umbriel,
       luciole,
       ...
@@ -88,6 +92,8 @@
             home-manager.nixosModules.home-manager
             (mkHomeManagerModule ./home-manager/nixos.nix)
             disko.nixosModules.disko
+            noctalia.nixosModules.default
+            noctalia-greeter.nixosModules.default
             umbriel.nixosModules.default
             luciole.nixosModules.default
           ];

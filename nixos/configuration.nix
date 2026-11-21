@@ -359,7 +359,7 @@
           layout = "us";
         };
       };
-      passwordlessSyncUsers = [ username ];
+      passwordless-sync-users = [ username ];
     };
 
     # The Luciole module installs the application system-wide.
