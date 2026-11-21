@@ -28,7 +28,6 @@ in
         "com.github.tchx84.Flatseal"
         "io.github.flattool.Warehouse"
         "com.obsproject.Studio"
-        "org.kde.kdenlive"
         "net.ankiweb.Anki"
         "md.obsidian.Obsidian"
         "dev.zed.Zed"
