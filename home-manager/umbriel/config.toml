@@ -257,8 +257,8 @@ natural_scroll = true
 "Mod+Ctrl+Equal" = "window-modify-secondary-extent +0.02"
 "Mod+Comma" = "window-consume-left"
 "Mod+Period" = "window-consume-right"
-"Mod+Ctrl+Period" = "window-consume-from-right"
-"Mod+Ctrl+Comma" = "window-consume-from-left"
+"Mod+Ctrl+Comma" = "window-consume-or-expel-left"
+"Mod+Ctrl+Period" = "window-consume-or-expel-right"
 # Needs layout.mode = "dwindle".
 # "Mod+Alt+T" = "layout-toggle-split"
 "Mod+W" = { action = "column-toggle-tabbed", repeat = false }
