@@ -323,6 +323,7 @@
               e = "end";
               u = "pageup";
               d = "pagedown";
+              semicolon = "esc";
             };
           };
 
