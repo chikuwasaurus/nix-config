@@ -19,6 +19,7 @@ in
     '';
     "hypr".source = mkLink "hypr";
     "keyd".source = mkLink "keyd";
+    "luciole".source = mkLink "luciole";
     "noctalia".source = mkLink "noctalia";
     "nwg-look".source = mkLink "nwg-look";
     "qt6ct".source = mkLink "qt6ct";

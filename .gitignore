@@ -102,6 +102,10 @@ tmbootpicker.efi
 **/keyd/*
 !**/keyd/app.conf
 
+# luciole
+**/luciole/settings.toml
+**/luciole/.settings.toml.lock
+
 # nushell
 **/nushell/history.txt
 
