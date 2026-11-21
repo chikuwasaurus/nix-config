@@ -251,9 +251,28 @@
         "type": "github"
       }
     },
-    "mitos": {
+    "luciole": {
       "inputs": {
         "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1795211628,
+        "narHash": "sha256-Yh+QK4JiNyOszn5PNHSf4uHX5xMfjvnIbJiYuwwXYHc=",
+        "owner": "noctalia-dev",
+        "repo": "luciole",
+        "rev": "4cf40716dfcfd4c8918329ecc2c9a232e5cf0a8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "ref": "cachix",
+        "repo": "luciole",
+        "type": "github"
+      }
+    },
+    "mitos": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1795044027,
@@ -371,6 +390,19 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1795085501,
+        "narHash": "sha256-kqy60mdSH4GQAv3kzSeefteaiCv9arf3P+auosZrpo0=",
+        "rev": "0bb8272318b4ca41bf0edc6224df3e3e3046b70d",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1124497.0bb8272318b4/nixexprs.tar.zst"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1790185690,
         "narHash": "sha256-xJ+X4hBtOcAFGBOe5nAMyMUeF9foJBmIOu3NjBqBycU=",
         "owner": "nixos",
@@ -385,7 +417,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1794840529,
         "narHash": "sha256-ySrWnmZB5UsZTYGHHnBjllT05O5iFjElCRS+mabtfP0=",
@@ -401,7 +433,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1794386569,
         "narHash": "sha256-W60urNAgQVS8bhNWH0bQsYoiagds8m38oTDUjEOM9FE=",
@@ -422,11 +454,12 @@
         "helix": "helix",
         "home-manager": "home-manager_2",
         "llm-agents": "llm-agents",
+        "luciole": "luciole",
         "mitos": "mitos",
         "nix-darwin": "nix-darwin",
         "nix-flatpak": "nix-flatpak",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_5",
+        "nixpkgs": "nixpkgs_6",
         "umbriel": "umbriel"
       }
     },
@@ -505,7 +538,7 @@
     },
     "umbriel": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_7",
         "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
       },
       "locked": {

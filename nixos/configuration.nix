@@ -47,13 +47,13 @@
       "https://cache.numtide.com"
       "https://helix.cachix.org"
       "https://ghostty.cachix.org"
-      "https://umbriel.cachix.org"
+      "https://noctalia.cachix.org"
     ];
     extra-trusted-public-keys = [
       "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
       "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
       "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
-      "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw="
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
     ];
     trusted-users = [
       username
@@ -152,6 +152,8 @@
     };
 
     umbriel.enable = true;
+
+    luciole.enable = true;
 
     noctalia = {
       enable = true;
@@ -380,6 +382,13 @@
       };
     };
 
+    # The Luciole module installs the application system-wide.
+    # Enable GVfs separately for Trash and network locations;
+    # Luciole’s modules do not enable it automatically.
+    # Optional DNS-SD discovery also needs services.avahi.enable = true;.
+    gvfs.enable = true;
+    avahi.enable = true;
+
     # services.getty.autologinUser = username;
 
     # Enable the X11 windowing system.
@@ -403,6 +412,13 @@
     # Enable touchpad support (enabled default in most desktopManager).
     # services.libinput.enable = true;
   };
+
+  # Umbriel's NixOS module generates a portal config that shadows the
+  # package-provided config, preventing Luciole from being auto-selected.
+  xdg.portal.config.umbriel."org.freedesktop.impl.portal.FileChooser" = [
+    "luciole"
+    "gtk"
+  ];
 
   systemd.services.keyd = {
     # Allow keyd to switch its effective group to the keyd group.

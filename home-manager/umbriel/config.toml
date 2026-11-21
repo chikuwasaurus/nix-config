@@ -240,6 +240,7 @@ natural_scroll = true
 "Mod+Shift+J" = "window-move-down"
 "Mod+Shift+K" = "window-move-up"
 "Mod+Shift+L" = "column-move-right"
+# "Mod+Tab" = "window-focus-last"
 
 # Window state and layout
 "Mod+T" = { action = "window-toggle-floating", repeat = false }
@@ -290,6 +291,11 @@ natural_scroll = true
 "Mod+Shift+7" = "window-move-to-workspace 7"
 "Mod+Shift+8" = "window-move-to-workspace 8"
 "Mod+Shift+9" = "window-move-to-workspace 9"
+"Mod+Ctrl+J" = "workspace-next"
+"Mod+Ctrl+K" = "workspace-previous"
+"Mod+Ctrl+Shift+J" = "window-move-to-workspace-next"
+"Mod+Ctrl+Shift+K" = "window-move-to-workspace-previous"
+"Mod+Ctrl+Tab" = "workspace-focus-last"
 
 # Scratchpad
 "Mod+Shift+Space" = { action = "window-move-to-scratchpad", repeat = false }
