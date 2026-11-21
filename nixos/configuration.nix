@@ -175,30 +175,7 @@
     # };
   };
 
-  security = {
-    polkit = {
-      enable = true;
-      enablePkexecWrapper = true;
-
-      extraConfig = ''
-        polkit.addRule(function(action, subject) {
-          // Sync Noctalia Shell theme with Nocalia Greeter.
-          // Allow active local users in the wheel group to sync the
-          // Noctalia desktop appearance to the greeter without authentication.
-          if (
-            action.id == "org.noctalia.greeter.apply-appearance" &&
-            subject.isInGroup("wheel") &&
-            subject.local &&
-            subject.active
-          ) {
-            return polkit.Result.YES;
-          }
-        });
-      '';
-    };
-
-    # security.pam.services.login.enableGnomeKeyring = true;
-  };
+  # security.pam.services.login.enableGnomeKeyring = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -368,6 +345,7 @@
     # Keep AccountsService enabled for greeter avatars.
     accounts-daemon.enable = true;
 
+    # The module enables Polkit and the pkexec wrapper.
     displayManager.noctalia-greeter = {
       enable = true;
       settings = {
@@ -381,6 +359,7 @@
           layout = "us";
         };
       };
+      passwordlessSyncUsers = [ username ];
     };
 
     # The Luciole module installs the application system-wide.
