@@ -16,6 +16,10 @@ privilege_command = "pkexec"
 [shell.launcher.providers.session]
 global = true
 
+[shell.screenshot]
+annotate = true
+copy_on_close = true
+
 [shell.window_switcher]
 mru = true
 style = "icons"
