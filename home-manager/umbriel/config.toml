@@ -213,6 +213,9 @@ natural_scroll = true
 "Mod+Ctrl+P" = { action = "spawn noctalia msg panel-toggle control-center" }
 "Mod+Ctrl+T" = { action = "spawn noctalia msg panel-toggle launcher '/tr ja '" }
 "Mod+Ctrl+E" = { action = "spawn noctalia msg panel-toggle launcher '/emo '" }
+"Mod+Ctrl+3" = { action = "spawn noctalia msg screenshot-fullscreen" }
+"Mod+Ctrl+4" = { action = "spawn noctalia msg screenshot-region" }
+"Mod+Ctrl+5" = { action = "spawn noctalia msg plugin noctalia/screen_recorder:service all toggle" }
 
 # Media, volume and brightness keys from any input device, routed through the
 # Noctalia shell so its OSDs show. Safe while the session is locked.
