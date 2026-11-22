@@ -181,12 +181,12 @@ enabled = true
 [shortcuts.global.fullscreen]
 enabled = true
 key = "3"
-modifiers = ["command", "shift"]
+modifiers = ["command", "control"]
 
 [shortcuts.global.area]
 enabled = true
 key = "4"
-modifiers = ["command", "shift"]
+modifiers = ["command", "control"]
 
 [shortcuts.global.repeat_area]
 enabled = true
@@ -211,7 +211,7 @@ modifiers = ["command", "shift"]
 [shortcuts.global.recording]
 enabled = true
 key = "5"
-modifiers = ["command", "shift"]
+modifiers = ["command", "control"]
 
 [shortcuts.global.pause_resume_recording]
 enabled = false
@@ -281,7 +281,7 @@ modifiers = ["shift", "option"]
 [shortcuts.global.object_cutout]
 enabled = true
 key = "1"
-modifiers = ["command", "shift"]
+modifiers = ["command", "control"]
 
 [shortcuts.global.history]
 enabled = false
