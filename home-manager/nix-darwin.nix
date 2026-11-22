@@ -29,6 +29,7 @@ in
           helper = osxkeychain
     '';
     "karabiner".source = mkLink "karabiner";
+    "omniwm".source = mkLink "omniwm";
     "snapzy".source = mkLink "snapzy";
   };
 }

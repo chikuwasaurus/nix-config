@@ -1,0 +1,10 @@
+[profiles]
+[profiles.default]
+center = ["active-window", "workspaces"]
+leading = ["scratchpads"]
+trailing = []
+
+[profiles.default.workspaceBar]
+fullWidth = false
+position = "overlappingMenuBar"
+reserveLayoutSpace = true

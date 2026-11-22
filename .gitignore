@@ -109,6 +109,13 @@ tmbootpicker.efi
 # nushell
 **/nushell/history.txt
 
+# omniwm
+**/omniwm/*
+!**/omniwm/settings.toml
+!**/omniwm/shell/
+**/omniwm/shell/*
+!**/omniwm/shell/shell.toml
+
 # qt6ct
 **/qt6ct/colors/*
 
