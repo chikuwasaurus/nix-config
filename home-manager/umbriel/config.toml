@@ -24,7 +24,7 @@ files = []
 # https://docs.noctalia.dev/umbriel/configuration/#general
 #
 [general]
-# autostart = ["noctalia", "kitty"]
+autostart = ["ghostty", "firefox", "chatgpt"]
 # xwayland = false
 # Sharp X11 apps and games on scaled outputs; they see physical resolutions.
 # xwayland_native_resolution = true
@@ -313,6 +313,9 @@ hide_when_typing = true  # Hide after a non-modifier key press.
 "Mod+Alt+Space" = "scratchpad-toggle"
 "Mod+Ctrl+Space" = { action = "window-restore-from-scratchpad", repeat = false }
 "Mod+Tab" = "scratchpad-focus-next"
+
+# Cheatsheet
+"Mod+Ctrl+Slash" = { action = "cheatsheet-toggle" }
 
 # ==============================================================================
 # Layout
