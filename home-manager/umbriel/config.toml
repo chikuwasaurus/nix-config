@@ -309,9 +309,8 @@ hide_when_typing = true  # Hide after a non-modifier key press.
 "Mod+Ctrl+Tab" = "workspace-focus-last"
 
 # Scratchpad
-"Mod+Shift+Space" = { action = "window-move-to-scratchpad", repeat = false }
-"Mod+Alt+Space" = "scratchpad-toggle"
-"Mod+Ctrl+Space" = { action = "window-restore-from-scratchpad", repeat = false }
+"Mod+Ctrl+Space" = "scratchpad-toggle"
+"Mod+Ctrl+Shift+Space" = { action = "window-toggle-scratchpad", repeat = false }
 "Mod+Tab" = "scratchpad-focus-next"
 
 # Cheatsheet
