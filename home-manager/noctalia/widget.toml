@@ -16,5 +16,9 @@ type = "noctalia/screen_recorder:recorder"
 [widget.screenshot]
 enabled = false
 
+[widget.taskbar]
+group_by_workspace = true
+inactive_opacity = 0.5
+
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
