@@ -10,6 +10,10 @@ let
   mkLink = path: config.lib.file.mkOutOfStoreSymlink "${nixConfigPath}/home-manager/${path}";
 in
 {
+  imports = [
+    ./keyd-app.nix
+  ];
+
   xdg.configFile = {
     "fcitx5".source = mkLink "fcitx5";
     "git/config.platform".text = ''
@@ -18,7 +22,6 @@ in
           helper = ! gh auth git-credential
     '';
     "hypr".source = mkLink "hypr";
-    "keyd".source = mkLink "keyd";
     "luciole".source = mkLink "luciole";
     "noctalia".source = mkLink "noctalia";
     "nwg-look".source = mkLink "nwg-look";
