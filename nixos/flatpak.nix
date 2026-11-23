@@ -30,7 +30,6 @@ in
         "com.obsproject.Studio"
         "net.ankiweb.Anki"
         "md.obsidian.Obsidian"
-        "dev.zed.Zed"
       ]
       ++ fromRemote "flatpark" [
         "dev.tabularis.Tabularis"

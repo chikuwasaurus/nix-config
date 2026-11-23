@@ -84,6 +84,10 @@ in
       enable = true;
       package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
+
+    zed-editor = {
+      enable = true;
+    };
   };
 
   systemd.user = {
