@@ -1,4 +1,6 @@
+
 [profiles]
+
 [profiles.default]
 center = ["active-window", "workspaces"]
 leading = ["scratchpads"]
