@@ -1,9 +1,16 @@
+{
+  config,
+  username,
+  ...
+}:
+
 let
   fromRemote =
     origin: appIds:
     map (appId: {
       inherit appId origin;
     }) appIds;
+  homeDir = config.users.users.${username}.home;
 in
 {
   services.flatpak = {
@@ -35,5 +42,16 @@ in
         "dev.tabularis.Tabularis"
         "ai.storyteller.pdfcraft"
       ];
+
+    overrides = {
+      settings = {
+        "dev.tabularis.Tabularis" = {
+          Context.filesystems = [
+            "xdg-config/tabularis:create"
+          ];
+          Environment.TABULARIS_DATA_DIR = "${homeDir}/.config/tabularis";
+        };
+      };
+    };
   };
 }

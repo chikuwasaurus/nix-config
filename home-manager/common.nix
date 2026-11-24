@@ -224,6 +224,7 @@ in
       "scooter".source = mkLink "scooter";
       "sheldon".source = mkLink "sheldon";
       "starship.toml".source = mkLink "starship/starship.toml";
+      "tabularis".source = mkLink "tabularis";
       "yazi".source = mkLink "yazi";
       "zed".source = mkLink "zed";
       "zsh".source = mkLink "zsh";

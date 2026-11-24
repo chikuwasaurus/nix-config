@@ -123,6 +123,10 @@ tmbootpicker.efi
 **/ssh/agents/*
 **/ssh/known_hosts*
 
+# tabularis
+**/tabularis/*
+!**/tabularis/config.json
+
 # zed
 **/zed/prompts
 **/zed/themes

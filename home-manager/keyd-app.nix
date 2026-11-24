@@ -8,6 +8,7 @@ let
     "firefox*"
     "chatgpt*"
     "dev-noctalia-*"
+    "tabularis*"
   ];
 
   keys = [
