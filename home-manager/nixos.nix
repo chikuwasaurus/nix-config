@@ -11,7 +11,7 @@ let
 in
 {
   imports = [
-    ./keyd-app.nix
+    ./keyd-app
   ];
 
   xdg.configFile = {
