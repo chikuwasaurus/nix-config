@@ -41,6 +41,7 @@ alias la='eza -aF auto'
 alias ll='eza -lahHF --git --git-repos-no-status --icons=always --color=always'
 alias lt='eza --tree --all --git-ignore --icons=always --color=always'
 alias rm="gomi"
+alias ha="herdr-app"
 
 # Use macOS's native whatis database for keyword searches.
 # Nix's man-db handles GNU/Nix manpages better, but its `man -k` does not
