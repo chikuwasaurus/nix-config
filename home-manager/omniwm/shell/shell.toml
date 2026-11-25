@@ -2,7 +2,7 @@
 [profiles]
 
 [profiles.default]
-center = ["active-window", "workspaces"]
+center = ["workspaces"]
 leading = ["scratchpads"]
 trailing = []
 
