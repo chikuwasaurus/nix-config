@@ -88,7 +88,6 @@ in
         delta
         deno
         difftastic
-        direnv
         dnsutils
         doggo
         duf
@@ -188,7 +187,10 @@ in
 
     direnv = {
       enable = true;
-      nix-direnv.enable = true;
+      nix-direnv = {
+        enable = true;
+        package = inputs.nix-direnv.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      };
     };
 
     helix = {

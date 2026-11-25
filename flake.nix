@@ -45,6 +45,10 @@
     noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter/cachix";
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
     luciole.url = "github:noctalia-dev/luciole/cachix";
+    nix-direnv = {
+      url = "github:nix-community/nix-direnv";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
