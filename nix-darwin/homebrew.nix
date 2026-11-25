@@ -16,7 +16,12 @@
     user = username;
     onActivation.cleanup = "zap";
 
-    taps = [ ];
+    taps = [
+      {
+        name = "stablyai/orca";
+        trusted = true;
+      }
+    ];
 
     brews = [
       "container"
