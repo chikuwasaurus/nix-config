@@ -88,6 +88,7 @@ in
         curl
         delta
         deno
+        inputs.devenv.packages.${pkgs.stdenv.hostPlatform.system}.default
         difftastic
         dnsutils
         doggo
