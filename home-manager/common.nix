@@ -48,6 +48,7 @@ in
     sessionVariables = {
       EDITOR = "ms";
       VISUAL = "ms";
+      DOCKER_CONFIG = "${config.xdg.configHome}/docker";
     };
 
     sessionPath = [

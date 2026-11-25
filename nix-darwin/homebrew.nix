@@ -28,8 +28,12 @@
     ];
 
     brews = [
+      "container"
+      "docker"
+      "docker-compose"
       "mas"
       "marksman"
+      "socktainer"
     ];
 
     casks = [

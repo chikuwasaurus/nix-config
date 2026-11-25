@@ -54,6 +54,7 @@ in
         # Sandbox for Codex
         bubblewrap
         marksman
+        podman-compose
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
         (chatgpt.override {
@@ -65,6 +66,11 @@ in
         orca
         t3code-desktop
       ]);
+
+    sessionVariables = {
+      DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
+      PODMAN_COMPOSE_PROVIDER = "${pkgs.podman-compose}/bin/podman-compose";
+    };
   };
 
   programs = {
