@@ -29,6 +29,7 @@
 
     brews = [
       "mas"
+      "marksman"
     ];
 
     casks = [

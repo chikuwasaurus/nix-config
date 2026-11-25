@@ -53,6 +53,7 @@ in
 
         # Sandbox for Codex
         bubblewrap
+        marksman
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
         (chatgpt.override {

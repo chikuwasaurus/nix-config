@@ -121,7 +121,7 @@ in
         less
         lua
         lua-language-server
-        marksman
+        # marksman
         mdcat
         inputs.mitos.packages.${pkgs.stdenv.hostPlatform.system}.default
         mo-viewer
