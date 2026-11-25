@@ -16,16 +16,7 @@
     user = username;
     onActivation.cleanup = "zap";
 
-    taps = [
-      {
-        name = "TabularisDB/tabularis";
-        trusted = true;
-      }
-      {
-        name = "BarutSRB/tap"; # omniwm
-        trusted = true;
-      }
-    ];
+    taps = [ ];
 
     brews = [
       "container"
