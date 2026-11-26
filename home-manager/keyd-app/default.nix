@@ -7,6 +7,7 @@ let
     "dev-noctalia-*"
     "tabularis"
     "md-obsidian-obsidian"
+    "net-ankiweb-anki"
   ];
 
   movements = {
