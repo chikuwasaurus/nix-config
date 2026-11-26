@@ -177,6 +177,12 @@
       enable = true;
     };
 
+    # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim = {
+      enable = true;
+      defaultEditor = true;
+    };
+
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;
@@ -195,7 +201,6 @@
     evtest # Identify and read keyboard input devices.
     gpu-screen-recorder
     config.services.keyd.package # Make the keyd CLI tools available system-wide.
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wl-clipboard
   ];
 
