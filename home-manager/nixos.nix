@@ -53,6 +53,7 @@ in
 
         # Sandbox for Codex
         bubblewrap
+        goldendict-ng
         marksman
         podman-compose
       ]
