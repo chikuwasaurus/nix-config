@@ -21,7 +21,19 @@ name = "markdown"
 language-servers = [
   "codebook",
   "marksman",
-  { name = "rumdl", only-features = ["diagnostics", "pull-diagnostics", "code-action", "format"] },
+  { name = "markdown-oxide", except-features = [
+    "goto-definition",
+    "goto-reference",
+    "document-symbols",
+    "workspace-symbols",
+    "code-lens",
+  ] },
+  { name = "rumdl", except-features = [
+    "goto-definition",
+    "goto-reference",
+    "document-symbols",
+    "workspace-symbols",
+  ] },
 ]
 
 auto-format = true

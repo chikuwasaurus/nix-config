@@ -123,6 +123,7 @@ in
         less
         lua
         lua-language-server
+        markdown-oxide
         # marksman
         mdcat
         inputs.mitos.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -225,6 +226,7 @@ in
       "lazygit".source = mkLink "lazygit";
       "mitos".source = mkLink "mitos";
       "nushell".source = mkLink "nushell";
+      "rumdl".source = mkLink "rumdl";
       "scooter".source = mkLink "scooter";
       "sheldon".source = mkLink "sheldon";
       "starship.toml".source = mkLink "starship/starship.toml";
