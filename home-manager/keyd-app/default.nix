@@ -1,7 +1,4 @@
-{
-  lib,
-  ...
-}:
+{ lib, ... }:
 
 let
   apps = [
@@ -10,19 +7,6 @@ let
     "dev-noctalia-*"
     "tabularis"
     "md-obsidian-obsidian"
-  ];
-
-  keys = [
-    "b"
-    "f"
-    "p"
-    "n"
-    "a"
-    "e"
-    "u"
-    "d"
-    "h"
-    "k"
   ];
 
   movements = {
@@ -38,22 +22,29 @@ let
     k = "macro(S-end delete)";
   };
 
-  modifiers = [
-    "shift"
-    "alt"
-    "meta"
-    "shift+alt"
-    "shift+meta"
-    "alt+meta"
-    "shift+alt+meta"
-  ];
+  keys = builtins.attrNames movements;
 
+  modifiers = {
+    "shift" = "S";
+    "alt" = "A";
+    "meta" = "M";
+    "shift+alt" = "S-A";
+    "shift+meta" = "S-M";
+    "alt+meta" = "A-M";
+    "shift+alt+meta" = "S-A-M";
+  };
+
+  # Apply Emacs-style bindings to Control alone.
   movementBindings = map (key: "control.${key} = ${movements.${key}}") keys;
 
-  modifiedBindings = lib.concatMap (
-    modifier: map (key: "control+${modifier}.${key} = C-M-${key}") keys
-  ) modifiers;
+  # Preserve the original modifier combinations.
+  modifiedBindings = lib.concatLists (
+    lib.mapAttrsToList (
+      modifier: prefix: map (key: "control+${modifier}.${key} = C-${prefix}-${key}") keys
+    ) modifiers
+  );
 
+  # Restore native Control shortcuts via Alt.
   altBindings = map (key: "alt.${key} = C-${key}") keys;
 
   bindings = movementBindings ++ modifiedBindings ++ altBindings;
