@@ -1,8 +1,0 @@
-[location]
-address = "Okinawa, Japan"  # geocoded when auto_locate = false and non-empty
-custom_schedule = true
-sunrise = "05:00"
-sunset = "17:00"
-
-[nightlight]
-enabled = true
