@@ -5,10 +5,11 @@
 
 let
   apps = [
-    "firefox*"
-    "chatgpt*"
+    "firefox"
+    "chatgpt"
     "dev-noctalia-*"
-    "tabularis*"
+    "tabularis"
+    "md-obsidian-obsidian"
   ];
 
   keys = [
