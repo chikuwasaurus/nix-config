@@ -1,3 +1,6 @@
+[widget.bar]
+type = "noctalia/umbriel-companion:bar"
+
 [widget.cat]
 audio_spectrum = true
 input_devices = ["/dev/input/by-id/keyd-virtual-keyboard"]

@@ -1,6 +1,27 @@
 [bar.default]
 center = ["taskbar"]
 concave_edge_corners = false
-end = ["media", "tray", "notifications", "screenshot", "recorder", "clipboard", "bluetooth", "network", "volume", "brightness", "battery", "launcher", "control-center", "clock"]
+end = [
+  "media",
+  "tray",
+  "notifications",
+  "screenshot",
+  "recorder",
+  "clipboard",
+  "bluetooth",
+  "network",
+  "volume",
+  "brightness",
+  "battery",
+  "bar",
+  "launcher",
+  "control-center",
+  "clock",
+]
 margin_ends = 10
-start = ["session", "theme_mode", "wallpaper", "wallhaven"]
+start = [
+  "session",
+  "theme_mode",
+  "wallpaper",
+  "wallhaven",
+]
