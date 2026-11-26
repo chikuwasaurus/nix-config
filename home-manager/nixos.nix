@@ -51,11 +51,12 @@ in
         # See: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/?section=qt-applications#qt-applications
         qt6Packages.qt6ct
 
-        # Sandbox for Codex
-        bubblewrap
+        asdbctl
+        bubblewrap # Sandbox for Codex
         goldendict-ng
         marksman
         podman-compose
+        wl-clipboard
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
         (chatgpt.override {

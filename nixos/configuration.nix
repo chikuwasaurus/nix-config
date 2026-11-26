@@ -183,6 +183,9 @@
       defaultEditor = true;
     };
 
+    # Install GPU Screen Recorder with the required security wrappers.
+    gpu-screen-recorder.enable = true;
+
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;
@@ -197,11 +200,8 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    asdbctl
     evtest # Identify and read keyboard input devices.
-    gpu-screen-recorder
     config.services.keyd.package # Make the keyd CLI tools available system-wide.
-    wl-clipboard
   ];
 
   networking = {
