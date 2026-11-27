@@ -14,23 +14,6 @@ in
     ./keyd-app
   ];
 
-  xdg.configFile = {
-    "fcitx5".source = mkLink "fcitx5";
-    "git/config.platform".text = ''
-      [credential]
-          helper =
-          helper = ! gh auth git-credential
-    '';
-    "hypr".source = mkLink "hypr";
-    "luciole".source = mkLink "luciole";
-    "noctalia".source = mkLink "noctalia";
-    "nwg-look".source = mkLink "nwg-look";
-    "qt6ct".source = mkLink "qt6ct";
-    "umbriel".source = mkLink "umbriel";
-    # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm
-    "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
-  };
-
   home = {
     pointerCursor = {
       enable = true;
@@ -97,6 +80,23 @@ in
     zed-editor = {
       enable = true;
     };
+  };
+
+  xdg.configFile = {
+    "fcitx5".source = mkLink "fcitx5";
+    "git/config.platform".text = ''
+      [credential]
+          helper =
+          helper = ! gh auth git-credential
+    '';
+    "hypr".source = mkLink "hypr";
+    "luciole".source = mkLink "luciole";
+    "noctalia".source = mkLink "noctalia";
+    "nwg-look".source = mkLink "nwg-look";
+    "qt6ct".source = mkLink "qt6ct";
+    "umbriel".source = mkLink "umbriel";
+    # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#nixos-uwsm
+    "uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
   };
 
   systemd.user = {
