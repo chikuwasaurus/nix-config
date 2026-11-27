@@ -26,10 +26,10 @@ let
   keys = builtins.attrNames movements;
 
   modifiers = {
-    "shift" = "S";
-    "alt" = "A";
+    # "shift" = "S";
+    # "alt" = "A";
     "meta" = "M";
-    "shift+alt" = "S-A";
+    # "shift+alt" = "S-A";
     "shift+meta" = "S-M";
     "alt+meta" = "A-M";
     "shift+alt+meta" = "S-A-M";
