@@ -177,7 +177,7 @@ source = "builtin"
 wallpaper_scheme = "m3-content"
 
 [theme.templates]
-builtin_ids = ["gtk3", "gtk4", "hyprland", "kcolorscheme", "qt"]
+builtin_ids = ["gtk3", "gtk4", "hyprland", "kcolorscheme", "qt", "umbriel"]
 
 [wallpaper.default]
 path = "/home/kyohei/Pictures/noctalia-wallpaper.png"
