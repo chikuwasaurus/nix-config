@@ -53,6 +53,7 @@ in
 
     sessionPath = [
       # "$HOME/.local/bin"
+      "${config.xdg.configHome}/emacs/bin"
     ];
 
     # The home.packages option allows you to install Nix packages into your
@@ -235,6 +236,7 @@ in
       "bottom".source = mkLink "bottom";
       "btop".source = mkLink "btop";
       "delta".source = mkLink "delta";
+      "doom".source = mkLink "doom";
       "eza".source = mkLink "eza";
       "gh".source = mkLink "gh";
       "ghostty/config.ghostty".source = mkLink "ghostty/config.ghostty";

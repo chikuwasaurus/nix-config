@@ -36,6 +36,7 @@ in
 
         asdbctl
         bubblewrap # Sandbox for Codex
+        emacs-pgtk
         goldendict-ng
         marksman
         podman-compose

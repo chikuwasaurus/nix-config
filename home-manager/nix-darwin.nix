@@ -13,7 +13,9 @@ let
 in
 {
   home = {
-    packages = with pkgs; [ ];
+    packages = with pkgs; [
+      emacs
+    ];
 
     sessionVariables = {
       DOCKER_HOST = "unix://${brewPrefix}/var/run/socktainer/.socktainer/container.sock";
