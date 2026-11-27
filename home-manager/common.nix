@@ -162,6 +162,7 @@ in
         codex
         herdr
         hunk
+        terminal-browser
         tuicr
       ]);
 
