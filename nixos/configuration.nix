@@ -125,8 +125,6 @@
 
   users = {
     groups = {
-      # Create a dedicated group for accessing the Apple Studio Display's HID interface.
-      "studio-display" = { };
       # Create a group that can access the keyd IPC socket.
       "keyd" = { };
     };
@@ -137,7 +135,6 @@
       home = "/home/${username}";
       extraGroups = [
         "wheel" # Enable ‘sudo’ for the user.
-        "studio-display" # Allow this user to control the Studio Display without sudo.
         "input" # Allow the user to access devices under /dev/input.
         "keyd" # Allow the application mapper to communicate with keyd.
         "ydotool" # Allow the user to control the mouse via ydotool.
@@ -236,17 +233,16 @@
     # Enable keyring.
     gnome.gnome-keyring.enable = true;
 
-    udev.extraRules = ''
-      # Grant read/write access to the Studio Display HID interface for
-      # members of the "studio-display" group.
-      #
-      # 05ac: Apple USB vendor ID
-      # 1114: Apple Studio Display product ID
-      SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="05ac", ATTRS{idProduct}=="1114", GROUP:="studio-display", MODE:="0660"
+    udev = {
+      packages = [
+        pkgs.asdbctl # https://github.com/juliuszint/asdbctl/blob/main/rules.d/20-asd-backlight.rules
+      ];
 
-      # Create a stable device path for keyd's virtual keyboard.
-      SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="keyd virtual keyboard", GROUP="input", MODE="0660", SYMLINK+="input/by-id/keyd-virtual-keyboard"
-    '';
+      extraRules = ''
+        # Create a stable device path for keyd's virtual keyboard.
+        SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="keyd virtual keyboard", GROUP="input", MODE="0660", SYMLINK+="input/by-id/keyd-virtual-keyboard"
+      '';
+    };
 
     # Enable the OpenSSH daemon.
     openssh.enable = true;
