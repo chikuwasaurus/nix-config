@@ -88,8 +88,8 @@
 	who = shortlog -sn
 
 	# hunk
-	hdiff = "-c core.pager=\"hunk pager\" diff"
-	hshow = "-c core.pager=\"hunk pager\" show"
+	diffh = "!hunk diff"
+	showh = "!hunk show"
 
 [pull]
 	ff = only

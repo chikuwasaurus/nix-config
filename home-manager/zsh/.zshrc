@@ -67,6 +67,7 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$(atuin init zsh)"
+eval "$(hunk completion zsh)"
 # sheldon: zsh のプラグインマネージャ
 # shell のプラグイン周りは sheldon で管理している(~/.config/sheldon/plugins.toml)。
 eval "$(sheldon source)"

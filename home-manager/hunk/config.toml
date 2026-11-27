@@ -1,2 +1,4 @@
 theme = "catppuccin-mocha"
-transparent_background = false
+transparent_background = true
+auto_split_min_width = 100
+sidebar = true
