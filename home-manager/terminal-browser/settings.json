@@ -1,0 +1,16 @@
+{
+  "search.engine": "https://www.google.com/search?q=%s",
+  "search.suggestions": "https://suggestqueries.google.com/complete/search?client=firefox&q=%s",
+  "telemetry.usage": "on",
+  "telemetry.crashReports": "on",
+  "updates.check": "on",
+  "window.transparent": "off",
+  "render.fps": "display",
+  "render.presenter": "auto",
+  "render.transport": "auto",
+  "render.tiles": "auto",
+  "render.imageRate": "auto",
+  "render.frameEvents": "off",
+  "render.transmitOutlines": "off",
+  "debug.logFile": "off"
+}
