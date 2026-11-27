@@ -130,6 +130,26 @@ in
         mo-viewer
         nixd # Nix LSP
         nixfmt # Nix formatter
+        (writeShellApplication {
+          name = "ns";
+          runtimeInputs = with pkgs; [
+            fzf
+            nix-search-tv
+          ];
+          text =
+            builtins.replaceStrings
+              [
+                "nixpkgs ctrl-n"
+                "home-manager ctrl-h"
+                "all ctrl-a"
+              ]
+              [
+                "nixpkgs alt-n"
+                "home-manager alt-h"
+                "all alt-a"
+              ]
+              (builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh");
+        })
         nodejs_24
         nushell
         oha
