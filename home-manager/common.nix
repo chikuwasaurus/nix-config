@@ -131,16 +131,6 @@ in
         mo-viewer
         nixd # Nix LSP
         nixfmt # Nix formatter
-        (writeShellApplication {
-          name = "ns";
-          runtimeInputs = with pkgs; [
-            fzf
-            nix-search-tv
-          ];
-          text = builtins.replaceStrings [ "ctrl-" ] [ "alt-" ] (
-            builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh"
-          );
-        })
         nodejs_24
         nushell
         oha
@@ -175,6 +165,9 @@ in
         hunk
         terminal-browser
         tuicr
+      ])
+      ++ (with pkgs; [
+        (callPackage ../pkgs/ns { })
       ]);
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
