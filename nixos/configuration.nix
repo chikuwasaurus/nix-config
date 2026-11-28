@@ -279,7 +279,6 @@
             };
 
             control = {
-              h = "backspace";
               # Send Escape when Ctrl+semicolon is pressed.
               semicolon = "esc";
             };
@@ -316,31 +315,22 @@
           };
 
           extraConfig = ''
-            # Preserve the original shortcuts when Ctrl+H is combined with
-            # additional modifiers. Only Ctrl+H should act as Backspace.
             [control+shift]
-            h = C-S-h
 
             [control+alt]
-            h = C-A-h
 
             [control+meta]
-            h = C-M-h
             c = M-C-c
             v = M-C-v
             x = M-C-x
 
             [control+shift+alt]
-            h = C-S-A-h
 
             [control+shift+meta]
-            h = C-S-M-h
 
             [control+alt+meta]
-            h = C-A-M-h
 
             [control+shift+alt+meta]
-            h = C-S-A-M-h
 
             [tab+shift]
             # Right-click when Tab and Shift are held.
