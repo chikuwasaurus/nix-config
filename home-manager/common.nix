@@ -137,19 +137,9 @@ in
             fzf
             nix-search-tv
           ];
-          text =
-            builtins.replaceStrings
-              [
-                "nixpkgs ctrl-n"
-                "home-manager ctrl-h"
-                "all ctrl-a"
-              ]
-              [
-                "nixpkgs alt-n"
-                "home-manager alt-h"
-                "all alt-a"
-              ]
-              (builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh");
+          text = builtins.replaceStrings [ "ctrl-" ] [ "alt-" ] (
+            builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh"
+          );
         })
         nodejs_24
         nushell
