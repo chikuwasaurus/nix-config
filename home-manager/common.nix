@@ -166,10 +166,10 @@ in
         terminal-browser
         tuicr
       ])
-      ++ (with pkgs; [
-        (callPackage ../pkgs/ns { })
-        (callPackage ../pkgs/yanki { })
-      ]);
+      ++ map (path: pkgs.callPackage path { }) [
+        ../pkgs/ns
+        ../pkgs/yanki
+      ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
